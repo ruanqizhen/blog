@@ -1,0 +1,33 @@
+---
+title: "用 XControl 实现面向组件的编程"
+date: "2006-09-05"
+tags: 
+  - "我和labview"
+---
+
+    XControl 是 LabVIEW 8 中出现的新功能。关于 XControl 功能介绍和实现方法可以参见这个网址：[http://zone.ni.com/devzone/conceptd.nsf/webmain/1AE46AF02D67AF468625706E006E577C](http://zone.ni.com/devzone/conceptd.nsf/webmain/1AE46AF02D67AF468625706E006E577C)。  
+    面向组件的编程（Component Oriented Programming ，COP）技术建立在对象技术之上，它是对象技术的进一步发展。“类”这个概念仍然是组件技术中一个基础的概念，但是组件技术更核心的概念是“接口”。组件技术的主要目标是复用—粗粒度的复用，组件的核心是接口。
+
+    LabVIEW 为我们提供了大量漂亮的控件，可以让我们非常方便地就搭建出一个程序界面来。然而，对于追求完美的用户而言，LabVIEW 提供的为数有限的控件是远远不够的。比如图1，是 LabVIEW 8.2 的一个新功能—导入导入共享库向导的界面。在它右上方有四个按钮，这四个按钮有着特殊的外观图标，在 LabVIEW 中并没有直接提供这样的按钮。要拥有这样的按钮，并保存下来以供再次使用，就只能自己来制作这样一个自定义控件。关于（用户自定义控件可以参考文章《[用户自定义控件中 Control, Type Def. 和 Strict Type Def. 的区别](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1549.entry)》）
+
+  ![](http://tkfiles.storage.msn.com/x1pN1mp8dKYgTFV_lNTUY6FnblHHsQ5D-NvZJN4vrpE0vnYl8YEKhrCyulbbcujRT7Ifp4UGJ50Rn1T1on4B2EKXM9n0bZkSSRXWb03q5IF6X7VdOI2u38s1A)  
+图1：LabVIEW 8.2 中 Import Shared Library 的界面
+
+    自定义控件虽然可以定义控件的外观，但无法定义控件的行为。功能复杂一点的控件，.ctl 文件就爱莫能助了。还是以图1 为例，它的 Include Paths 控件是“一个”功能比较复杂的控件，它比 LabVIEW 自带的列表框多了编辑功能。用户添加或编辑一个路径时，这个控件要为用户在所编辑的路径项目上，显示出供编辑使用的文本框和浏览路径按钮。  
+    实际上这个编辑功能是由三个 LabVIEW 提供的标准控件合作完成的：一个 Listbox、一个 String 和一个 Button 控件。它们的行为（位置、是否可见，值，等等）是在程序运行时决定的：当用户选择编辑控件中某一路径时，程序就把 String 和 Button 挪到 Listbox 上需要编辑的那一项，并遮挡住 Listbox 原本的内容。这样，用户只能在 String 控件内输入内容，或者点击浏览按钮选择一个路径。编辑完成，程序把 String 控件的值写到 Listbox 上相应的项目中。
+
+    我们虽然看不见图1 例子中的程序框图，但是可以想象，上述的一系列操作，如判断 String 和 Button 应当显示的位置；然后挪动它们、把 String 值传给 Listbox；处理用户对他们操作的消息等等，都会为这个程序添加不少复杂的代码。这些代码应该是与程序的其它部分没有任何直接关系的。但是如果把它们也写在这个界面 VI 的程序框图上，一方面影响了程序的可读性；另一方面，编程人员有可能在更改程序其它问题时，一不小心改变了这部分代码，降低了代码的安全性。  
+    从逻辑关系上来看，图1 中上半部分的 Listbox、String、浏览按钮以及右上方四个操作按钮，合作共同完成一个功能，与它们之外的界面控件没有什么直接关联，所以他们七个应当被作为一个整体，或者说是一个组件。这个组件需要与程序其它模块之间的接口就只是一个字符串数组—用于输入或输出一组路径。其它的数据和操作，都应当是组件私有的、外部不可见的。  
+    在 LabVIEW 8 之前，想分离和封装出这样一个组件是非常困难的。因为既然这七个控件都在这个 VI 的面板上，对它们的操作和相应的代码必须放在这个 VI 的程序框图上，无法与其他代码隔离开。当然也不是说绝对没有办法，比如你可以使用 sub-panel、动态注册事件等方法，强行地把它们的代码分隔开。但是这些方法既不简单直观，使用它们又可能会让程序变得更为复杂、难以阅读和维护。
+
+    XControl 的出现终于为这个问题提供了一个比较完美的解决方案。图1 中我们提到的七个应当划分在同一组件的控件可以被制作成一个 XControl。这个 XControl 的外观就是图1 中上半部分七个控件组合在一起的样子。XControl 与用户自定义控件相比，它不仅定义了控件的外观，更重要的是，开发人员可以通过编写 LabVIEW 代码定义 XControl 的行为，这些代码是对外隐藏的。开发人员还可以定义 XControl 的属性和方法，通过 Property Node 和 Invoke Node 在程序中使用这些属性和方法。  
+    同样完成选取一组路径这个功能，可以有各种不同的界面。比如各种 C++ 编译器都会提供类似的功能，但它们外观各不相同。你可以利用 XControl，编写多个外观、行为大相径庭的组件。但是，只要他们的接口相同—都是一个字符串数组，用户就可以在这些组件内任意互换，选用自己喜欢的组件，而不需改动程序的任何其它部分！  
+    现在，XControl 仍然不太令人满意的地方是它还不支持用户自定义的事件。
+
+    XControl 具有封装的特性。因此我在《[利用 LabVIEW 工程库实现面向对象编程](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!783.entry)》一文中提到，同样可以使用 XControl 来达到面向对象的编程方法。但是 XControl 不具备继承和多态的特性。与之相比较，Library 和 LVClass 只能够把程序中的某些功能封装成模块，而涉及到包含界面的模块，就无能为力了。XControl 则非常适合制作有界面的程序组件。
+
+**参考文章：**    [一个 XControl 的实例](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1973.entry)  
+    [我和 LabVIEW](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)  
+    [面向对象与面向组件小议](http://zhuweisky.cnblogs.com/archive/2005/09/13/235648.html)
+
+[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1559&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

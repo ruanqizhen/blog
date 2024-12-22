@@ -1,0 +1,14 @@
+---
+title: "在上海书城看到我的书了"
+date: "2009-09-27"
+tags: 
+  - "我和labview"
+---
+
+今天休假，又没什么事情，于是跑到上海书城去看书。书城把LabVIEW和其它编程语言归在一个区内，LabVIEW在编程区最后面一个柜台跟程序设计理论相关的书挤在一起。
+
+书城里有关LabVIEW的书还挺多的，不下十几种。《我和LabVIEW》摆在一堆LabVIEW书籍当中。数量不是很多，我去看的时候只有7本，没有旁边几种LabVIEW教程的数量多。
+
+[![](images/smile_tongue.gif)](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8bf215459417684a664d7bbc55c5da57.jpg)
+
+[](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8bf215459417684a664d7bbc55c5da57.jpg)[《我和LabVIEW》的写作过程](mmm2009-09-01_09.47/blog/cns!5852D4F797C53FB6!4321.entry)

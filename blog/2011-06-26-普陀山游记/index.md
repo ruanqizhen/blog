@@ -1,0 +1,50 @@
+---
+title: "普陀山游记"
+date: "2011-06-26"
+tags: 
+  - "游记"
+---
+
+周末公司组织去普陀山旅游。周五晚上从吴淞码头出发，第二天一早驶达普陀山。我们很不幸，因为周六正赶上台风袭击，整天都在下雨，而我们只能穿着雨衣打着伞游玩了。
+
+[![DSC01759](images/dsc01759_thumb.jpg "DSC01759")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01759.jpg)
+
+不过台风也带来了意外的好处：由于短途的渡船都已停航，来参观的游客比较稀少，不会因为太过拥挤而影响旅游的心情。
+
+[![DSC01784](images/dsc01784_thumb.jpg "DSC01784")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01784.jpg)
+
+普陀山这里自然风光很有限，所谓旅游就是看庙。我对烧香拜佛不感兴趣，所以我很少进入室内，每到一处就在庙外面练练摄影。
+
+[![DSC01816](images/dsc01816_thumb.jpg "DSC01816")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01816.jpg)
+
+有些庙宇藏在深山里，安闲宁静。
+
+[![DSC01814](images/dsc01814_thumb1.jpg "DSC01814")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc018141.jpg)
+
+有些寺庙临海而建，惊涛拍岸，颇有气势。
+
+[![DSC01832](images/dsc01832_thumb.jpg "DSC01832")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc018321.jpg)
+
+岛上最显眼的还是这尊铜制观音像，还没去参观她的时候，远远的就看到了。
+
+[![DSC01843](images/dsc01843_thumb.jpg "DSC01843")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01843.jpg)
+
+台风只持续了一天就过去了，天气突然就从狂风暴雨转为风和日丽。
+
+第二天的行程还是以看庙为主，首先去的是岛上规格最高的那座寺庙（庙太多，名字都没记住）。果然富丽堂皇，远远看去，和宫殿也可媲美。
+
+[![image](images/image_thumb1.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/image1.png)
+
+除去寺庙，我们玩的唯一一处景点是千步沙，景色不错，唯一缺憾是海不够蓝。
+
+[![DSC01906](images/dsc01906_thumb.jpg "DSC01906")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01906.jpg)
+
+我借用大家看庙的时间，脱离队伍去周围走了走，岛上颇有点幽静的田园气息，要是能生活在这里就爽了。
+
+[![image](images/image_thumb2.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/image2.png)
+
+行程的最后一站是岛上最高的那座寺庙。寺庙都是大同小异的，然而登山途中的风光还是值得一看的。
+
+[![DSC01943](images/dsc01943_thumb.jpg "DSC01943")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01943.jpg)
+
+[![DSC01950](images/dsc01950_thumb.jpg "DSC01950")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01950.jpg)

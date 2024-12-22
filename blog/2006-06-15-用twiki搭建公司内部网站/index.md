@@ -1,0 +1,24 @@
+---
+title: "用TWiki搭建公司内部网站"
+date: "2006-06-15"
+tags: 
+  - "我的文章"
+---
+
+最近我开始把平时工作中的一些内部文档整理整理放到公司内部的TWiki网站上去。用过了几天越发觉得当初决定把内部网站转移到wiki上去是非常明智的。
+
+以前我们也有内部网站，如果员工要更新点什么内容，需要先到文件服务器，把相应的文件下载下来，修改，再上传到文件服务器，然后等上几十分钟，网页服务器刷新了，才能看到自己修改的内容。过程及其麻烦。所以基本上没什么同事肯维护自己相关的页面。
+
+TWiki可以允许用户直接在网页上进行修改，而且被修改的内容立即生效。所以我修改网页的积极性大大提高。两个多星期里，我就勤奋的做了一百多次更新 :)
+
+这是我们组的TWiki页面：[http://twiki.natinst.com/twiki/bin/view/SAST/](http://twiki.natinst.com/twiki/bin/view/SAST/) 
+
+不过这是内部网站，所以只有NI同事可以看。
+
+**相关文章：**
+
+    [整合 wiki, blog 和 forum](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1696.entry)
+
+    [技术文章](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
+
+[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1411&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

@@ -1,0 +1,12 @@
+---
+title: "Silverlight程序中显示帧数的方法"
+date: "2011-06-15"
+tags: 
+  - "计算机技术"
+---
+
+接到一个需求：要在Silverlight程序的界面上放置一些控制选项，可以开关Silverlight的EnableFrameRateCounter，EnableRedrawRegions等和显示效率相关的一些设置项。我开始在网上查了一下，这几个与显示性能相关的设置主要被用在装载Silverlight控件的HTML文本中。在Silverlight程序启动之后，这几个属性仍然可以被修改，除EnableGPUAcceleration之外。问题在于，如果EnableGPUAcceleration没有在HTML文件中被设置为True的话，EnableCacheVisualization和EnableFrameRateCounter也无法工作。看来微软给出这几个属性就是为了帮助开发显卡加速的动画的。
+
+EnableFrameRateCounter被设置为真时，Silverlight界面左上角会显示出几个和GPU相关的数据，其中包括动画刷新帧数。但是我搜索了一下，Silverlight似乎没有提供函数，可以在程序中把这个帧数读出来。MSDN中提供了一个间接方法来计算帧数，利用CompositionTarget.Rendering这个事件。Silverlight没刷新一帧，都会抛出一个CompositionTarget.Rendering事件，对这个事件计数，就可以算出每秒帧数了。不过，用这个方法计算出来的帧数，与EnableFrameRateCounter设置显示的帧数居然是不同的。
+
+CompositionTarget.Rendering事件的发生次数与用户设置的MaxFrameRate和系统繁忙程度相关。而EnableFrameRateCounter显示出来的那个帧数还与Silverlight动画是否需要刷新相关。比如对于一个界面不怎么活跃的Silverlight程序，当Silverlight觉得不需要刷新界面时，它就不刷新，显示出来的帧数很可能是个位数，甚至为0。

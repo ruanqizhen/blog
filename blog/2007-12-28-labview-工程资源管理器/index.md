@@ -1,0 +1,34 @@
+---
+title: "LabVIEW 工程资源管理器"
+date: "2007-12-28"
+tags: 
+  - "我和labview"
+---
+
+    从 8.0 开始，LabVIEW 增加了一个工程资源管理器功能。LabVIEW 工程资源管理器就是一个可以方便查看、调整程序系统结构的工作区。与 VC, VB 等语言中的 project, workspace 相类似。Project 的出现使得 LabVIEW 对于大项目的管理更加方便。
+
+[![](http://by1.storage.msn.com/y1pH5Es9Ox64kZJ9i9ega46dCjPyTXjZ5Cmp2uSDwGBXtUNu6ESgSHoZN-KieWAYuc9ihHMWGB-X_NE5veswrZFlDn9Aa2AimT1?PARTNER=WRITER)](http://by1.storage.msn.com/y1pH5Es9Ox64kYUHDn7w2s8P8laJ_XDfu8WpfMec2m4zVlIc31CnQ-HnKrCoMYlnItL24KsJeIs7KlZZ3dCyPUOJ5JohAPCbaTK?PARTNER=WRITER) 图1：LabVIEW 工程资源管理器
+
+    要想充分利用 LabVIEW 工程资源管理器带来的好处，那就需要我们改变一些以往的LabVIEW编程习惯。譬如说，在开始一个新的项目的时候，在 LabVIEW 8 以前的版本中，我们最先创建的是程序的主 VI；而现在，我们首先创建的应该是一个空的工程（Project），再在这个工程中添加相应的 VI和各种组件。
+
+    工程管理器还有如下优点： 工程的树形结构表示了程序中 VI 的调用层次关系，利用VI的快捷菜单可以查看到调用该VI的程序，以及该VI的子程序，而不必再使用 VI Hierarchy 来查看。 在工程资源管理器的File页就可以直接调整文件存放的磁盘位置，而不必再另外打开操作系统提供的文件浏览器。 在工程资源管理器中集成源代码管理功能，不需要再使用源代码管理工具提供的界面了。（源代码管理工具是用来进行软件源代码版本控制的。大型软件开发通常需要这样的工具，用来记录每一次代码的修改、同时开发同一软件的不同版本、方便多人同时对同一段代码进行修改等。）
+
+### 一、工程的结构
+
+    图1是一个工程资源管理器的截图。它用一个树形的结构来表示工程中所有的 VI、各种组件和文件设置等。 树形结构的最顶层是工程的名称。 第二层是工程运行的目标机器。假如我的机器上只装了普通台式机版本的 LabVIEW，大家只能看到一个目标：“My Computer”。假如我的计算机上还装了 LabVIEW RT, FPGA 等用于其它硬件环境的 LabVIEW，那么在这一层还会出现其它那些目标设备。 第三层以下就是工程中所有使用到的文件了。用户可以添加虚拟文件夹，按自己的喜好组织文件结构。LabVIEW 从 8.0 起，文件及其它组件种类一下子丰富了许多。以前基本就只有 VI 和控件两种文件，现在又多了 Library, Class, XControl，XNode，共享变量等等。安装了其他功能模块，组件的种类还会更多。 右击树状结构中的每个条目，还可看到针对他们的更多设置。
+
+    在 LabVIEW 8 之前，若要把 VI 源文件构建成可执行文件，必须使用Tools 菜单下的 APP Builder 工具。现在这个工具也被集成到了工程管理器中。在目标机器的最后一个条目“Build Specification”中包含了把源代码配置成为EXE, DLL 等的信息。 在旧版本 LabVIEW 中，保存VI时的一些高级选项，比如添加密码、移除 VI前面板，程序框图等选项；以及其它一些与运行有关的选项，例如禁止调试，自动弹出错误框等选项，也都被合并到此处了。在 Build Source Distribution 中可以找到相应的设置。
+
+    在旧版本 LabVIEW 中，是绝对不允许把两个文件名相同，但内容不同的 VI 同时装入内存的。这也可以理解，VI 就好比是 C 语言中的函数，如果两个函数名相同，那到时究竟应该使用哪一个呢？但这毕竟不方便，比如我们需要同时运行两个程序，他们当中都有排序的功能。为了方便，VI的名字都起名为“Sort.vi”，但是他们的代码其实并不相同。为了让两个程序同时正常工作，我们应该允许在这两个程序内分别使用两个文件名相同，但内容不同的 VI。 在版本 8 中，LabVIEW 对此作了两点改进，一是引进了库的概念，类似给 VI 增加了名字空间。在不同的库中的 VI，即时文件名相同，它们的 VI 名字实际上也是不同的，因为 VI 名还包括库名作为前缀。（可以参考：[http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!783.entry](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!783.entry "http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!783.entry")） 二是增加了运行环境的概念。LabVIEW 中，每一个工程都是一个独立的运行环境。为每一个的程序建立一个单独的工程，它们就有了一个独立的运行环境。一个运行环境中的 VI 不会影响到其它运行环境中的程序。这样，同时运行分属不同工程的两个程序，它们之间即便用到了同名的 VI，也不会相互影响。 但在单个工程中，还是不允许出现同名又不在库中的 VI。
+
+### 二、按照文件的物理结构来查工程
+
+    在需要创建一个新的类似工程，或版本备份时，程序经常被来回复制。在这个过程中，很可能会引起子VI的错误链接。比如，本来工程里应该使用的的是 Project One 文件夹下的一个子VI，但实际上却链接到了 Project Two 文件夹下的一个同名VI。我们可以把文件的真实路径同时显示在工程资源管理器的Item，以及File 页上，选取菜单 Project -> Show Item Paths，如图2所示。我们可以在这里检查每个文件的路径是否正确。 但是，文件比较多的时候，一条一条看下来，是比较麻烦的。这时可以按照文件的物理结构来查看工程中的文件。在工程资源管理器中选择“Files”标签页，看到的就是文件在物理硬盘上的真实结构。我们只要在这里检查一下，有没有不需要的文件夹出现，就可以判定是否出现了错误链接。 如果发现某些文件所存放的路径不恰当，需要调整，我们可以直接在工程资源管理器中来调整，而不需要打开文件浏览器去修改。
+
+ [![](http://byfiles.storage.msn.com/y1pIcO_924THofXIZAm1eHAxcY8FV0gUOTvAt0ZdbLDDt8YLd4SnV1Tw11g9FJH9gSPBhOHWRZgwjo?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THofuNIRSviYohCkC9usG6INFCb0VqQ72GeWAi-yEeAa8APTNOVjahHynDwV_7HQNMe4?PARTNER=WRITER) 图2：按照文件的物理结构查看工程
+
+### 三、VI 交叉连接
+
+    前文提到程序可能会错误的链接子 VI，这在 LabVIEW 中被称为 VI 的交叉链接。除了前面提到的可能引起交叉链接的情况外，试图调用重名的VI，或把它加到工程里来等操作，都会引起 VI 的交叉链接。 VI 的交叉链接会引起很多问题，比如你在修改 VI 的时候，改动了不应该改动的那份；引起程序不可预知的行为等等。LabVIEW 的工程资源管理器可以帮助检查、修复 VI 的交叉链接。 当工程资源管理器发现程序中试图使用两个同名 VI 时，就会在这样的 VI 上打出一个惊叹号。如图2中所示的 Sub VI.vi。工程中试图用到了两个同名的VI，分别在路径 Project One 和 Project Two 下。你可以到引用这些 VI 的地方去把他们一一修正，也可以让工程资源管理器来修正它们。回到“Item”页面，在有惊叹号VI上点击鼠标右键，选择 Resolve Conflicts。这时候，就会出现修正冲突的对话框。在这个对话框中选择应该被选用的正确子VI，工程资源管理器就会自动更新程序，使它们链接到正确的VI上去。
+
+[《我和 LabVIEW》目录](http://ruanqizhen.wordpress.com/2005/11/07/%e6%88%91%e5%92%8c-labview/)

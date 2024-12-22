@@ -1,0 +1,17 @@
+---
+title: "周末在老婆单位拍的照片"
+date: "2010-11-14"
+tags: 
+  - "摄影"
+---
+
+周末又练习一下摄影。这次有个惊喜的发现：有几张照片拍的很清晰。可能调节到某种合适的拍照姿势，可以在一定程度上减少手抖带来的影响。
+
+前几天，我还特地试验了一下这个相机的防抖功能。打开和关闭防抖功能，对于我来说区别相当明显。现在觉得，选这款相机还是正确的。
+
+生化所的小白楼：  
+[![DSC00150](images/dsc00150_thumb.jpg "DSC00150")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/11/dsc00150.jpg)  
+[![DSC00145](images/dsc00145_thumb.jpg "DSC00145")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/11/dsc00145.jpg)
+
+原法国领事馆（大概是解放前的）的官邸：  
+[![DSC00165](images/dsc00165_thumb.jpg "DSC00165")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/11/dsc00165.jpg)

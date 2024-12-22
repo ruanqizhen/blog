@@ -1,0 +1,18 @@
+---
+title: "豆豆到了晚上开始找妈妈了"
+date: "2011-04-22"
+tags: 
+  - "豆豆"
+---
+
+原本谁哄都可以哄豆豆睡觉的，但最近一个星期，他开始赖上妈妈了。每天晚上睡觉必须要躺在妈妈身边才行，否则就大哭大闹。
+
+不过豆豆白天还是更喜欢听着故事睡觉。今天上午，豆豆本来在吃奶，可是他有点困了，于是吃了几口就开始哼唧。后来我把他抱过来趴在我肩膀上，一边在屋里散布，一边给他讲小蝌蚪找妈妈的故事，他于是就安静了，趴在我肩膀上一动不动。一会就闭上眼睛睡着了。
+
+[![DSC01240](images/dsc01240_thumb.jpg "DSC01240")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/dsc01240.jpg)
+
+[![DSC01227](images/dsc01227_thumb.jpg "DSC01227")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/dsc01227.jpg)
+
+豆豆练杂耍： [![DSC01271](images/dsc01271_thumb.jpg "DSC01271")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/dsc01271.jpg)
+
+小和尚： [![DSC01249](images/dsc01249_thumb.jpg "DSC01249")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/dsc01249.jpg)
