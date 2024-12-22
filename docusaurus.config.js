@@ -53,6 +53,8 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
 		  onUntruncatedBlogPosts: 'ignore',
+          blogSidebarTitle: '文章列表',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: './src/css/custom.css',
