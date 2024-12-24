@@ -12,7 +12,7 @@ tags:
 
 首先找一张老照片：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image.png?w=488)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image.png)
+![](image.png)
 
 要想效果好，照片一定要找上图这样的：大头照，而且只有少量折痕和磨损。我也测试了一些质量更差的照片（人脸所占像素太小，有大片磨损等），人工智能对于它们目前还还无能为力。
 
@@ -22,7 +22,7 @@ tags:
 
 上图经过傅立叶变换，在频域上的图像如下（灰度图部分）：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image-1.png?w=853)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image-1.png)
+![](image-1.png)
 
 由于原照片里的网纹是规则的（有固定频率），频域图会在一些特定的频段里出现高能量区域，也就是上图用红圈圈出来的部分。我只画了三个圈，但其它那些亮点（除了中心低频区域外），都是网纹造成的，只要把这些亮点全部涂黑，再做反傅立叶变换，新生成的图片就是被去除了网纹的照片了。
 
@@ -48,4 +48,4 @@ GitHub上最受欢迎的黑白照片上色程序是这个：https://github.com/j
 
 **处理后的效果**
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image-2.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/02/image-2.png)
+![](image-2.png)
