@@ -7,7 +7,7 @@ tags:
 
 去年回国一趟，就考虑写一些回忆文章，记录一些还能想的起来的事情，可是一直没动笔，毕竟还有太多更重要的事了。最近跟老婆讨论起我初中因为淘气，腿上受过伤，就顺便把还记得的初中的几件事记录一下吧。
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdU7Zo4-te0pnlQQ7gyrAbMJ4ATq_YjxMCj85fAdV1e0ENEvfh__8c_KNbaauxAedeqMUlw91-M0gl8MfSD0j6IwX9mI4cCng9-lfhNvPc1PGWn_Y9AWgfmJqXOzmnsP-ZhitY?key=8tb-bhCYu6DxzRWxMubNOg)
+![](school.png)
 
 我初中就读于齐齐哈尔铁路第五中学。后来，随着铁路体制改革，和其他铁路系统的学校一样，这所学校也被划归地方管理，改名为齐齐哈尔第四十五中学。前几年回老家时，我特意去看了看曾经学习过的地方。然而，如今的学校已完全变了样子，尽管还是那个熟悉的位置，但我却找不到任何与记忆中的景象了。
 
@@ -51,4 +51,4 @@ tags:
 
 每逢深秋，看见窗外飘落的红叶，我还是会回想起小时候劳动的情景。转眼间，几十年就过去了。或许是对过往的怀念吧，我在现在自家院子里也种了几颗葡萄。是新培育出的耐寒品种，不需要任何照料就能安然越冬。然而，葡萄我却吃不到，因为松鼠总能抢先一步，只留给我一地的葡萄皮。收拾树叶依然是每年固定的工作。当我清理草坪的时候，儿子总要陪在一旁，要么在堆积的落叶上打滚，要么把我收集好的树叶再吹回到它们原来的地方去。
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeatCNhkptWDYnhBfJqCfZdbHRdV7pkRFeK2l-szgVoK2Eka0U8w-T1JdUsT3OZYv1HkmlaDkZrlu5o2N2_rDVCFQNbx6oUpcWSFfE1N8tYyI4pfyvb1W6LlV5pGJU5zoNzcp8yWA?key=8tb-bhCYu6DxzRWxMubNOg)
+![](yard.jpg)
