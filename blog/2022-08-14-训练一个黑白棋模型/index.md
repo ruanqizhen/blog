@@ -31,4 +31,4 @@ tags:
 
 模型训练好之后，我把它移植到了之前编写好的 LabVIEW 黑白棋 VI 中。棋力算不上很好，但至少是明显优于随机落子。等我空闲的时候，看看还能不能进一步优化下。
 
-程序在： https://github.com/ruanqizhen/labview\_book/tree/main/code/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/Xcontrol/Othello
+程序在： https://github.com/ruanqizhen/labview_book/tree/main/code/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/Xcontrol/Othello

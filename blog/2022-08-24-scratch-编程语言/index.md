@@ -15,7 +15,7 @@ Scratch 是 2003 年才诞生的一个新语言。它能够一出现就挤掉 La
 
 下面是一个具体的示例程序：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/08/image.png?w=849)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/08/image.png)
+![](image.png)
 
 这段代码中的积木（一种颜色的近似长方形的一个条形块）分成了三堆，这三堆之间是并行的关系。每一堆积木都从一个事件开始。左边这一大堆是主线程，当接受到用户点击绿色旗帜的事件时开始运行，它在运行过程中会发出一些事件，去启动另外两堆积木。这段程序的主要功能是运行一个循环“repeat 20”，在循环内调用“move”功能，让屏幕上的一只小狐狸（绘制在“costume”里面）向前移动一段距离。同时还让小狐狸发出“喵呜”的声音。
 
