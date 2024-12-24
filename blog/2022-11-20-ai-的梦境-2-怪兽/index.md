@@ -24,7 +24,7 @@ tags:
 “毒液”：
 ![](d.png)
 
-<figcaption>
+
 
 
 怪兽生活的外星球
