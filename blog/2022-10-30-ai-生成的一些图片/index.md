@@ -12,46 +12,34 @@ tags:
 
 先贴两张 AI 生成的仿旧照片，看起来还真挺像真的：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00013-329790701-color-photo-of-an-old-man.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00013-329790701-color-photo-of-an-old-man.png)
+![](00013.png)
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00014-2516937710-color-photo-of-a-worker.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00014-2516937710-color-photo-of-a-worker.png)
+![](00014.png)
 
 接下来几组图片，都是首先生成了左边的真实照片风格的图片，再根据照片转换成了右边二次元图片：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00020-482861532-high-quality-photo-beautiful-young-girl-red-cheek-smile.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00020-482861532-high-quality-photo-beautiful-young-girl-red-cheek-smile.png)
+| 真实照片风格  | 二次元风格    |
+| ----------- | ----------- |
+| ![](00020.png) | ![](00022.png) |
+| ![](00012.png) | ![](00032.png) |
+| ![](00017.png) | ![](00031.png) |
+| ![](00018.png) | ![](00033.png) |
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00042-3509550471-high-quality-cg-beautiful-young-girl-red-cheek-smile.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00042-3509550471-high-quality-cg-beautiful-young-girl-red-cheek-smile.png)
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00012-3328892317-a-beautiful-young-girl.jpg?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00012-3328892317-a-beautiful-young-girl.jpg)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00032-1041540522-high-quality-photo-beautiful-young-girl.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00032-1041540522-high-quality-photo-beautiful-young-girl.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00017-1317139118-high-quality-photo-young-girl-big-eye.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00017-1317139118-high-quality-photo-young-girl-big-eye.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00031-3444786038-high-quality-photo-beautiful-girl.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00031-3444786038-high-quality-photo-beautiful-girl.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00018-947873617-high-quality-photo-middle-age-man.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00018-947873617-high-quality-photo-middle-age-man.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00033-2905176251-high-quality-photo-man-indian.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00033-2905176251-high-quality-photo-man-indian.png)
 
 下面这两组图片是先生成的左边的二次元风格图片，再根据它生成右侧的真实照片风格图片：
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download-1.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download-1.png)
+| 二次元风格    | 真实照片风格  | 
+| ----------- | ----------- |
+| ![](download-1.png) | ![](00046.png) |
+| ![](download-2.png) | ![](00038.png) |
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00046-1932642439-high-quality-photo-beautiful-young-girl-pink-dressbig-eye-cake.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00046-1932642439-high-quality-photo-beautiful-young-girl-pink-dressbig-eye-cake.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download-2.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download-2.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00038-366384530-high-quality-photo-beautiful-young-girl.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00038-366384530-high-quality-photo-beautiful-young-girl.png)
 
 可以明显感觉到，生成真实照片要困难很多。可能是因为人脑对所谓“真实”照片更挑剔吧。
 
 下面两组是风景图片，感觉两种风格生成出来的图片区别远没有人像的区别那么大
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/download.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00039-3605090416-high-quality-photomountain-river-flower-bird.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00039-3605090416-high-quality-photomountain-river-flower-bird.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00044-456858294-high-quality-cg-moon-river-house.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00044-456858294-high-quality-cg-moon-river-house.png)
-
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00040-1896070736-high-quality-photo-river-moon-house-1.png?w=512)](https://ruanqizhen.wordpress.com/wp-content/uploads/2022/10/00040-1896070736-high-quality-photo-river-moon-house-1.png)
+| 二次元风格    | 真实照片风格  | 
+| ----------- | ----------- |
+| ![](download.png) | ![](00039.png) |
+| ![](00044.png) | ![](00040.png) |
