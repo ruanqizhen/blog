@@ -15,6 +15,6 @@ AI 绘画工具的出现对于我的帮助还是非常大的：我经常希望�
 
 我的 Facebook 上经常会收到骗子的好友申请。由于工作相关，我还曾经仔细研究过几个骗子的页面。在社交媒体上有很多知名度极低的小网红们，经常性的发布自己的生活照片视频等。骗子们会把这些内容收集起来，发布在一个虚假的账号下面，把这个账号伪装成某个帅哥美女的账号，然后行骗。估计以后骗子们的手法也要升级了，不需要再去收罗真人的内容，用 AI 生成全套的内容就可以了。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/03/00935-2503344512-best-quality-ultra-detailed-masterpiece-finely-detail-highres-beautiful-girl-realistic-black-hair-cute-extremely-detail.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/03/00935-2503344512-best-quality-ultra-detailed-masterpiece-finely-detail-highres-beautiful-girl-realistic-black-hair-cute-extremely-detail.png)
+![](00935.png)
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/03/00942-3537016382-an-extremely-delicate-and-beautiful-girlan-extremely-delicate-and-beautifulworld-masterpiece-theaterblack-hairefbc8clong-hairefbc8cswea.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/03/00942-3537016382-an-extremely-delicate-and-beautiful-girlan-extremely-delicate-and-beautifulworld-masterpiece-theaterblack-hairefbc8clong-hairefbc8cswea.png)
+![](00942.png)

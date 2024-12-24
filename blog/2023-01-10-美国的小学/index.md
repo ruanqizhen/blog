@@ -15,7 +15,7 @@ tags:
 
 儿子出生前，我曾多次来美国出差，并在这段时间里断断续续地住了一年。虽然那时我并没有太关注教育问题，但多少从同事那里听说了一些美国的教育方式，感觉美国的教育体系更符合我的理念。所以我还是决定让儿子来美国接受教育。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a4.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a4.png)
+![](a4.png)
 
 ## 学制
 
@@ -27,7 +27,7 @@ tags:
 
 国内这种稳定的班级也有好处，同学之间的关系比较亲近。尤其是同桌之间，每天坐在一起，感情比一般同学更好。美国这边没有同桌的概念了，每个小朋友都有一个独立的小桌子。老师常常会把几张小桌围成一圈，方便同学分组讨论问题。这种小组也不稳定，会经常调整。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a3.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a3.png)
+![](a3.png)
 
 ## 私立学校
 
@@ -55,7 +55,7 @@ tags:
 
 我小时候，学校总是会提：要把学生培养成“德智体美劳”全面发展的人才。现在可能有新口号了吧，不过我还是按照这五个传统的方向来比较一下中美两国的区别吧。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a5.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a5.png)
+![](a5.png)
 
 ## 德
 
@@ -83,7 +83,7 @@ tags:
 
 我感觉这样的学校环境对于培养儿子正确价值观是非常有利的，他曾经跟我说过，班级里一些同学有交流和行动困难，但是他还是非常喜欢跟们一起玩。儿子还跟其中一名有缺陷的同学还成了好朋友。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/01/moral.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2023/01/moral.png)
+![](moral.png)
 
 ## 智
 
@@ -103,7 +103,7 @@ tags:
 
 在美国，如果只考虑比较好的学校，那么从小学到大学，学习负担是逐级加重的。在中国，我当年上学的时候，对于相当一部分同学来说是高中最累，大学最轻松。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a1.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a1.png)
+![](a1.png)
 
 ## 体
 
@@ -129,4 +129,4 @@ tags:
 
 在美国，小学生通常不需要什么劳动。但是升入中学后，就需要参加更多的社区活动了，这也是申请大学的必要条件之一。中学生最常见的劳动项目包括：组织更小的小朋友们的集体活动、通过清洁车辆或销售商品等方式为学校和公益基金筹款等。我小时候学校组织的劳动，是直接为学校或社会做贡献的，不会涉及到钱的问题。美国学生的劳动虽然也是公益性质，但通常需要先换算成钱，再把钱捐赠给相关机构。比如擦车，学生们为客户擦车，收取客户的佣金，再把佣金捐赠给学校。学生们在这一过程可以同时了解劳动与钱的关系，也是一段非常宝贵的经验。
 
-[![](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a6.png?w=1024)](https://ruanqizhen.wordpress.com/wp-content/uploads/2024/01/a6.png)
+![](a6.png)
