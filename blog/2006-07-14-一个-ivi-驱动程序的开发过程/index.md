@@ -86,7 +86,7 @@ IVI驱动程序利用CallBack函数（回调函数）对仪器设置进行读写
 
 1〉 驱动程序调用Ivi\_SetAttributeViReal64()函数，对属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的值进行设置。同时，SetAttribute函数将会激发IVI引擎。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="22">&nbsp;</td></tr><tr><td>&nbsp;</td><td><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image001.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image001" border="0" alt="clip_image001" src="images/clip_image001_thumb.gif" width="361" height="433"></a></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="22">&nbsp;</td></tr><tr><td>&nbsp;</td><td><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image001.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image001" border="0" alt="clip_image001" src="images/clip_image001.gif" width="361" height="433"></a></td></tr></tbody></table></td></tr></tbody></table>
 ```
 2〉 如果继承属性（Ingerent attribute）FG300\_ATTR\_RANGE\_CHECK的值为VI\_TRUE（值为真，允许值范围检查），IVI引擎则自动调用属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的RangeCheckCallBack函数。检查值30是否在属性的RangTable的允许范围内。如果取值超出范围，SetAttribute函数会结束任务，并将出错代码作为返回值返回。有时，IVI引擎还利用RangeTable把输入值强行转换至某一范围内。
 
@@ -118,7 +118,7 @@ IVI驱动程序利用CallBack函数（回调函数）对仪器设置进行读写
 
 1〉 原理图：
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image002.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image002" border="0" alt="clip_image002" src="images/clip_image002_thumb.gif" width="454" height="232"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image002.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image002" border="0" alt="clip_image002" src="images/clip_image002.gif" width="454" height="232"></a></p></td></tr></tbody></table>
 ```
 其电路中包括：晶体振荡器，用来产生基准时钟信号；相位运算部分；波形存储区；数/模转换器；低通滤波器。波形存储器存储了样本信号在一个完整周期内的数据。存储单元的地址与相位相对应。
 
@@ -126,7 +126,7 @@ IVI驱动程序利用CallBack函数（回调函数）对仪器设置进行读写
 
 首先，根据用户选择的频率确定N值。锁存器的输出在第一个时钟周期内也是N，这就是第一次读波形存储器时的地址。锁存器的输出值反馈给加法器，以后每个时钟周期，锁存器的输出都会增加N（2N、3N、4N……）,波形存储器会根据这些地址信号送出波形数据，再由D/A转换器转换成模拟信号。你可以通过改变N值来修改输出频率。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image004.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image004" border="0" alt="clip_image004" src="images/clip_image004_thumb.gif" width="230" height="97"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image004.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image004" border="0" alt="clip_image004" src="images/clip_image004.gif" width="230" height="97"></a></p></td></tr></tbody></table>
 ```
 **二、** **FG300****的主要性能指标：**
 
@@ -248,7 +248,7 @@ FG300信号发生器采用的是消息型通讯方式（message-based）。就�
 
 LabWindows/CVI是一种C语言开发系统。与其它开发系统相比，CVI增添了一个交互式程序开发环境、数据采集函数库、仪器控制工具等工具。同时，LabWindows/CVI包含一整套用来进行数据采集、分析、显示等处理的软件工具。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image006.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image006" border="0" alt="clip_image006" src="images/clip_image006_thumb.gif" width="240" height="168"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image006.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image006" border="0" alt="clip_image006" src="images/clip_image006.gif" width="240" height="168"></a></p></td></tr></tbody></table>
 ```
 你可以利用CVI的交互式环境编写调试ANSI C语言（美国国家标准C语言），还可以使用LabWindows/CVI自带的库函数以及调用其它的C语言模块、动态链接库函数、C语言库函数、仪器驱动程序等。
 
@@ -304,13 +304,13 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 **第二节** **使用仪器驱动程序开发向导创建驱动程序文件：**
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image008.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image008" border="0" alt="clip_image008" src="images/clip_image008_thumb.gif" width="316" height="182"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image008.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image008" border="0" alt="clip_image008" src="images/clip_image008.gif" width="316" height="182"></a></p></td></tr></tbody></table>
 ```
 一、 打开LabWindows/CVI的主工作窗口，在“Tools”菜单下选取“Create IVI Instrument Driver”，开始进入驱动程序开发向导。
 
 二、 在“Select an Instrument Driver”对话框中，选取显见驱动程序的信息：
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image010.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image010" border="0" alt="clip_image010" src="images/clip_image010_thumb.gif" width="340" height="227"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image010.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image010" border="0" alt="clip_image010" src="images/clip_image010.gif" width="340" height="227"></a></p></td></tr></tbody></table>
 ```
 1〉 新建一个驱动程序（Create a new driver）。
 
@@ -324,7 +324,7 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 1> 仪器的名称：“TOKOGAWA FG300 Function Generator”;
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image012.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image012" border="0" alt="clip_image012" src="images/clip_image012_thumb.gif" width="344" height="231"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image012.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image012" border="0" alt="clip_image012" src="images/clip_image012.gif" width="344" height="231"></a></p></td></tr></tbody></table>
 ```
 2> 仪器前缀名：“FG300”;
 
@@ -336,7 +336,7 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 四、 在General Command Strings 对话框中填写以下信息：
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image014.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image014" border="0" alt="clip_image014" src="images/clip_image014_thumb.gif" width="344" height="231"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image014.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image014" border="0" alt="clip_image014" src="images/clip_image014.gif" width="344" height="231"></a></p></td></tr></tbody></table>
 ```
 1〉 填写默认的设置命令，FG300可以不需要默认的设置命令。
 
@@ -346,19 +346,19 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 五、 在Stand Operation对话框种选择仪器支持的基本操作。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image016.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image016" border="0" alt="clip_image016" src="images/clip_image016_thumb.gif" width="352" height="235"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image016.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image016" border="0" alt="clip_image016" src="images/clip_image016.gif" width="352" height="235"></a></p></td></tr></tbody></table>
 ```
 六、 在ID Query对话框中填入仪器用来询问ID号的命令，以及希望得到的返回值。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image018.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image018" border="0" alt="clip_image018" src="images/clip_image018_thumb.gif" width="364" height="244"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image018.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image018" border="0" alt="clip_image018" src="images/clip_image018.gif" width="364" height="244"></a></p></td></tr></tbody></table>
 ```
 七、 在Reset对话框中填入仪器用来进行重设置的命令。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image020.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image020" border="0" alt="clip_image020" src="images/clip_image020_thumb.gif" width="364" height="244"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image020.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image020" border="0" alt="clip_image020" src="images/clip_image020.gif" width="364" height="244"></a></p></td></tr></tbody></table>
 ```
 八、 在Self Test对话框中填入以下内容：
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image022.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image022" border="0" alt="clip_image022" src="images/clip_image022_thumb.gif" width="364" height="243"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image022.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image022" border="0" alt="clip_image022" src="images/clip_image022.gif" width="364" height="243"></a></p></td></tr></tbody></table>
 ```
 1〉 在自检命令控制栏中填入自检命令:“\*RST?”；
 
@@ -366,7 +366,7 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 3〉 选择“%hd”通用符作为格式化模式。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image024.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image024" border="0" alt="clip_image024" src="images/clip_image024_thumb.gif" width="364" height="243"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image024.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image024" border="0" alt="clip_image024" src="images/clip_image024.gif" width="364" height="243"></a></p></td></tr></tbody></table>
 ```
 九、 在Error Query对话框中填入以下信息：
 
@@ -376,11 +376,11 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 3〉 选择通配符“%ld,\\”%256\[”\\”\]”作为格式化模式。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image026.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image026" border="0" alt="clip_image026" src="images/clip_image026_thumb.gif" width="352" height="235"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image026.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image026" border="0" alt="clip_image026" src="images/clip_image026.gif" width="352" height="235"></a></p></td></tr></tbody></table>
 ```
 十、 在Revision对话框中填入FG300的版本询问命令：“\*IDN?”；并选用通配符“%x\[^,\],%x\[^,\],%x\[^,\],%256\[^\\n\]”作为返回信息的格式化模式。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image028.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image028" border="0" alt="clip_image028" src="images/clip_image028_thumb.gif" width="352" height="235"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image028.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image028" border="0" alt="clip_image028" src="images/clip_image028.gif" width="352" height="235"></a></p></td></tr></tbody></table>
 ```
 十一、 Test对话框：
 
@@ -396,13 +396,13 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 **第三节** **编辑仪器的属性：**
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image030.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image030" border="0" alt="clip_image030" src="images/clip_image030_thumb.gif" width="269" height="277"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image030.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image030" border="0" alt="clip_image030" src="images/clip_image030.gif" width="269" height="277"></a></p></td></tr></tbody></table>
 ```
 当时用“仪器驱动程序开发向导”生成了驱动程序的框架后，可以直接装入属性编辑器，也可以在将来的任何时候，通过选择Tools菜单中的Edit Instrument Attributes项来调出属性编辑器编辑仪器属性。
 
 一、 制定仪器属性：
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image032.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image032" border="0" alt="clip_image032" src="images/clip_image032_thumb.gif" width="312" height="269"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image032.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image032" border="0" alt="clip_image032" src="images/clip_image032.gif" width="312" height="269"></a></p></td></tr></tbody></table>
 ```
 选定你要编辑的属性，按Edit键，或按下Add Attribute添加新的属性，就会进入Edit Attribute对话框。在此对话框内，需要填写或修改以下内容：
 
@@ -450,9 +450,9 @@ CVI最大的优势在于功能强的的函数库。它的函数库包含了对�
 
 1、编辑或创立一个高层函数。
 ```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image034.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image034" border="0" alt="clip_image034" src="images/clip_image034_thumb.gif" width="348" height="291"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image034.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image034" border="0" alt="clip_image034" src="images/clip_image034.gif" width="348" height="291"></a></p></td></tr></tbody></table>
 
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image036.jpg"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image036" border="0" alt="clip_image036" src="images/clip_image036_thumb.jpg" width="216" height="83"></a></p></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image036.jpg"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image036" border="0" alt="clip_image036" src="images/clip_image036.jpg" width="216" height="83"></a></p></td></tr></tbody></table>
 ```
 用户在使用仪器时，为完成某一任务，通常需要一次设置一组相关的几个属性；很少需要对某个单个的属性进行设置。因此，IVI驱动程序为用户提供了高层函数，以方便操作。一个高层函数常常由几个设置仪器属性的自函数组成。选择Tools菜单中的“Edit function tree”项，或打开“ykfgxx0.fp”函数面板文件，就会看到驱动程序的函数树列表。我们把函数树中的每一项成为一个结点，每一个结点都对应一个高层函数。修改一个已有的函数或创建一个新的函数可以按以下步骤进行：
 

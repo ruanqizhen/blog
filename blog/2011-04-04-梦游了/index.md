@@ -9,10 +9,10 @@ tags:
 
 豆豆这两天又学会了不少新本领。
 
-豆豆会自己抱着奶瓶啦： ![DSC01136](images/dsc01136_thumb.jpg "DSC01136")
+豆豆会自己抱着奶瓶啦： ![DSC01136](images/dsc01136.jpg "DSC01136")
 
-豆豆学会了翻身，今天自己一使劲，就趴过来了： ![DSC01173](images/dsc01173_thumb.jpg "DSC01173")
+豆豆学会了翻身，今天自己一使劲，就趴过来了： ![DSC01173](images/dsc01173.jpg "DSC01173")
 
-豆豆还很爱“看书”呢： ![DSC01176](images/dsc01176_thumb.jpg "DSC01176")
+豆豆还很爱“看书”呢： ![DSC01176](images/dsc01176.jpg "DSC01176")
 
 我昨天剃头了，结果一回家就被豆豆发现了。他一看见我的“光头”就哈哈大笑，他不知道，他自己才是真正的光头呢:D 视频：[http://v.youku.com/v\_playlist/f5520621o1p8.html](http://v.youku.com/v_playlist/f5520621o1p8.html)

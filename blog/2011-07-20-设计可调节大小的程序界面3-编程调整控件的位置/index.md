@@ -11,10 +11,10 @@ https://labview.qizhen.xyz/
 
 比如下面这个程序界面包含一个波形图控件和一个停止按钮。
 
-![image_thumb2](images/image_thumb2_thumb.png "image_thumb2")
+![image2](images/image2.png "image2")
 
 当用户改变界面尺寸时，我们希望停止按钮始终停靠在界面右下角，而波形图控件则撑满剩下的界面空间。这些变化都可以通过编程来设置，示例程序如下：
 
-![image_thumb11](images/image_thumb11_thumb.png "image_thumb11")
+![image11](images/image11.png "image11")
 
 使用编程的方式使控件布局符合变化的界面尺寸，其优点是调整精确稳定。有些控件，比如仪表盘控件，只能通过这种编程的方式才能准确调整其大小。编程的缺点是较为繁琐。对于比较简单的界面，可以考虑使用分隔栏帮助界面布局，省去编程的繁琐。

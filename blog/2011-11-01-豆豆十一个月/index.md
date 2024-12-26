@@ -7,12 +7,12 @@ date: "2011-11-01"
 
 最近秋高气爽，每个周末都抱着豆豆去绿地上玩。
 
-![DSC02703](images/dsc02703_thumb.jpg "DSC02703")
+![DSC02703](images/dsc02703.jpg "DSC02703")
 
-![DSC02767](images/dsc02767_thumb.jpg "DSC02767")
+![DSC02767](images/dsc02767.jpg "DSC02767")
 
-![DSC02823](images/dsc02823_thumb.jpg "DSC02823")
+![DSC02823](images/dsc02823.jpg "DSC02823")
 
-![DSC02847](images/dsc02847_thumb.jpg "DSC02847")
+![DSC02847](images/dsc02847.jpg "DSC02847")
 
-![DSC02889](images/dsc02889_thumb.jpg "DSC02889")
+![DSC02889](images/dsc02889.jpg "DSC02889")

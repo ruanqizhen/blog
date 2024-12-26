@@ -6,7 +6,7 @@ tags:
 ---
 
 豆豆的童童阿姨家有一个小哥哥，比豆豆大了三个多月。豆豆出生前，童童阿姨把小哥哥的袜子送给了豆豆。可是等豆豆出来一看，小袜子穿不了啊。这样的小袜子，要两双拼在一起才装得下豆豆的一只大脚丫：  
-![DSC00706](images/dsc00706_thumb.jpg "DSC00706")
+![DSC00706](images/dsc00706.jpg "DSC00706")
 
 豆豆的Apple姐姐送了他一个印模，给豆豆的大脚做个纪念：  
-![image](images/image_thumb1.png "image")
+![image](images/image1.png "image")

@@ -10,8 +10,8 @@ tags:
 前几天，我还特地试验了一下这个相机的防抖功能。打开和关闭防抖功能，对于我来说区别相当明显。现在觉得，选这款相机还是正确的。
 
 生化所的小白楼：  
-![DSC00150](images/dsc00150_thumb.jpg "DSC00150")  
-![DSC00145](images/dsc00145_thumb.jpg "DSC00145")
+![DSC00150](images/dsc00150.jpg "DSC00150")  
+![DSC00145](images/dsc00145.jpg "DSC00145")
 
 原法国领事馆（大概是解放前的）的官邸：  
-![DSC00165](images/dsc00165_thumb.jpg "DSC00165")
+![DSC00165](images/dsc00165.jpg "DSC00165")

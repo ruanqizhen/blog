@@ -15,11 +15,11 @@ LabVIEW中也可以编程实现这些数据结构，一个比较直观易懂的�
 
 为了介绍如何在LabVIEW中实现一个数据结构，我打算以双向链表为例，讲解一下如何编写它。
 
-![image](images/image_thumb9.png "image")
+![image](images/image9.png "image")
 
 双向链表中每个节点都会记录上一个节点和下一个节点的位置。因此，在双向链表中，可以从一个节点直接跳转到它的上一个或下一个节点上去，也就是正向或反向遍历整个链表。可以直观的想到，使用LvClass实现这样的节点，只要为这个节点创建一个类ListNode，并且这个类有两个成员变量，它们的类型都是ListNode的引用，分别用于指向前一个和后一个节点就可以了：
 
-![image](images/image_thumb10.png "image")
+![image](images/image10.png "image")
 
 这样的设计在文本编程语言中是没有问题的，但在LabVIEW中行不通。其它编程语言中，程序运行时，才会对类的对象进行初始化。LabVIEW中，VI一打开，它上面的控件和常量就需要被初始化了。某个对象在初始化时，它的成员变量也要被初始化，若它的成员变量的类型还是这个类，这以初始化的过程就陷入了死锁：类需要它的成员变量先初始化；它成员变量需要这个类先初始化。
 
@@ -27,21 +27,21 @@ LabVIEW中也可以编程实现这些数据结构，一个比较直观易懂的�
 
 既然父类初始化时，不依赖于子类的初始化；而子类的对象又可以被当做父类的类型来保存，咱们就可以利用这一特性在LabVIEW中实现可以数据结构的节点了。只不过LabVIEW实现链表的节点要多一个步骤：我们需要为ListNode类再定义一个父类ListNodeVirtual。这个父类不做任何实质性的工作，它仅用于保存相邻节点的引用。
 
-![image](images/image_thumb11.png "image")
+![image](images/image11.png "image")
 
 以上两个类是针对链表节点的双向链表本身也需要做成一个类：DoubleLinkedList类，这个类中封装有链表的属性和方法。比如它需要一个指向链表表头的引用，需要有为链表添加删除数据的方法，为遍历链表中的数据，还需要有一个迭代器……
 
 作为演示，我只实现了链表的几个简单功能。演示程序工程结构如下：
 
-![image](images/image_thumb12.png "image")
+![image](images/image12.png "image")
 
 ListNode的成员变量包括一个数据，和两个指向前后节点的引用：
 
-![image](images/image_thumb13.png "image")
+![image](images/image13.png "image")
 
 DoubleLinkedList类的成员变量包括指向链表头节点的引用，迭代器指向的节点的引用，并记录了链表长度
 
-![image](images/image_thumb14.png "image")
+![image](images/image14.png "image")
 
 下面看一下链表中几个主要方法是如何实现的。
 
@@ -51,34 +51,34 @@ DoubleLinkedList类的成员变量包括指向链表头节点的引用，迭代�
 
 我设计的这个链表是一个环状链表。当链表中只有一个节点的时候，这个链表的上一个和下一个节点都是它自己。
 
-![image](images/image_thumb15.png "image")
+![image](images/image15.png "image")
 
 如果链表不是空的，就把新节点插在迭代器指向的节点的后面。因此：
 
 新节点的前一节点指向的应当是迭代器指向的那个节点；新节点的后一节点是迭代器指向节点原来的后一节点。迭代器指向节点的新的后一节点应当是这个新节点；原来迭代器的后一节点的前一节点也应当换成这个新的节点。最后，我把迭代器也指向了这个新的节点，这样连续添加新节点时，它们会按照先后顺序插入链表。
 
-![image](images/image_thumb16.png "image")
+![image](images/image16.png "image")
 
 我的演示程序还用到了其它几个方法。
 
 Reset Enumerator.vi 负责把迭代器复位，也就是指向链表的头节点：
 
-![image](images/image_thumb17.png "image")
+![image](images/image17.png "image")
 
 Enumerator go Next.vi 用于让迭代器向后移动一个节点：
 
-![image](images/image_thumb18.png "image")
+![image](images/image18.png "image")
 
 Enumerator Value.vi 返回迭代器指向的那个节点：
 
-![image](images/image_thumb19.png "image")
+![image](images/image19.png "image")
 
 使用这几个方法就可以搭建出一个简单的演示程序来看一下链表如何工作了。下面这个演示程序中，分两部分：第一部分是左面那个循环，每次循环迭代就会创建出一个新的ListNode对象，它的数值是当前迭代的次数；右半部分使用链表的迭代器遍历链表中的节点。在这个演示程序中，迭代器移动次数比链表长度多了两次，因为链表是环状的，转着圈访问，链表中的头两个元素会被读出两遍。
 
-![image](images/image_thumb20.png "image")
+![image](images/image20.png "image")
 
 程序运行后，data显示了迭代器每一步所指向的节点的值：
 
-![image](images/image_thumb21.png "image")
+![image](images/image21.png "image")
 
 示例程序下载：[https://decibel.ni.com/content/docs/DOC-16236](https://decibel.ni.com/content/docs/DOC-16236)

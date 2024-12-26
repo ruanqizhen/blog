@@ -19,9 +19,9 @@ tags:
 
 从ColorMe出来，我们直接去了嘟嘟家。嘟嘟比豆豆小了四个月，虽然嘟嘟是个大美女，不过豆豆似乎对嘟嘟的玩具更感兴趣一些。
 
-![image](images/image_thumb1.png "image")
+![image](images/image1.png "image")
 
-![doudou smile](images/doudou-smile_thumb1.jpg "doudou smile")
+![doudou smile](images/doudou-smile1.jpg "doudou smile")
 
 **动物园**
 
@@ -55,11 +55,11 @@ tags:
 
 这是豆豆正在投抹布，准备擦地呢：
 
-![DSC04159](images/dsc04159_thumb1.jpg "DSC04159")
+![DSC04159](images/dsc041591.jpg "DSC04159")
 
 这是棒棒，刚45天大：
 
-![DSC04183](images/dsc04183_thumb1.jpg "DSC04183")
+![DSC04183](images/dsc041831.jpg "DSC04183")
 
 晚上从棒棒家回来，出大钟寺地铁站的时候已经9点了。这时我看看豆豆的尿不湿，已经很大了，我想出了地铁了，也不怕他乱尿了，捂着怪难受的，就解下他的尿不湿扔掉了。我还有点不放心，于是又问了他一下，你要不要嘘嘘啊。豆豆很干脆的说“啊不啊不”，豆豆已经能够清楚的判断自己是否要撒尿了。
 
@@ -71,31 +71,31 @@ tags:
 
 豆豆妈说，豆豆来北京一趟，去看看天安门是必须的。可惜我们去的不是时候：正午时分，太阳火辣，我们拍了几张照，就草草收兵了。
 
-![DSC04228](images/dsc04228_thumb1.jpg "DSC04228")
+![DSC04228](images/dsc042281.jpg "DSC04228")
 
-![DSC04234](images/dsc04234_thumb1.jpg "DSC04234")
+![DSC04234](images/dsc042341.jpg "DSC04234")
 
-![DSC04249](images/dsc04249_thumb1.jpg "DSC04249")
+![DSC04249](images/dsc042491.jpg "DSC04249")
 
 豆豆是分时段的：晚上9点到早上7点段跟妈妈亲，我抱他一下，他都会哇哇大叫。其它时段是跟爸爸亲，这时候不让妈妈抱呢。
 
-![DSC04268](images/dsc04268_thumb1.jpg "DSC04268")
+![DSC04268](images/dsc042681.jpg "DSC04268")
 
 **鸟巢和水立方**
 
 白天太热，只好晚上行动了。晚上我们领着豆豆去看鸟巢和水立方。
 
-![DSC04357](images/dsc04357_thumb1.jpg "DSC04357")
+![DSC04357](images/dsc043571.jpg "DSC04357")
 
 开始跟妈还不错
 
-![DSC04345](images/dsc04345_thumb1.jpg "DSC04345")
+![DSC04345](images/dsc043451.jpg "DSC04345")
 
-![DSC04365](images/dsc04365_thumb1.jpg "DSC04365")
+![DSC04365](images/dsc043651.jpg "DSC04365")
 
 后来就开始找爸爸了
 
-![DSC04448](images/dsc04448_thumb1.jpg "DSC04448")
+![DSC04448](images/dsc044481.jpg "DSC04448")
 
 **游乐场**
 
@@ -109,4 +109,4 @@ tags:
 
 旅馆里地方太小，他又惦记着水龙头，有时一不注意，他就溜进去了。有一次，他跑进卫生间后，斜眼一看：“咦，这里有盆水啊”。于是把手伸进马桶里和弄了一通，豆豆妈这个气啊，心想：“我一个洁癖，怎么会生出这么个脏豆呢？”
 
-![DSC04308](images/dsc04308_thumb1.jpg "DSC04308")
+![DSC04308](images/dsc043081.jpg "DSC04308")

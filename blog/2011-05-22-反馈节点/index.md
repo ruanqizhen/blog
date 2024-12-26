@@ -11,15 +11,15 @@ https://labview.qizhen.xyz/
 
 下图是一个简单的使用了反馈节点的程序代码，它的运行结果是什么？
 
-![image](images/image_thumb3.png "image")
+![image](images/image3.png "image")
 
 但从这个程序我们是无法判断运行结果的，因为我们既不知道反馈节点的初始状态，也不知道它运行了几次。给定了这两个条件我们才能推算程序的运行结果，比如下图中的程序，运行结果是5。
 
-![image](images/image_thumb4.png "image")
+![image](images/image4.png "image")
 
 那么下面这个程序运行结果是几呢？
 
-![image](images/image_thumb5.png "image")
+![image](images/image5.png "image")
 
 如果出现循环嵌套的情况，反馈节点是针对于包含它的每一层循环结构的。它相当于在每一层循环结构上都建立一对移位寄存器，然后把它们串联起来。因此，上图程序运行的结果是25。
 
@@ -29,20 +29,20 @@ https://labview.qizhen.xyz/
 
 反馈节点有个使能输入端，右键点击反馈节点，选“Show Enable Terminal”可以显示出这个输入。它的输入为真时，反馈节点正常工作；输入为假时，反馈节点并不拿新的数据，而是把上一次得数据返回回来。大家猜下面这个程序运行结果是啥？
 
-![image](images/image_thumb6.png "image")
+![image](images/image6.png "image")
 
 反馈节点只有在i为偶数时才工作，因此程序是在统计0~4中有几个偶数，结果为3。
 
 移位寄存器出了可以可以返回上一次迭代的数据，还可以返回上n次迭代数据。反馈节点也有类似功能。右键点击反馈节点，打开它的属性配置对话框，在Configuration中可以选择Delay的次数，比如咱们设置延迟3次，那么反馈节点每3次迭代才把数据反馈一次。比如下面这个程序，result控件在程序的5次迭代中分别返回值1、1、1、2、2……，其运行结果是2。
 
-![image](images/image_thumb7.png "image")
+![image](images/image7.png "image")
 
 那么多层循环会对延迟有什么样的影响呢？
 
-![image](images/image_thumb8.png "image")
+![image](images/image8.png "image")
 
 在上图的程序中，result总共经历25次迭代。在这个多层嵌套的循环中，带延迟的反馈节点依然是每隔3次迭代（最里层循环的迭代）返回一次反馈数据。每次迭代返回的数据分别是：1、1、1、2、2、2、3、3、3、4、4、4、5、5、5、6、6、6、7、7、7、8、8、8、9。也就是最终结果为9。
 
 最后大家猜一下下面这个程序的运行结果是几？
 
-![image](images/image_thumb9.png "image")
+![image](images/image9.png "image")

@@ -23,31 +23,31 @@ tags:
 
 示例由三个VI组成。Main.vi实现软件的功能，Interface1，和Interface2分别是程序两个不同风格的界面。
 
-![image](images/image_thumb4.png "image")
+![image](images/image4.png "image")
 
 我为程序设计了一个非常简单的功能，在界面上点一下按钮，就返回一个随机数值。程序的功能是在Main.vi中实现的，它采用的是经典的事件结构。与一般程序不同的是，它没有界面控件，它所捕获的事件都是通过动态注册生成的。
 
-![image](images/image_thumb5.png "image")
+![image](images/image5.png "image")
 
 Main.vi的前面板用于把界面VI上控件的引用传递过来。
 
-![image](images/image_thumb6.png "image")
+![image](images/image6.png "image")
 
 Interface1.vi，它的前面板就是程序界面：
 
-![image](images/image_thumb7.png "image")
+![image](images/image7.png "image")
 
 它的程序框图不需要做任何实质工作，只要把界面上的控件的引用传递给Main.vi就可以了。
 
-![image](images/image_thumb8.png "image")
+![image](images/image8.png "image")
 
 Interface2.vi只是与第一种界面风格略有不同：
 
-![image](images/image_thumb9.png "image")
+![image](images/image9.png "image")
 
 它的程序框图与前一VI完全相同：
 
-![image](images/image_thumb10.png "image")
+![image](images/image10.png "image")
 
  
 

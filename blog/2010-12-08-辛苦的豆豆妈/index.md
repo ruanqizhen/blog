@@ -15,4 +15,4 @@ tags:
 
 希望豆豆长大后看到他出生的过程，会理解妈妈的辛苦。
 
-![DSC00329](images/dsc00329_thumb.jpg "DSC00329")
+![DSC00329](images/dsc00329.jpg "DSC00329")

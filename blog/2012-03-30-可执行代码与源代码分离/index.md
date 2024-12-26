@@ -15,7 +15,7 @@ tags:
 
 这个问题可以通过分离VI的源代码与可执行代码来解决，这是LabVIEW2010开始出现的功能。在VI的属性对话框中，有一个选项是“分离编译后代码与源代码”。若这一选项被选中，则VI中只保留程序的源代码，而编译生成的代码则被移出VI之外。
 
-![image](images/image_thumb1.png "image")
+![image](images/image1.png "image")
 
 被分离出来的编译好的可执行代码又LabVIEW统一管理，在我的Windows 7 系统中，文件夹C:\\Users\\\[user name\]\\Documents\\LabVIEW Data\\VIObjCache\\\[LabVIEW version number\]\\ 下有一个objFileDB.vidb 文件，这就是用来存储LabVIEW 程序所有可执行代码的数据库。
 

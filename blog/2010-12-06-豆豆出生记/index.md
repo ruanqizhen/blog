@@ -13,12 +13,12 @@ tags:
 
 我把豆豆从产房出来的全过程都录下来了。下图是录像中的一幅截图：豆豆第一次看见老爸。
 
-![image](images/image_thumb3.png "image")
+![image](images/image3.png "image")
 
 护士接下来带豆豆去洗澡，他的奶奶和姥姥于是就跟着护士一起去看豆豆洗澡去了，我继续留在手术室门外等豆豆妈。我们又等了大半个小时，豆豆妈才被推出来。等我们把豆豆妈推到新的单人间病房的时候，豆豆已经洗好澡在等我们了。
 
 洗干净了的豆豆长得真漂亮:) 下面这幅图这是豆豆平生的第一张照片：
 
-![DSC00322](images/dsc00322_thumb.jpg "DSC00322")
+![DSC00322](images/dsc00322.jpg "DSC00322")
 
 豆豆出生的录像：[http://v.youku.com/v\_show/id\_XMjQyMjI3Nzk2.html](http://v.youku.com/v_show/id_XMjQyMjI3Nzk2.html)

@@ -13,11 +13,11 @@ https://labview.qizhen.xyz/
 
 首先，给一个子类的对象设置一些数据。然后把它当做父类类型的数据，平化成XML文本，存盘：
 
-![image](images/image_thumb.png "image")
+![image](images/image.png "image")
 
 关闭LabVIEW，然后重新打开LabVIEW。再编写一个反向程序，把XML数据转换成父类类型的数据：
 
-![image](images/image_thumb1.png "image")
+![image](images/image1.png "image")
 
 发现Unflatten From XML函数返回一个错误，value中是一个空的数据。
 
@@ -27,11 +27,11 @@ https://labview.qizhen.xyz/
 
 如果这个程序稍微改动一下，把XML数据直接转换成子类的数据，就不会出错了：
 
-![image](images/image_thumb2.png "image")
+![image](images/image2.png "image")
 
 实际上，子类的数据总是可以用父类来表示的。因此这个XML数据亦可以直接被转换成父类的类型，但前提是，一定要保证子类的类型别家在到内存中去了。只要在程序中放置一个子类的对象，自然就可以把子类加载至内存。像下面这个程序就可以正常工作：
 
-![image](images/image_thumb3.png "image")
+![image](images/image3.png "image")
 
 这个实验反映出两个问题：
 
