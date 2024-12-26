@@ -9,9 +9,9 @@ tags:
 
     首先考虑数据功能控件，它用于定义XControl的接线端的数据类型。我们使用一个二维的U16数组表示棋盘布局，所以在数据功能控件中要使用一个二维数组。
 
-[![](http://byfiles.storage.msn.com/y1p93K4W2p5lm0JfWdoTQpnev9GMqqwc4WTQ9NW8_dw6Z41wPAbhn9r7hKRFad6cIvj?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1p8GlhwFQG-rGMhzoU1XqlIlrwI6XgtvDx7fOwuyfvWIVx4kpU3sh93XWnkvU0Xm22?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1p93K4W2p5lm0JfWdoTQpnev9GMqqwc4WTQ9NW8_dw6Z41wPAbhn9r7hKRFad6cIvj?PARTNER=WRITER)
 
-[![](http://byfiles.storage.msn.com/y1pbtGUyMosB9F6nPTR1V2BtD6ITur8Bj_OTj2Z0O8nKQfVGnavSAe5TAnJt4b9LKU6?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pwvNaH1ZhiC9J_AzXMhTgqpaXj_LvmWOAdRMzTQaLGG1fW5LfoGq1ykoFz0JYfI3G?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pbtGUyMosB9F6nPTR1V2BtD6ITur8Bj_OTj2Z0O8nKQfVGnavSAe5TAnJt4b9LKU6?PARTNER=WRITER)
 
      其次就要来考虑状态功能控件，这个控件类型的数据在XControl的功能VI中又被称为显示状态。但它实际上的用途并不局限于帮助显示，实际上，XControl运行所需的全部变量，都应当被包含在这个功能控件中。
 

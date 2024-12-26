@@ -7,7 +7,7 @@ tags:
 
 ## 1\. 断点
 
-    断点和探针是调试 LabVIEW 代码时最常用的两个工具。LabVIEW 中的断点在使用和功能上都比较简单、直观：使用工具选板上的断点工具[![](http://byfiles.storage.live.com/y1pIcO_924THocYYm3PRS_488eE5pVJBR-bef5YO4vRht2NvLiuWBK4kbeJRV7XyjLhmQo0qYAynaQ)](http://byfiles.storage.live.com/y1pIcO_924THocYYm3PRS_488eE5pVJBR-bef5YO4vRht2NvLiuWBK4kbeJRV7XyjLhmQo0qYAynaQ)，在想要设置或者取消断点的代码处点击鼠标即可；或直接在程序框图的节点、数据线上右击鼠标，就可以看到设置或取消断点的菜单项。  
+    断点和探针是调试 LabVIEW 代码时最常用的两个工具。LabVIEW 中的断点在使用和功能上都比较简单、直观：使用工具选板上的断点工具![](http://byfiles.storage.live.com/y1pIcO_924THocYYm3PRS_488eE5pVJBR-bef5YO4vRht2NvLiuWBK4kbeJRV7XyjLhmQo0qYAynaQ)，在想要设置或者取消断点的代码处点击鼠标即可；或直接在程序框图的节点、数据线上右击鼠标，就可以看到设置或取消断点的菜单项。  
     断点几乎可以设置在程序的任何部分。当程序运行至断点处，就会暂停，等待调试人员的下一步操作。很多其他语言的调试环境都有条件断点，LabVIEW 的端点没有类似的设置，LabVIEW 是使用条件探针来实现条件断点功能的。  
     断点是会保存在 VI 中的。关闭带有断点的 VI，程序执行至断点处还是会停下来，并且这个 VI 会被自动打开。  
     如果某个 VI 不允许你设置断点，很可能这个 VI 被设为不允许调试了。此时，只要在 VI 属性中重新设置一下即可。（[LabVIEW 的调试环境.2](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1778.entry)）
@@ -17,14 +17,14 @@ tags:
     探针的功能类似于其他语言调试环境中的查看窗口，用于显示变量当前状态下的数据。LabVIEW 与其他语言不同之处在于，LabVIEW 是数据流驱动型的图形化编程语言。LabVIEW 中的数据传递主要不是使用变量，而是通过节点之间的连线完成的。所以 LabVIEW 的探针也不是针对变量的，而是加在某根数据线上的。  
     LabVIEW 的探针也是图形化显示的。比如为一根数字类型的数据线加探针，探针一般就是一个数字型显示控件，见图1。Error Cluster 类型的数据线的探针，则看上去就像是个 Error Cluster，见图2。
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4Dn0yKvHrWHpMPqTFLrJnOzCqwys4GrPB232U2M2G7gKKkgYgdg2oDCfc4DfEeMMplK8FAuEMgux_MrdIur9yu-CJWwPMPEOvW-wWAkytS87i4iM8IkDpKK)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4AnOuFw_oFE1CM7JISQs05z8n6QjDBJw0Xp2-rbX8wz8dNewPc8iNhtgs2puOud6DkyCN2F5CLSDGRM0FP4lFM_HVArl-UD1Ax9BguO_kvvo5b9jYhFriHa) [![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4ADg7SPM9_OosxhraiqaXYQKHTz7aTchiV6YF9RwoEUxlbDLsmo-OnqnpMa2Yoktv-60KEzg2u6atUkkBb3BFPtiW_uEJc7wjRIKmZsx3b8VcYTIk7rQETW)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DuhVlRhFYdUoP3FyxfkVpLFKJXAzNIOIozYkNnq2oz0WQwTwZZX7M9rSUx7yeWFPDyUQ7cwXyqySDcbrtIlQplKZ-DNl_vS1x4cGUG8ueSne8wtZTKlU-1)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4Dn0yKvHrWHpMPqTFLrJnOzCqwys4GrPB232U2M2G7gKKkgYgdg2oDCfc4DfEeMMplK8FAuEMgux_MrdIur9yu-CJWwPMPEOvW-wWAkytS87i4iM8IkDpKK) ![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4ADg7SPM9_OosxhraiqaXYQKHTz7aTchiV6YF9RwoEUxlbDLsmo-OnqnpMa2Yoktv-60KEzg2u6atUkkBb3BFPtiW_uEJc7wjRIKmZsx3b8VcYTIk7rQETW)  
 图1、图2：数值型和错误信息型数据线的探针
 
 ### 3\. 选取其他类型控件作为探针
 
     如果你觉得 LabVIEW 默认的探针不美观或不适用，则可以在数据线上点击鼠标右键，选择 Custom Probe -> Controls -> ... 选取一个其他控件作为探针，如图3。但是要注意，你选取的控件的数据类型要与数据线的数据类型一致才可以。
 
-[![](http://tkfiles.storage.msn.com/x1pN1mp8dKYgTFV_lNTUY6FnVRO4tnlze6B4hY4MPutfjJk2duk0Tcx1YMF-Lw_pfqT2f2yJW8f001JrGABucNqyD-6_x6IK6CjzceTTv97JR_yQTy_EbTQjA)](http://tkfiles.storage.msn.com/x1pN1mp8dKYgTFV_lNTUY6FnVRO4tnlze6B4hY4MPutfjJk2duk0Tcx1YMF-Lw_pfqT2f2yJW8f001JrGABucNqyD-6_x6IK6CjzceTTv97JR_yQTy_EbTQjA)  
+![](http://tkfiles.storage.msn.com/x1pN1mp8dKYgTFV_lNTUY6FnVRO4tnlze6B4hY4MPutfjJk2duk0Tcx1YMF-Lw_pfqT2f2yJW8f001JrGABucNqyD-6_x6IK6CjzceTTv97JR_yQTy_EbTQjA)  
 图3：使用仪表盘控件作为数值型数据线的探针
 
 ### 4\. 条件探针

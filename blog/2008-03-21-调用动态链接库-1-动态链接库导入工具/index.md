@@ -8,7 +8,7 @@ tags:
     在 Windows 系统上，动态链接库就是DLL文件。调用DLL是 LabVIEW 与其它语言混合使用是最重要的一种方法。比如，在一个大的项目中，用户可以用 C++ 语言实现软件的运算部分，并把这些功能构建在DLL文件中；再使用 LabVIEW 编写程序的界面部分，并通过调用编写好的DLL来调用运算部分的功能。  
     现在轻易就可以找到完成各种功能的DLL，LabVIEW 通过调用它们，也几乎无所不能。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoc4dqpHOMKB4vsn8I-P8IcqOCO1QOZ29xh0oxOIEnQwYXHj6p2D35-P-DJEtOgCmZI?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THoe0CkiTPjZdLHdbXvRSF4kAdMlE8rC8cO1DHQXPqBdcXF3pCLZI3K7aSjQxrazbW9Q?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pIcO_924THoc4dqpHOMKB4vsn8I-P8IcqOCO1QOZ29xh0oxOIEnQwYXHj6p2D35-P-DJEtOgCmZI?PARTNER=WRITER)
 
     在 LabVIEW 中，通过 Connectivity -> Libraries & Executables -> Call Library Function Node（CLN）节点来调用DLL中的函数。  
     在函数选板上，它旁边的一个节点是 Code Interface Node，这个 CIN 节点也是用来与C语言混合编程用的。这是在 CLN 节点出现以前，LabVIEW 调用C函数的方法。现在有了CLN，可以不再考虑它了。（我个人强烈建议：不要使用CIN！因为那样会遇到很多问题，但没人能帮你解决。）

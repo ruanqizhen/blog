@@ -11,6 +11,6 @@ tags:
 
 下面这幅图中手写的几个字就是我的亲笔签名。由于我的手比一般人抖得厉害，所以写出来的字稳定性比较差，每个签名都有所不同，各有各的丑法，不过神韵都是一致的:)。
 
-[![](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8dada6b293afc464683a64370dc25a4d.png?w=300)](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8dada6b293afc464683a64370dc25a4d.png)
+![](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8dada6b293afc464683a64370dc25a4d.png?w=300)
 
 [《我和LabVIEW》的写作过程](blog/cns!5852D4F797C53FB6!4321.entry)

@@ -5,7 +5,7 @@ date: "2012-01-06"
 
 The WordPress.com stats helper monkeys prepared a 2011 annual report for this blog.
 
-[![](images/emailteaser.jpg)](/2011/annual-report/)
+![](images/emailteaser.jpg)
 
 Here's an excerpt:
 

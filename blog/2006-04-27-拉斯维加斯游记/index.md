@@ -25,7 +25,7 @@ tags:
 
 我的拉斯维加斯相册：由于我是一个人去的，所以只有风景照，没有自己的照片。
 
-[![](images/200604LasVegas.jpg)](http://picasaweb.google.com/ruanqizhen/200604LasVegas)
+![](images/200604LasVegas.jpg)
 
 2006.04 Las Vegas
 

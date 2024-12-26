@@ -14,7 +14,7 @@ tags:
 豆豆学会玩手了。现在如果让他“挠”一个，他就会举起小手握拳，张开，握拳再张开。豆豆是个右撇子，目前还只会挠右手。
 
 豆豆抱着爸爸的大腿：  
-[![DSC02088](images/dsc02088_thumb.jpg "DSC02088")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/07/dsc02088.jpg)
+![DSC02088](images/dsc02088_thumb.jpg "DSC02088")
 
 天黑了以后给我租住的房屋窗外照了张像，上海的夜晚亮如白昼  
-[![DSC02070](images/dsc02070_thumb.jpg "DSC02070")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/07/dsc02070.jpg)
+![DSC02070](images/dsc02070_thumb.jpg "DSC02070")

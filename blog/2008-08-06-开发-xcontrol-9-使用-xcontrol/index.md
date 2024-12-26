@@ -11,13 +11,13 @@ tags:
 
     这是演示程序的界面，只有黑白棋XControl控件和必要的几个控件。
 
-[![](http://byfiles.storage.msn.com/y1pQQi2uJqD-tRhKV63aFq6WfRIn8HXiIPHo6BggI8tweRtwyoSrbZ3iKaDsoqSwLqe?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1php_zlzp9-dWWTobhzoPfabeOgRj21AH0JrgJellCGPcQ7jm6ktatMKFgxeCktaSS?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pQQi2uJqD-tRhKV63aFq6WfRIn8HXiIPHo6BggI8tweRtwyoSrbZ3iKaDsoqSwLqe?PARTNER=WRITER)
 
     其程序框图如下，这是一个典型的事件处理结构。
 
     首先程序注册必要的事件：一个XControl的事件，在用户走子后通知应用程序；一个用户自定义事件，这里仅用于初始化。
 
-[![](http://byfiles.storage.msn.com/y1pmpYBiuponp7SlTqBjpRexeCzft0JmftNmPnj4yx_fwgDjKYwmqz74qyTWWYT51_0?PARTNER=WRITER)](http://2ujomw.bay.livefilestore.com/y1pH6FpRZEVvYeTMhe89WSvOBTScQBuMqux_1uqXUeveNEjiE2SdpcUkNM-WiF7F3QIGwzCGUgAZPtO6B-yPpUwmw?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pmpYBiuponp7SlTqBjpRexeCzft0JmftNmPnj4yx_fwgDjKYwmqz74qyTWWYT51_0?PARTNER=WRITER)
 
     程序初始化，与用户点“New”按钮做的事情相同，都是调用黑白棋控件的New Game方法，开始一盘新的游戏。
 

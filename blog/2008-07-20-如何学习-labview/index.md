@@ -11,7 +11,7 @@ tags:
 
 探索型学习方法适合喜好自己钻研的人。同样一个技巧，如果是自己发现的，比从他人那里的来会更有成就感。任何一个教程都不可能覆盖到LabVIEW的全部功能，有心得学员不妨自己打开书中未曾介绍到的那些菜单或者函数选板，尝试一下它们都是做什么用的。在真正动手摆弄每个新东西之前，打开LabVIEW的即时帮助窗口，阅读一下相关说明可以大大加快学习过程。 比如，打开“应用程序控制”函数选板，发现这里有一项“选板编辑”。好像没有任何一本书里介绍过这个功能嘛，这是干啥用的呢？如果没任何提示，也是无从下手去尝试的。打开LabVIEW的及时帮助，可以看到它对这个功能的简单介绍。进入“详细帮助信息”，会得到更全面的说明。再自己动手实践一下，就基本可以掌握此功能了。
 
-[![](http://byfiles.storage.msn.com/y1pNnEfKP1JXzkLqHxU0ibJ15gWHyRCHDHpAGRlEE_wwYjmXI865luqHtk9htXhOHDW?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pVMgs8msqIq1oWXEguCP-H2svrsrLrk742A-y0Z_-4Qkqx858AQyMk1A1E56KYnwF?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pNnEfKP1JXzkLqHxU0ibJ15gWHyRCHDHpAGRlEE_wwYjmXI865luqHtk9htXhOHDW?PARTNER=WRITER)
 
     阅读他人代码也是一个很好的学习方法。自己的探索总是有思维局限性的，他人解决问题的方法可以大大拓宽自己思路。我介绍过的编程经验中，很大一部分都不是我自己凭空想出来的，而是借鉴与别人的LabVIEW代码。
 

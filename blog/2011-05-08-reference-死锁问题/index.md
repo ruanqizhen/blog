@@ -11,16 +11,16 @@ LabVIEW中的引用经常需要和“In Place Element Structure”配合使用�
 
 举例来说，下面这段程序的执行时间是1秒：
 
-[![image](images/image_thumb.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/05/image.png)
+![image](images/image_thumb.png "image")
 
 而下面这段程序的执行时间则是2秒：
 
-[![image](images/image_thumb1.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/05/image1.png)
+![image](images/image_thumb1.png "image")
 
 因为第二段程序中的两个In Place Element Structure必须顺序执行。
 
 有了“锁住”这个操作，就有不小心造成死锁的可能。比如对于同一数据的引用，千万不能嵌套使用In Place Element Structure，否则就会死锁：
 
-[![image](images/image_thumb2.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/05/image2.png)
+![image](images/image_thumb2.png "image")
 
 在上面这个示例中，程序运行至内层的In Place Element Structure，就会停在这里等外层In Place Element Structure运行结束，释放它锁住的数据；而对于外层In Place Element Structure来说，它内部的全部代码要运行结束，它才结束。因而它们相互等待，造成了死锁。

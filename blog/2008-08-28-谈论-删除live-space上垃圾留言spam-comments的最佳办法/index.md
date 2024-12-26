@@ -17,4 +17,4 @@ tags:
 > 
 > 还好，有一个办法既简单又快速，用[http://mobile.spaces.live.com](http://mobile.spaces.live.com)，这是一个给手机用户使用的界面，内容大部分都是文本，传输速度快，最妙的是可以快速地删除垃圾评论。登陆之后点击Your Space（你的空间），第一屏就可以看到最近的Comments，对每个Comment都可以直接删除，毫无疑问，最近骚扰你的Spam Comment会出现在上面，不用一个文章一个文章的寻找了，在一个界面下就可以全部搞定。
 > 
-> [![](http://byfiles.storage.msn.com/y1pSqA6uyZos3eUytye7od0UDJZsT3Uczkv8OwLPtRGoaI70IzK6AoodS8zZ6Nz1HuF)](http://byfiles.storage.msn.com/y1pW71-vOwXkMYsx_-bT7QGQ8POlaP2JsENypmYCYqn0nhhJx_wqjF_HDI9iDCM2lKI)
+> ![](http://byfiles.storage.msn.com/y1pSqA6uyZos3eUytye7od0UDJZsT3Uczkv8OwLPtRGoaI70IzK6AoodS8zZ6Nz1HuF)

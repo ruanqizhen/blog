@@ -11,6 +11,6 @@ tags:
 
     我们的黑白棋控件中有一个只读属性是得到当前该下什么颜色的棋子。他的实现如下：
 
-[![](http://byfiles.storage.msn.com/y1prG5TKY81fDEGDnq9RcnO2jA4uk95XLwgqgquvGG80X-DX15Bmie8msA95BDGFVX-?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pJpYW67IAC8tHjLHh3LWHrt6FfYbdCGYcyKVTPQCM-oU1mJOmaxpZfJyI8G6MAcXr?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1prG5TKY81fDEGDnq9RcnO2jA4uk95XLwgqgquvGG80X-DX15Bmie8msA95BDGFVX-?PARTNER=WRITER)
 
 [《我和 LabVIEW》目录](http://ruanqizhen.spaces.live.com/mmm2008-05-17_13.22/mmm2007-10-25_18.59/mmm2007-07-26_17.23/mmm2007-07-26_17.23/mmm2007-07-26_17.23/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)

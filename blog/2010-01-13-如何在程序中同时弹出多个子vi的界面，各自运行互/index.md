@@ -9,6 +9,6 @@ date: "2010-01-13"
 
 需要注意的是，用于子VI是可重入的，需要给“Open VI Reference”函数设置一个值为“8”的Options参数。主VI程序代码如下：
 
-[![](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/01/bd55f7f2210914e96593204856fd0e0b.png?w=284)](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/01/bd55f7f2210914e96593204856fd0e0b.png)
+![](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/01/bd55f7f2210914e96593204856fd0e0b.png?w=284)
 
 全书： https://labview.qizhen.xyz/

@@ -5,11 +5,11 @@ tags:
   - "我和labview"
 ---
 
-[https://labview.qizhen.xyz/](_wp_link_placeholder)
+https://labview.qizhen.xyz/
 
 新版本的LabVIEW在设置VI为可重入时，还有两个选项：“为每个实例预分配空间”和“让各个实例间共享空间”：
 
-[![image](images/image_thumb2.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/07/image2.png)
+![image](images/image_thumb2.png "image")
 
 “为每个实例预分配空间”是旧版本LabVIEW（8.6之前）设置可重入VI时的唯一选项。它是指程序在运行前，编译的时候就为每个可重入VI的实例分配好各自的数据空间。比如说这个子VI被主VI在3处不同的地方调用了，那么就分配3份数据副本给它。但是，这种分配数据空间的方式有两个主要的问题。
 

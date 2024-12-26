@@ -15,7 +15,7 @@ tags:
     Calling convention 用于指明被调用函数的调用约定。这里只支持两种约定：stdcall 和 C call。它们之间的区别在于，stdcall 由被调用者负责清理堆栈；C call 由调用者清理堆栈。这个设置错误时，可能会引起 LabVIEW 崩溃，所以一定要小心。反过来说，如果 LabVIEW 调用 DLL 函数时出现异常，首先就可以考虑这个设置是否正确。  
     （Windows API 一般使用的都是 stdcall；标准C的库函数大多使用 C call。如果函数声明中有类似 \_\_stdcall 这样的关键字，它就是 stdcall 的。）
 
-[![](http://q0aida.bay.livefilestore.com/y1pxGfiphRHa8jzDrLSPIV6WsKvjNW3JP1J1JxNRPE9uF2mzZGG3jq9GOZmzWr56uLhnYGcvN_V7MD4c5XcHfAfWOUB4sPwyMQJ?PARTNER=WRITER)](http://q0aida.bay.livefilestore.com/y1p83KYkHeC7aAbysb_Qn1wDn_NONVlLAvEytl2CMvswf4e4DbC6gW8wGJqLAjEjpuuOaQExYdrBxqQ-tUdjPjn2Q?PARTNER=WRITER)
+![](http://q0aida.bay.livefilestore.com/y1pxGfiphRHa8jzDrLSPIV6WsKvjNW3JP1J1JxNRPE9uF2mzZGG3jq9GOZmzWr56uLhnYGcvN_V7MD4c5XcHfAfWOUB4sPwyMQJ?PARTNER=WRITER)
 
     第二页是函数参数的配置，这是最复杂的部分，留待下次详细分析。
 
@@ -25,7 +25,7 @@ tags:
     Abort 中指定的函数用在 VI 非正常结束时被调用。比如按 Abort 按钮让一个VI停止，而不是让他运行完。  
     这里的几个回调函数必须要由DLL的开发者按照特定的格式实现。它的原型就是 Prototype for these procedures 中列出的那个。如果你使用的DLL不是专为 LabVIEW 设计的，一般不会包含这样的回调函数。
 
-[![](http://q0aida.bay.livefilestore.com/y1pxGfiphRHa8gAw6mEKAPZbdtoOq2PgrOJV0RTis2tADqC2uFmX0oAkRBi6el2FmOuujNvLifo35DfsyQWXG38wW3QhWjXyatF?PARTNER=WRITER)](http://q0aida.bay.livefilestore.com/y1pxGfiphRHa8j2bO7iQdvUqusLrnkzhS5HP2A1CEFIgR5TaaDSYHrMchX2CkMcS7i8hgeZxPIR9XzahWm4yZ3iBhdaSp3oiJiX?PARTNER=WRITER)
+![](http://q0aida.bay.livefilestore.com/y1pxGfiphRHa8gAw6mEKAPZbdtoOq2PgrOJV0RTis2tADqC2uFmX0oAkRBi6el2FmOuujNvLifo35DfsyQWXG38wW3QhWjXyatF?PARTNER=WRITER)
 
     第四页是错误处理方式，这上面说明写得已经够详细了，我也在补充不了什么了。不过，像我在《[用户界面设计 4 - 帮助和反馈信息](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!2872.entry)》里提到的，把帮助文档直接写在界面上的地方，都是极不常用的设置。所以，我们基本上可以不关心这页的设置。
 

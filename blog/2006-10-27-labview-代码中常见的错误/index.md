@@ -9,7 +9,7 @@ tags:
 
 ### 1\. 数值溢出
 
- [![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4AIavAyXK0mbocOT8x1TkGt-8SNvhP9Ts5Gnz4SiYs_nmr07YUU-p2q182rQmptl366UbNCBfbslXA_b86-IC_7p-i1FDNHHkm0DD_TvZKJ7KFCmYpmzLHP)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4BACOB2u1MAPf79cbrr6CyCSyqikGCsRVS0HDNO34tmrGjUcx7_TKtQUfgvNmVMbsIIW_DiQ2C25GGRIrWfBjoY0zZSs2oH2atftmk3chNo8kvgh0Zo0wwn) 图1：数值溢出错误
+ ![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4AIavAyXK0mbocOT8x1TkGt-8SNvhP9Ts5Gnz4SiYs_nmr07YUU-p2q182rQmptl366UbNCBfbslXA_b86-IC_7p-i1FDNHHkm0DD_TvZKJ7KFCmYpmzLHP) 图1：数值溢出错误
 
     图1 中的 VI 只做了一个简单乘法 300\*300 ，不加思索就应该知道答案是 90000，但程序中乘法节点给出的结果却是 24464。乘法节点是不会错的，错误是由于程序中使用的数据类型是 I16。I16 能表示的最大数目只有32767，所以在乘法计算中出现了溢出。 避免此类错误的方法是，在程序中使用短数据类型时，一定要确认程序中的数据绝不会超出该类型可以表示的范围。
 
@@ -39,7 +39,7 @@ While 循环同样也可以使用带索引的隧道，但是我不建议大家�
 
 ### 5\. Cluster
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CAkuN5DtlyPD6-D1ynMefVJKdZbVq4CpdYecsryiqXL7FZ4WKpFgE814Ymv8Rn5ui-uoiGtnBNl2MFEhkqCkn_zJ1K8Kelf8iTpqT6ancidAzApy92Nyc_)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4B9HLZBtvEwUBu1ArE_bYxlTz4LfeNW-XtiK5wnc4Y2Wr1XyCcFyV1Cl59vGfoqs8OjufioehwN7CDeDOP2U2Ze86Y-blxBIJ6_zDB4MLRx7zxYWY0E4B5k) 图4：Cluster 传递数据出错
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CAkuN5DtlyPD6-D1ynMefVJKdZbVq4CpdYecsryiqXL7FZ4WKpFgE814Ymv8Rn5ui-uoiGtnBNl2MFEhkqCkn_zJ1K8Kelf8iTpqT6ancidAzApy92Nyc_) 图4：Cluster 传递数据出错
 
     图4的程序中有个奇怪的错误，明明应该是 weight 加 1 怎么运行完后的结果变成了high 加 1 了呢？直接揭开谜底吧，原因是 Cluster 中的元素有个顺序，这个顺序可以和界面上看到的顺序不一致。分别鼠标右击程序中的两个 Cluster，选择“Reorder Controls in Cluster”，就可以看到每个元素在 cluster 中的编号。info out 中的 high 实际上编号是 2，第三个元素。
 

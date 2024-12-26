@@ -9,33 +9,33 @@ tags:
 
 我们给豆豆买了一个生日蛋糕，蛋糕店不肯写字，豆豆妈自己动手写上了豆豆两个字。
 
-[![DSC02974](images/dsc02974_thumb.jpg "DSC02974")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc02974.jpg)
+![DSC02974](images/dsc02974_thumb.jpg "DSC02974")
 
 我们还特地教豆豆比划出1这个数字。蛋糕店送了个好玩的帽子，不过豆豆不是很喜欢。
 
-[![DSC02994](images/dsc02994_thumb.jpg "DSC02994")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc02994.jpg)[![DSC03120](images/dsc03120_thumb.jpg "DSC03120")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03120.jpg)
+![DSC02994](images/dsc02994_thumb.jpg "DSC02994")![DSC03120](images/dsc03120_thumb.jpg "DSC03120")
 
 中午吃完蛋糕，就带豆豆去外面草坪玩。
 
-[![DSC03131](images/dsc03131_thumb.jpg "DSC03131")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03131.jpg)
+![DSC03131](images/dsc03131_thumb.jpg "DSC03131")
 
 豆豆爬得可开心呢。
 
-[![DSC03238](images/dsc03238_thumb.jpg "DSC03238")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03238.jpg)
+![DSC03238](images/dsc03238_thumb.jpg "DSC03238")
 
 豆豆是大力士，已经可以把他的大汽车搬起来了。
 
-[![DSC03198](images/dsc03198_thumb.jpg "DSC03198")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03198.jpg)
+![DSC03198](images/dsc03198_thumb.jpg "DSC03198")
 
 豆豆看见一个美女，赶紧凑过去亲密一下。
 
-[![DSC03159](images/dsc03159_thumb.jpg "DSC03159")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03159.jpg)
+![DSC03159](images/dsc03159_thumb.jpg "DSC03159")
 
 回家前，又跟爸爸疯了一阵。
 
-[![DSC03177](images/dsc03177_thumb.jpg "DSC03177")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03177.jpg)
+![DSC03177](images/dsc03177_thumb.jpg "DSC03177")
 
-[![DSC03306](images/dsc03306_thumb.jpg "DSC03306")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/12/dsc03306.jpg)
+![DSC03306](images/dsc03306_thumb.jpg "DSC03306")
 
 虽然豆豆只能说一些简单的单词，比如爸爸、妈妈、袜袜等，但是大多数日常用语他都可以理解的。比如问他奶奶在哪呢，他就会去吧奶奶找出来。豆豆其实很爱说话的，只不过他说的话俺们都听不懂。
 

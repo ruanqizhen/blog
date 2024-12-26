@@ -19,6 +19,6 @@ tags:
 
 豆豆特能吃，吃不饱就哭，这点像爸爸。据我妈说，我小时候喝奶，能比别人多喝一倍的量。豆豆也差不多。但和我不同，我消化功能不好，虽然吃得多，但长不胖。豆豆消化可好了，他出生的第二个星期，一个星期就长了一斤。我们都担心他会过胖，打算让他节食了。
 
-[![DSC00462](images/dsc00462_thumb.jpg "DSC00462")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/12/dsc00462.jpg)
+![DSC00462](images/dsc00462_thumb.jpg "DSC00462")
 
-[![Untitled1](images/untitled1_thumb1.jpg "Untitled1")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/12/untitled11.jpg)
+![Untitled1](images/untitled1_thumb1.jpg "Untitled1")

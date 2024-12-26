@@ -53,7 +53,7 @@ tags:
 
  我的休斯敦相册：
 
-[![](images/200603Houston.jpg)](http://picasaweb.google.com/ruanqizhen/200603Houston)
+![](images/200603Houston.jpg)
 
 [
 

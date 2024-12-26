@@ -11,7 +11,7 @@ tags:
 
 当前面板的大小改变时，分隔栏也可以跟着移动。在分隔栏的鼠标右键菜单中可以设置一个状态栏跟随面板的哪个边沿一起移动，或者是按比例移动。
 
-[![image_thumb3](images/image_thumb3_thumb.png "image_thumb3")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/07/image_thumb31.png)
+![image_thumb3](images/image_thumb3_thumb.png "image_thumb3")
 
 在分隔栏的右键菜单最后两项用来设置分隔栏两侧窗格的一些属性。比如，界面划分成窗格后通常不需要显示窗格内的拖动条，在这里可以在这里找到相应设置的子菜单禁止其显示。
 

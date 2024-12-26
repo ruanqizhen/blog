@@ -13,7 +13,7 @@ tags:
 
     在 C++ 语言中，调用子函数时，可以指定某个参数是传值还是传引用。LabVIEW 采用的是完全不同的机制：在一般情况下，数据类型决定了这个数据是采用传值还是传引用。LabVIEW 中大部分数据类型是值传递的，一少部分数据类型专门用于传引用。例如，控件选板上的 Refnum 栏上的控件就都是传引用数据类型的控件。在程序框图上，用深色细绿线表示这类传引用的数据类型。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THofG9CDuYTdgVgC_DAGLt9sx-WZeWKFvQXMS2i9FEkOzaiXOsEDIgs0SY6RsoOWNKvY?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocgGoih23_xJJeiLRdYZSDX8IjfNrichJjIFYWw504TDkl2RJjseL2_if9JdzPgUns?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THofG9CDuYTdgVgC_DAGLt9sx-WZeWKFvQXMS2i9FEkOzaiXOsEDIgs0SY6RsoOWNKvY?PARTNER=WRITER)  
 图1：Refnum 选板
 
     使用 VI Scripting 编程时常会使用到 VI Refnum, Control Refnum 和其它对象的引用。与传值不同，在传递这些数据时，如果数据线分叉，并不意味把它们所表示的控件等复制了一份。新分出来的 Refnum 还是指向原来的那个控件。
@@ -31,7 +31,7 @@ tags:
 
     LabVIEW 中有一套操作队列的函数。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THofkVlCNZc7g0vlKsIlAsuxCopgWP5hYvm39bnbnCRCkxZL5yb_mCILy_Fh7znKk_LY?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocAutKcSp9FdBkSZyCEGzgn79chHYNg4UGNzEKBf6ZRJwJ-OqTSUdstRExl_KnC9Vk?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THofkVlCNZc7g0vlKsIlAsuxCopgWP5hYvm39bnbnCRCkxZL5yb_mCILy_Fh7znKk_LY?PARTNER=WRITER)  
 图2：队列的函数选板
 
     LabVIEW 中的队列是双向队列，堆栈也可以使用它。它与其它语言中的队列一样，为数据数据提供了存入取出的操作。一般用于不同线程、不同设备等之间通讯时数据的缓存。  
@@ -39,13 +39,13 @@ tags:
 
     我们可以借助队列，使任意一种类型的数据按照传引用的方式传递。其思路是：创建一个新的只有一个元素的队列，把数据作为这个队列的元素。平时在 VI 间传递参数时，传递的是这个队列。需要时，再把数据从队列中取出使用。下图是初始化一个这样的传引用数据的代码：
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoeUC_tuY75pKQkNDqhTPEWySmqWgnUqSRjhzbFHlcwhUPhdodM5hY6JwO7vYT8u8Vk?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocwRYhlDB7voN7l5NNCrN7IYoS-9orND8v7x_RCMTec2BoJban22KeA87P3NSbF8aY?PARTNER=WRITER)   
+![](http://byfiles.storage.msn.com/y1pIcO_924THoeUC_tuY75pKQkNDqhTPEWySmqWgnUqSRjhzbFHlcwhUPhdodM5hY6JwO7vYT8u8Vk?PARTNER=WRITER)   
 图3：创建一个传引用的数据
 
     传引用通常都是用于在不同线程里访问同一份数据，所以在访问数据时要防止出现竞争状态。一个数据处理的 VI（假设名为A），第一步操作就应当是用“Dequeue Element”把队列中唯一的元素取出。在 VI （A）所有工作都完成后，再让新的数据重新入队。这样一来，程序执行到VI（A）时，队列立即被清空。其它线程内若有 VI （假设名为B）准备同时处理同一数据，此时它已经无法从空队列中取出所需的数据。它只能暂时等待，直到 VI（A ）完成所有工作，再次把数据放回队列，VI（B） 才能继续执行。这样就避免了同一数据被同时访问而引发的竞争状态。  
     下图就是一段处理数据的示例代码：
 
- [![](http://byfiles.storage.msn.com/y1pIcO_924THocliBWWXb51r9TpHb4eafWHq_u0LM7NbRMh8AteMez1e44Z_ltcJuY3Wqr6MtBqPNk?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THoesaq5lmlI1AvAXgDMHQruVDTMzr8VQc4Ks1_5V7PGbNkTWpBMjT_YpKfPpwPx0i4k?PARTNER=WRITER)  
+ ![](http://byfiles.storage.msn.com/y1pIcO_924THocliBWWXb51r9TpHb4eafWHq_u0LM7NbRMh8AteMez1e44Z_ltcJuY3Wqr6MtBqPNk?PARTNER=WRITER)  
 图4：清空队列、处理数据、重新入队
 
     （有人问起，代码中那个黄色可框是什么。它是[缓存重用结构](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!2442.entry)。）  
@@ -59,7 +59,7 @@ tags:
 
     在下图的[小猪的演示程序](http://decibel.ni.com/content/docs/DOC-1035)中使用到了这种传数据引用方法。下图是演示程序中创建数据引用的VI：Pig.lvlib:New.vi
 
-[![](http://q0by9q.bay.livefilestore.com/y1pxGfiphRHa8jW-G5HJAuCHkahXmFLvKDnNQcBliBZRnKRu0Rw_MDYvVB12U7qda1bDK_eSafHLhw3h6BS60B1EB78NpapfL5g?PARTNER=WRITER)](http://q0by9q.bay.livefilestore.com/y1p83KYkHeC7aCN_LM4u9_cbJc77Q3yOHjJ6uRQACfTs256aNQ3ZaxaOoHYnKwqv8ClTrLIHxu_90e2yr5CX7_uyQ?PARTNER=WRITER)
+![](http://q0by9q.bay.livefilestore.com/y1pxGfiphRHa8jW-G5HJAuCHkahXmFLvKDnNQcBliBZRnKRu0Rw_MDYvVB12U7qda1bDK_eSafHLhw3h6BS60B1EB78NpapfL5g?PARTNER=WRITER)
 
     先不去考虑这个例子中的数据具体是什么，值分析一下它如何构造数据的引用：在这个 VI 的正中间是一个显示为“NEW INDEX”的VI。它的功能是把一段数据放置在C语言中开辟的内存里，然后返回保存数据的内存地址。内存地址用I32整数类型标识。以后在每个子 VI 间传递的数据就是这个内存地址的值。  
     你可能已经注意到，程序把这个内存地址又强制转换成了一个 Refnum 数据类型。这不仅是为了看着舒服（LabVIEW 中的传引用大多使用这种数据类型），更是因为使用自定义的 Refnum 类型，比整数有更高的安全性。例如你的程序中有不同的几块数据都采用这种放法保存在C语言开辟的内存中，使用不同的 Refnum 类型可以分别地将它们区分开来，避免直接把地址值传递给需要使用另一块数据的 VI。（这个技巧留待以后详细解释:）

@@ -10,18 +10,18 @@ date: "2008-07-07"
 
     LabVIEW 的某些控件本身就带有对输入数据进行限制的功能。比如数值型控件，在它的属性对话框中的 Data Entry 页，可以设置这个控件接受的数据的范围。我有一个控件用来表示选取某个通道，可供使用的合法数据为通道0至通道3，我们就可以在这一页把控件的最大最小值分别设为3和0。如下图：
 
-[![](http://byfiles.storage.msn.com/y1pmybLalV3KW-yD8mCVvdNz4-9GmSmYYwQp79Z-6m-k9Jk6d2JrTU4vKawwDwsQISo?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1p6qLF6efA8tMeBO-d0GsWWjDywQYhp7qKEdQUJkmaRarCQFOcr75_Fa1f-8oWWKPB?PARTNER=WRITER)   
+![](http://byfiles.storage.msn.com/y1pmybLalV3KW-yD8mCVvdNz4-9GmSmYYwQp79Z-6m-k9Jk6d2JrTU4vKawwDwsQISo?PARTNER=WRITER)   
 图1：数据范围限制
 
     这样设置后，用户也许还会输入一个不合理的数值，比如99，但LabVIEW 会立即忽略这个不合理数值。  
     有时，还有更好的限制方法：让用户根本没办法选择不合理的数据。比如本例，我们在设计时，可以考虑使用 Enum 或 Ring 型控件来表示通道号，这样用户只能在正确的值中选择一个。如下图：
 
-[![](http://byfiles.storage.msn.com/y1pmbHL-6U0ET7JAA1PBQ6YVi_xV7CAdjnzAEqe_0u94QzAttowkJ-45m2H0UaMHG4-?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pDRESXeopa0YhSdQJiJrJNPaf6hqhtuWMZ-zN5F0uHf6Ur7mOc0kL9S1J9ZKDkuTS?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pmbHL-6U0ET7JAA1PBQ6YVi_xV7CAdjnzAEqe_0u94QzAttowkJ-45m2H0UaMHG4-?PARTNER=WRITER)  
 图2：枚举型数据
 
     除了 Enum 或 Ring 型控件，单选按钮也可以起到同样的效果。单选按钮可以直接就在界面上显示出所有可供选择的值，并且可以附带对每个选项的详细解释。不经常被用到的对话框可以采用这种控件。比如下图，是VI属性中设置密码的页面。
 
-[![](http://byfiles.storage.msn.com/y1por4lok8Z4Zhg7lym8WIhLaF_InstIknO8mgfxeMxTLMq92q82I3X93c8VVH3e6wU?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1p1wiB1dtKKFrAVn1JpghWk7xgz7I0lmb5eLvC6JF-SJLggeO-zzHVBUbQaMt1MtPf?PARTNER=WRITER)   
+![](http://byfiles.storage.msn.com/y1por4lok8Z4Zhg7lym8WIhLaF_InstIknO8mgfxeMxTLMq92q82I3X93c8VVH3e6wU?PARTNER=WRITER)   
 图3：使用选择按钮的界面
 
 二、防止误操作

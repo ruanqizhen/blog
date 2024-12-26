@@ -13,7 +13,7 @@ tags:
     我们先来创建一个名叫 Animal 的类吧，用它来描述一些动物的属性和行为。现实中，通过特定的属性和方法（行为）来定义某一类事物；与之对应的 LabVIEW 中的概念是类的数据和VI。  
     动物类是一个类，符合这个概念的任何一个实体比如某一只小猫，一条小狗就是这个类的实例。程序中处理的都是这些实例。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoc3dgamzy9QuoF-fk2u9P-L1lHFD05WpYqrq3GbOUQ4heyAEDdlmRmJYPGwfeAqYFI?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THofLsI5MGSxKk3BNSqanvv00fskBVgUl_aV541xiXfQPGXp7GbtnYF7Yt7SwG6rZ_1o?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THoc3dgamzy9QuoF-fk2u9P-L1lHFD05WpYqrq3GbOUQ4heyAEDdlmRmJYPGwfeAqYFI?PARTNER=WRITER)  
 图1：创建类的菜单
 
 ### 二、类的属性
@@ -30,14 +30,14 @@ tags:
 
     现在，回到我的 Animal 类：它有两个属性，分别是动物的年龄和颜色。于是我在 Cluster 中放了两个分别表示年龄和颜色的控件。
 
- [![](http://byfiles.storage.msn.com/y1pIcO_924THod5cyrhLIzRNwlF53K5FnqV9aI2RWE0uA9_P0om11yg-3-MakgDhVdIoqeTnrcScn8?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocJOayg8VqzS_GEzYC6tCDt8xESNAVBMdZN6BghLY3HHLeJO2fcTnC2fXvo4bYh8Sg?PARTNER=WRITER)  
+ ![](http://byfiles.storage.msn.com/y1pIcO_924THod5cyrhLIzRNwlF53K5FnqV9aI2RWE0uA9_P0om11yg-3-MakgDhVdIoqeTnrcScn8?PARTNER=WRITER)  
 图2：添加类的数据（类的属性）
 
 ### 三、类的方法
 
     鼠标右键点击在类上，就可以为类创建 VI，也就是类的方法。
 
- [![](http://byfiles.storage.msn.com/y1pIcO_924THodjbEkzBuCaFzMb_kL-l5ywYHbXQYvELkG_F-YQu02dQeIa4Q7KJJ4ko91-x2HdsZc?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocJrSLHkqkyRE4pSEBTNFb6C8bXHS4qdz2h1DJjqACd4sID2Ipr8NZM_uYGZqB1lio?PARTNER=WRITER)  
+ ![](http://byfiles.storage.msn.com/y1pIcO_924THodjbEkzBuCaFzMb_kL-l5ywYHbXQYvELkG_F-YQu02dQeIa4Q7KJJ4ko91-x2HdsZc?PARTNER=WRITER)  
 图3：创建新方法
 
     在上图新建这一栏下可以看到很多条目：  
@@ -49,7 +49,7 @@ tags:
     VI for Override...，这个选项是专门给子类用的。用来创建覆盖父类方法的VI。  
     Control，创建用户自定义控件，这一条与类的概念不相关，仅为了方便用户。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THocZJvyIRxoNR9eMbJUlvyLkPl-CxVTMAYt-mvgA8DHFAjzcH1VVUvWTtUPhVf6AbWg?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THofhl8a4fBdMp-8f7DKRcKvLY5c2mAVCeg3FsoZ9vezPcxG3uYEbfXW692wycKWjtI8?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THocZJvyIRxoNR9eMbJUlvyLkPl-CxVTMAYt-mvgA8DHFAjzcH1VVUvWTtUPhVf6AbWg?PARTNER=WRITER)  
 图4：动态调度的接线端子
 
     在类的类的属性面板中可以设置类中每个 VI 是公有的还是私有的。这与工程库中 VI 的设置是类似的。
@@ -62,7 +62,7 @@ tags:
 
     为了让演示程序更有意义，再分别为狗和鸡创建两个类。这两个类应为动物类的子类。进入类的属性对话框，在 Inheritance 一栏中选择animal.lvclass作为它的父类，这两个类便成了animal的子类。可以注意到，LabVIEW 中所有的类都有一个共同的父类“LabVIEW Objet”。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoegTe0dLKA3ZPN1HZNd7h0mn5JesKKLAbznyKz2YAqvzBkq8iR2RkCQupuzz3_gzhw?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THocXMA6uCOda8rpnwVP0noHIr0kbP5DWmMgNOzyFKAQJOyjCQwYdkw--nKYeVGTkcVs?PARTNER=WRITER)   [![](http://by1.storage.msn.com/y1pH5Es9Ox64kbiofogMErJ3XR5KVIbqtic0ugDHPA_1507ALD59LtSWEYqCvzksnA5b0zQYiN5JCCDmzxH2LoZD1rrLmNrpuYu?PARTNER=WRITER)](http://q0by9q.bay.livefilestore.com/y1p83KYkHeC7aD_Orq2WXHb4-ZF6OlodHSOLiCgi_XZa1os1qZvjJgr6n0Zk6FwoxAmRPScgJzo1XLf2NJkR0xiqg?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THoegTe0dLKA3ZPN1HZNd7h0mn5JesKKLAbznyKz2YAqvzBkq8iR2RkCQupuzz3_gzhw?PARTNER=WRITER)   ![](http://by1.storage.msn.com/y1pH5Es9Ox64kbiofogMErJ3XR5KVIbqtic0ugDHPA_1507ALD59LtSWEYqCvzksnA5b0zQYiN5JCCDmzxH2LoZD1rrLmNrpuYu?PARTNER=WRITER)  
 图5：设置类的继承关系
 
     在这个设置面板上可以看到，LabVIEW 所有的类都有一个共同的祖先类 LabVIEW Object。LabVIEW Object 是个空类，既没有方法也没有属性。那么它存在的意义是什么呢？  
@@ -74,14 +74,14 @@ tags:
 
     设置好继承关系，再为子类创建几个属性和方法，我们的演示类就搭建完成了。为了让应用程序美观易读，我们可以修改这几个类的数据线外观。否则，所有的类的数据线千篇一律，很容易就混淆了。数据线的外观也是在类的属性对话框中配置的。
 
-[![](http://byfiles.storage.msn.com/y1pH5Es9Ox64kbyAPL-Mbm0pPXSlCUsw3-P7qIjxZPXOFAhIdBV9KI-k_9hSbqv2uAGdHdk86SoAMebS1ZmbrpcYG6Lk3Q4cqcJ?PARTNER=WRITER)](http://q0by9q.bay.livefilestore.com/y1pxGfiphRHa8hAkGcR-Pv8bcSUeo8Xv_2JEXPVFZf4Z2HVgRJWQLKGg0YDd7P-fLfuTHmWl1gHgikiUwU1L780-P9gzsSAHXnH?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pH5Es9Ox64kbyAPL-Mbm0pPXSlCUsw3-P7qIjxZPXOFAhIdBV9KI-k_9hSbqv2uAGdHdk86SoAMebS1ZmbrpcYG6Lk3Q4cqcJ?PARTNER=WRITER)  
 图6：配置类数据线的外观
 
 ### 六、演示程序
 
     我们再简要介绍一下类的多态：在动物类中先用虚函数方法（VI from Dynamic Dispatch Template）创建一个“叫唤”方法：Make Sound.vi。因为狗和鸡的叫声不一样。因此，在两个子类中，我们用 VI for Override... 重新实现这个方法，使其覆盖父类中的“叫唤”。应用程序中有几个不同动物的实例，程序的任务就是让它们每个实例叫一声。借助类的多态特性，应用程序不需要判断实例数据所属的子类，再根据不同子类编写不同代码的。它可以把所有实例用他们共同的父类的类型来传递，代码中也只是用父类的方法。而程序执行到父类的方法时，会自动执行已经覆盖了它的相应的子类的方法。从而让不同的动物发出不同的叫声。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoePk7fcyT7Sdbuyq1Cf7gqhwUn8f8OQlc8ho-F2vpHwDZESSCOL5mYpWpIwVaxoYm8?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THoeOFZgafwUK1rtoSx8bHGUTTWNl1FcOZAkAhUyXkM_TLXZGAoyh16qGa6JYqjWULic?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THoePk7fcyT7Sdbuyq1Cf7gqhwUn8f8OQlc8ho-F2vpHwDZESSCOL5mYpWpIwVaxoYm8?PARTNER=WRITER)  
 图7：动态调用的示例
 
 [下载示例程序](http://decibel.ni.com/content/docs/DOC-1722)  

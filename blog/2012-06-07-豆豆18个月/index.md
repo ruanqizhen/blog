@@ -9,15 +9,15 @@ tags:
 
 最近六一儿童节，豆豆妈所在的生化所组织一次小朋友聚会。与会的大多是4～7岁的小宝，他们已经可以表演节目什么的了。可是豆豆啥都不懂，可是他发现舞台上似乎是个好地方，全然不顾别的小朋友正在演出，冲上去就开始捣乱。
 
-[![DSC04118](images/dsc04118_thumb.jpg "DSC04118")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/06/dsc04118.jpg)
+![DSC04118](images/dsc04118_thumb.jpg "DSC04118")
 
-[![DSC04124](images/dsc04124_thumb.jpg "DSC04124")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/06/dsc04124.jpg)
+![DSC04124](images/dsc04124_thumb.jpg "DSC04124")
 
-[![DSC04128](images/dsc04128_thumb.jpg "DSC04128")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/06/dsc04128.jpg)
+![DSC04128](images/dsc04128_thumb.jpg "DSC04128")
 
-[![DSC04135](images/dsc04135_thumb.jpg "DSC04135")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/06/dsc04135.jpg)
+![DSC04135](images/dsc04135_thumb.jpg "DSC04135")
 
-[![DSC04139](images/dsc04139_thumb.jpg "DSC04139")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/06/dsc04139.jpg)
+![DSC04139](images/dsc04139_thumb.jpg "DSC04139")
 
 豆豆可以熟练的说一些两字词了，比如：“吃奶”，“这个”。豆豆想要爬高的时候还会喊口号，一面使劲一面嘴里念念有词的喊着“一二一二”。豆豆很早就识别大小了，比如我拿两块馒头给他，他必定是挑大的那个。但是他也不算特别贪心啦，通常不会同时把大小两个吃的都拿走。
 

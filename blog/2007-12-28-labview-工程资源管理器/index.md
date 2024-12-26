@@ -7,7 +7,7 @@ tags:
 
     从 8.0 开始，LabVIEW 增加了一个工程资源管理器功能。LabVIEW 工程资源管理器就是一个可以方便查看、调整程序系统结构的工作区。与 VC, VB 等语言中的 project, workspace 相类似。Project 的出现使得 LabVIEW 对于大项目的管理更加方便。
 
-[![](http://by1.storage.msn.com/y1pH5Es9Ox64kZJ9i9ega46dCjPyTXjZ5Cmp2uSDwGBXtUNu6ESgSHoZN-KieWAYuc9ihHMWGB-X_NE5veswrZFlDn9Aa2AimT1?PARTNER=WRITER)](http://by1.storage.msn.com/y1pH5Es9Ox64kYUHDn7w2s8P8laJ_XDfu8WpfMec2m4zVlIc31CnQ-HnKrCoMYlnItL24KsJeIs7KlZZ3dCyPUOJ5JohAPCbaTK?PARTNER=WRITER) 图1：LabVIEW 工程资源管理器
+![](http://by1.storage.msn.com/y1pH5Es9Ox64kZJ9i9ega46dCjPyTXjZ5Cmp2uSDwGBXtUNu6ESgSHoZN-KieWAYuc9ihHMWGB-X_NE5veswrZFlDn9Aa2AimT1?PARTNER=WRITER) 图1：LabVIEW 工程资源管理器
 
     要想充分利用 LabVIEW 工程资源管理器带来的好处，那就需要我们改变一些以往的LabVIEW编程习惯。譬如说，在开始一个新的项目的时候，在 LabVIEW 8 以前的版本中，我们最先创建的是程序的主 VI；而现在，我们首先创建的应该是一个空的工程（Project），再在这个工程中添加相应的 VI和各种组件。
 
@@ -25,7 +25,7 @@ tags:
 
     在需要创建一个新的类似工程，或版本备份时，程序经常被来回复制。在这个过程中，很可能会引起子VI的错误链接。比如，本来工程里应该使用的的是 Project One 文件夹下的一个子VI，但实际上却链接到了 Project Two 文件夹下的一个同名VI。我们可以把文件的真实路径同时显示在工程资源管理器的Item，以及File 页上，选取菜单 Project -> Show Item Paths，如图2所示。我们可以在这里检查每个文件的路径是否正确。 但是，文件比较多的时候，一条一条看下来，是比较麻烦的。这时可以按照文件的物理结构来查看工程中的文件。在工程资源管理器中选择“Files”标签页，看到的就是文件在物理硬盘上的真实结构。我们只要在这里检查一下，有没有不需要的文件夹出现，就可以判定是否出现了错误链接。 如果发现某些文件所存放的路径不恰当，需要调整，我们可以直接在工程资源管理器中来调整，而不需要打开文件浏览器去修改。
 
- [![](http://byfiles.storage.msn.com/y1pIcO_924THofXIZAm1eHAxcY8FV0gUOTvAt0ZdbLDDt8YLd4SnV1Tw11g9FJH9gSPBhOHWRZgwjo?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THofuNIRSviYohCkC9usG6INFCb0VqQ72GeWAi-yEeAa8APTNOVjahHynDwV_7HQNMe4?PARTNER=WRITER) 图2：按照文件的物理结构查看工程
+ ![](http://byfiles.storage.msn.com/y1pIcO_924THofXIZAm1eHAxcY8FV0gUOTvAt0ZdbLDDt8YLd4SnV1Tw11g9FJH9gSPBhOHWRZgwjo?PARTNER=WRITER) 图2：按照文件的物理结构查看工程
 
 ### 三、VI 交叉连接
 

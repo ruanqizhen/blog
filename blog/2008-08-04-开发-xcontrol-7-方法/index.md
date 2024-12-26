@@ -11,7 +11,7 @@ tags:
 
     黑白棋中有一个方法：“走一步棋”。它的实现如下：
 
-[![](http://byfiles.storage.msn.com/y1pxWuyMR_jXzt6N25dyjriRw0XNMpMODGGesWYUxV1rR38HvVONcDjm7XISpJwGMJLaz1eXOxealc?PARTNER=WRITER)](http://q0by9q.bay.livefilestore.com/y1py_DytCJIYBJ7Lx-SPXZGVtt1nbreZ0fSIDX8Zj6vgq-YzidiXokC4wVFXaLLQocvmYpfLVErkuY?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pxWuyMR_jXzt6N25dyjriRw0XNMpMODGGesWYUxV1rR38HvVONcDjm7XISpJwGMJLaz1eXOxealc?PARTNER=WRITER)
 
     首先，判断落子的位置是否合理。如果是，则修改状态中相应的数据，落子位置。走一步棋之后，控件的数据和外观都需要做相应修改的。这部分修改没办法在方法VI中完成，只能在外观功能VI中实现。当方法VI修改了XControl的状态后，外观功能VI的“显示状态更改”事件会立刻被触发，所以相应代码可以放在外观功能VI的显示状态更改事件处理分支中。
 

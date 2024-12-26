@@ -8,7 +8,7 @@ tags:
     图标是 LabVIEW 语言很有特色的一个东西，其它语言大概都不需要给它的函数设置一个图形标识。认真给每一个 VI 加上一个有意义的图标是非常必要的，它可以帮助程序人员快速理解一段程序的含义。一个风格良好的 VI，只要扫一眼它的程序框图，就可以了解他的功能了，而不必要像文本语言那样一行行把程序读下来。LabVIEW 程序比文本语言的程序可读性要高得多，当然这是指在编程风格良好的情况下进行比较。  
     有意义的图标是良好程序风格中非常重要的一项。编辑图标应该是一个很常见的工作，双击一个 VI 的图标就会出现图标编辑器，如下图所示。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THoeW26P3t6kQMiCY2q6LRTZjdJfyWZsYIjFHDHHWe5nORgNyLQoqq59AacysoumB_Es?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THodF47mI9n2_sKJFWUL92FebAZL4f_mwSDaQqvJabPk12AdyVv3WuCyYY8E8VdXkROc?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pIcO_924THoeW26P3t6kQMiCY2q6LRTZjdJfyWZsYIjFHDHHWe5nORgNyLQoqq59AacysoumB_Es?PARTNER=WRITER)
 
     上图这个这个图标编辑器界面左上方是绘制图标的工具栏，里面工具被我编了号。不知道大家有没有试过鼠标双击这几个工具，我是经常双击他们的。
 

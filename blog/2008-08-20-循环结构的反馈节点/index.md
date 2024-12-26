@@ -7,17 +7,17 @@ tags:
 
 如果单纯是为了让下一次迭代使用上次迭代的数据，可以使用反馈节点，如下图所示。
 
-[![](http://byfiles.storage.msn.com/y1piQDnExfTy-K5oTBAcE04ZRxXZSBQ5xkU7mcZlj-yLp2JTqf7VrXzRMN9Vz2Q3luwcE3QAddIvhM?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1p30JJrw0qn2PwroIwzQDxLJezHlrRGhTUToW5cFgM7goFYrY5kqrRFgO5-lF0ncFo?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1piQDnExfTy-K5oTBAcE04ZRxXZSBQ5xkU7mcZlj-yLp2JTqf7VrXzRMN9Vz2Q3luwcE3QAddIvhM?PARTNER=WRITER)
 
 图1：反馈节点
 
 需要使用反馈节点的时候，可以通过移位寄存器的右键菜单，把一个移位寄存器改造成反馈节点。在给循环结构内的节点的连线端连线时，如果数据流出现一个环，LabVIEW会自动创建出一个反馈节点插在这个环中。例如图2中的“+1”函数，输入从它的输入端流入，被其加工过后再从它的输出端流出。现在试图连线，把流出的数据再引回到“+1”函数的输入端，这样就形成了数据流的环，LabVIEW会自动在这个环上查如一个反馈节点。
 
-[![](http://byfiles.storage.msn.com/y1p1dr91Jq1cPgv3_7sJYhcV_2cph8GaMb3eRX6pE-iE_4d4fIfbTKnM8GBmy1GgKDK?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pbmxOxw0pCg8CzaDu6TMMaylbZdidBw3wzpzPXQ0mA1IocvcN2CezrXu6KiGxbAT-?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1p1dr91Jq1cPgv3_7sJYhcV_2cph8GaMb3eRX6pE-iE_4d4fIfbTKnM8GBmy1GgKDK?PARTNER=WRITER)
 
 图2：连接输入输出接线端
 
-[![](http://byfiles.storage.msn.com/y1pf7GOFEeopxn4avhJDPQMG0n9JzUlQJPeqG1kN6Tlx4Xfb9CVU2C53R_4_ow52CXnB8xxTMVhvQ4?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1p5mQKQMQpXFdBlqGzmF_tPu9j5Uurz0YFmhGlYHomdpwZ_ErpMaU6MFrkzJlnBs9YdGm0m9cYVG4?PARTNER=WRITER)
+![](http://byfiles.storage.msn.com/y1pf7GOFEeopxn4avhJDPQMG0n9JzUlQJPeqG1kN6Tlx4Xfb9CVU2C53R_4_ow52CXnB8xxTMVhvQ4?PARTNER=WRITER)
 
 图3：通过直接连线创建出的反馈节点
 

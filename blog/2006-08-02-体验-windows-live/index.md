@@ -9,7 +9,7 @@ tags:
 
 我也体验一把 :)
 ```
-加我的 Space 到个性化 Live.com：[![](images/atl0zw.gif)](http://www.live.com/?add=http://ruanqizhen.spaces.live.com/feed.rss)
+加我的 Space 到个性化 Live.com：![](images/atl0zw.gif)
 
-加我的 Space 到 Live Favorites：[![](images/live58vm.gif)](https://favorites.live.com/quickadd.aspx?marklet=1&url=http://ruanqizhen.spaces.live.com&title=和我一起学习 LabVIEW)
+加我的 Space 到 Live Favorites：![](images/live58vm.gif)
 ```

@@ -7,19 +7,19 @@ tags:
 
 今天是春节过后第一个晴朗的星期天，我们决定带豆豆去动物园玩一玩。上了地铁10号线就发现车厢里全是小孩，一问都是去动物园的。看来小朋友们都憋坏了，难得一个好天气，不容错过。动物园里果然也是人山人海，我排队买票居然还排了二十分钟。
 
-[![DSC03837](images/dsc03837_thumb.jpg "DSC03837")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03837.jpg)
+![DSC03837](images/dsc03837_thumb.jpg "DSC03837")
 
 整个动物园里，豆豆最喜欢的是猴子。上海动物园的猴子种类还真不少，大大小小。其中一只猴子还抢了豆豆的橙子吃。
 
-[![image](images/image_thumb.png "image")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/image.png)
+![image](images/image_thumb.png "image")
 
 豆豆还去看了大象和长颈鹿
 
-[![DSC03854](images/dsc03854_thumb.jpg "DSC03854")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03854.jpg)
+![DSC03854](images/dsc03854_thumb.jpg "DSC03854")
 
-[![DSC03862](images/dsc03862_thumb.jpg "DSC03862")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03862.jpg)
+![DSC03862](images/dsc03862_thumb.jpg "DSC03862")
 
-[![DSC03864](images/dsc03864_thumb.jpg "DSC03864")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03864.jpg)
+![DSC03864](images/dsc03864_thumb.jpg "DSC03864")
 
 看完了长颈鹿，豆豆就困了。然后就趴在爸爸肩膀上睡着了。
 
@@ -27,6 +27,6 @@ tags:
 
 接下来豆豆又去看了大熊猫、小熊猫、各种大鸟。然后就回家了。豆豆今天玩的好累，到了家里一改好动性格，老老实实坐在床上。不过吃东西的力气还是有的，豆豆的晚餐水果是火龙果。
 
-[![DSC03888](images/dsc03888_thumb.jpg "DSC03888")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03888.jpg)
+![DSC03888](images/dsc03888_thumb.jpg "DSC03888")
 
-[![DSC03886](images/dsc03886_thumb.jpg "DSC03886")](http://ruanqizhen.wordpress.com/wp-content/uploads/2012/03/dsc03886.jpg)
+![DSC03886](images/dsc03886_thumb.jpg "DSC03886")

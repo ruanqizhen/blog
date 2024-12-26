@@ -9,7 +9,7 @@ tags:
 
  微軟也出部落格寫作工具啦~ 一開始根本沒聽說會出這個玩意，之前都無任何消息，就這樣蹦出來！用這個有什麼好處呢?  不用怕瀏覽器當掉!! 當掉!! 還有居然可以改發文時間(還真的可以改) ，這樣寫Spaces又增加一種方法囉，雖然還是英文測試版，不過有興趣的就看看有什麼功能吧～本篇就是使用Windows Live Writer 寫成發佈的。
 
-[![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hVWdggxOPxUEgjRaDYwVKjBnjAk15e0xo70Er5oIzYe-vt5XmpE7Wg0Fw8t8CWD2kxUSB5kyNnVO6GI_Rw2HoU6YFHz30lytUJQw9TTCsFhKZFhyvsrPc4r)](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hXVsg3BtfejShSxahUVPiPi1602HCV1bLzQnVl-ToCtOhMv3Cr8_JmG14Cu1BT2JTeEXMqHcE5SOLkuCSXHn647oQ1auLgwg5yq59dQL2AE0M-xKEIUzakr)  
+![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hVWdggxOPxUEgjRaDYwVKjBnjAk15e0xo70Er5oIzYe-vt5XmpE7Wg0Fw8t8CWD2kxUSB5kyNnVO6GI_Rw2HoU6YFHz30lytUJQw9TTCsFhKZFhyvsrPc4r)  
 
 1. 所見即所得的部落格寫作介面(這是一個講究直觀又方便的軟體所必要的吧)
 2. **貼上圖片功能增強**(Insert Picture)　  
@@ -30,12 +30,12 @@ Windows Live Writer社群
   
 貼上地圖功能範例:  
 
-[![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hXPu4Jqxh1ArWHMAFnFi5Z2IeutvMAe0w_pIfftXSnCH_IPBQAfLxv2pqQ7V7hpu2HASgU33dxZ9M6qzMepXABwHqCYikuQLI3G5ZIOOlDORoD39sKDfUYB)](http://local.live.com/default.aspx?v=2&cp=47.6205~-122.3492&lvl=17&style=h&sp=aN.47.62093_-122.3493_Space%2520Needle_ "Click to view this map on Live.com")  
+![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hXPu4Jqxh1ArWHMAFnFi5Z2IeutvMAe0w_pIfftXSnCH_IPBQAfLxv2pqQ7V7hpu2HASgU33dxZ9M6qzMepXABwHqCYikuQLI3G5ZIOOlDORoD39sKDfUYB)  
 太空針塔 - 西雅圖
 
 **如何更改發文時間?  
 **Ans:  
-1.按下[![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hUFRp5KHxweVHeCPr4bWKd-3Qntuh_g4XmVbhvL7GL-Mo6FLkAvN9poWxy-jBNpZZAtjnxIq5FElxzwMlypMIsyvvD404BKMwQnnH2ljY49NQ)](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hWgb3HavfOSbAeDaOKQ0d5NWXqqTe664O7OKZo0rgBvKbjArFrJ59CVJ0rTiq3IZ4W7sSkj0DtIX7mQWo8pS4jnm4Y-9cTBAQ63SJhU1Qy70cmY7vB2NPGh)選項  
+1.按下![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hUFRp5KHxweVHeCPr4bWKd-3Qntuh_g4XmVbhvL7GL-Mo6FLkAvN9poWxy-jBNpZZAtjnxIq5FElxzwMlypMIsyvvD404BKMwQnnH2ljY49NQ)選項  
 2.勾選Date/Time選項,並選時間,再重新按Publish發佈文章即可。  
-　[![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hUwYhDW-tKRIGV6QYYu1wQ_F1ihz-e5x9Kzct5lW8IqOW9JZtDJvqxRoXPApUZyxdcxmdqERx8FU1mRU2HaoIWLKlKIBsacCtx3oX9IXCi4nQ)](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hXcCKuadW8PfFKPAJrv6BNIui71ttLkeRmuyYzPt_uoUqpu_mr1PQRhNy_9-7_U4NWFbkzeR6IV5ezIIzV5ePFYq-3YT-5aS6V43kzb2Qo7rWz1H0EciEHq)  
+　![](http://tk1.storage.msn.com/x1plMlLh5OuvLUJCkwU76rRa6brGDcBU02OcTTQi4o59hUwYhDW-tKRIGV6QYYu1wQ_F1ihz-e5x9Kzct5lW8IqOW9JZtDJvqxRoXPApUZyxdcxmdqERx8FU1mRU2HaoIWLKlKIBsacCtx3oX9IXCi4nQ)  
 3.更改發文時間之後，就可以隨意更改文章顯示的"順序"了。

@@ -9,4 +9,4 @@ tags:
 
 尽管豆豆力气是够了，但神经系统还没发育好呢，所以还不能进行真正的爬行。他现在每次先把手放在胸前，撑起身体来，接下来向后使劲，把屁股撅得老高，然后再伸直腿，身体就嗞溜一下滑到后面去了。
 
-[![DSC01575](images/dsc01575_thumb.jpg "DSC01575")](http://ruanqizhen.wordpress.com/wp-content/uploads/2011/06/dsc01575.jpg)
+![DSC01575](images/dsc01575_thumb.jpg "DSC01575")

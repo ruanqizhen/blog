@@ -19,4 +19,4 @@ tags:
 
 它毕竟不是一个真正的容器，还有一些局限性，比如标识只能使用字符串。
 
-[![](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/08/6a1147c23429b96c55775b4c9d64e704.png?w=300)](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/08/6a1147c23429b96c55775b4c9d64e704.png)
+![](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/08/6a1147c23429b96c55775b4c9d64e704.png?w=300)

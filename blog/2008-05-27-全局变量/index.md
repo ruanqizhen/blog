@@ -17,7 +17,7 @@ tags:
     再次，它的效率低下。VI每次读全局变量，LabVIEW 都要为读到的数据复制一个新的副本，这毫无疑问影响到VI的效率。  
     此外，全局变量的不合理使用还可能导致竞争状态。比如下图中的VI，假设全局变量 Data 的值原本为 0，运行完下面这个加2减1后的代码后，Data 中的值是几呢？可能是1，也有可能是2，还可能是-1，这完全取决于程序的执行顺序。而在这种情况下，这个顺序是不确定的。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THod-_E7SsLpOAEqOB7D-x4ma6tuYX3CwfLUXtIJB78ytNwdR-vQPl7UTx0-FeGvthNg?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THodknaiVV45G0oqFwIvUYJHQqT8EpCsassOa93Q9vpZcLSSXh8e-dHJKSWewB4B_bno?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THod-_E7SsLpOAEqOB7D-x4ma6tuYX3CwfLUXtIJB78ytNwdR-vQPl7UTx0-FeGvthNg?PARTNER=WRITER)  
 图1：处于竞争状态的全局变量
 
 ### 二、单进程共享变量（Single-Process Shared Variable）
@@ -25,7 +25,7 @@ tags:
     共享变量有三种：单进程，网络发布，以及时间触发的共享变量。后两种主要应用于不同硬件设备、不同计算机、不同进程程序间的数据交换。在此，我们仅仅介绍与全局变量相关的第一种：单进程共享变量。共享变量的种类可以在它的属性页中进行修改。  
     单进程共享变量，顾名思义就是作用域为单个程序进程的共享变量。它与全局变量的性质是完全相同的。唯一的不同点是单进程共享变量带错误输入/输出端，我们可以利用错误处理连线来控制单进程共享变量的执行顺序。比如下图中的VI，假设共享变量 Data 的值原本为 0，运行完下面这个加2减1后的代码后，Data 的值必然为1。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THofjT56fTaSQNGSP2Q_8Db8AlCQ00sY5DoVxnct0_jxMoNQObDYX0EmP_7aGZiA8K0w?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THodu1JdZSVKk9WJoO38PLxAj_4JZWTWinFcgPS_4NnAAseIH_RhTBts3yLj1dchHslQ?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THofjT56fTaSQNGSP2Q_8Db8AlCQ00sY5DoVxnct0_jxMoNQObDYX0EmP_7aGZiA8K0w?PARTNER=WRITER)  
 图2：共享变量的使用
 
     这并不意味着单进程共享变量可以防止出现竞争状态。设想上图的VI只是程序中的一个子VI，在其运行的同时，Data 仍然可以在其它子VI中被访问，因此，仍然有可能处于竞争状态。  
@@ -38,10 +38,10 @@ tags:
     其实，使用循环结构仅是为了利用它的移位寄存器。移位寄存器没有连初始化数据，因此每次执行这个VI时，它里面保存的是上一次 VI 执行结束时的数据。这样，就可以在程序的全程保存、处理或使用这一数据了。功能全局变量 VI 不可以被设置为[可重入](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1519.entry)，否则在不同地方，得到的移位寄存器中的数据就不是同一份了。  
     从 LabVIEW 8.5 开始，VI 的程序框图增加了反馈节点了。可以使用它来替代仅执行一次的循环，以简化程序。下面两图就是完全等效的功能全局变量。
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THocNHqUsZ1YFY0q-3sMTyVqr9BNp4goNwlEzZBEvkX32li4Z6FygMOz0UTcv6ru4qx4?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THodBc5tDUNbNYAXExgzSsb2IUvOlfzfoP7H4IMMjL5hV3D7tLvXdT__aqX0gXZeSetY?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THocNHqUsZ1YFY0q-3sMTyVqr9BNp4goNwlEzZBEvkX32li4Z6FygMOz0UTcv6ru4qx4?PARTNER=WRITER)  
 图3：实现加减法功能的功能全局变量
 
-[![](http://byfiles.storage.msn.com/y1pIcO_924THofX7ru4C5UV4FMKota_y4pa7Yw0gDQc9gPBLzvd99eTCi6j2C4VEpPwOGWVjm3Q69c?PARTNER=WRITER)](http://byfiles.storage.msn.com/y1pIcO_924THoe0GObX0qq6RqhEEmz6wFJilGWvnifja9ufjMGhEpbzXGExPCo1BWcrK28TsTpAPdA?PARTNER=WRITER)  
+![](http://byfiles.storage.msn.com/y1pIcO_924THofX7ru4C5UV4FMKota_y4pa7Yw0gDQc9gPBLzvd99eTCi6j2C4VEpPwOGWVjm3Q69c?PARTNER=WRITER)  
 图4：等效的加减法功能全局变量
 
     与前两种全局变量相比，功能全局变量有两项主要的优点。所以我建议，如果不得不使用全局变量，那就使用功能全局变量。  

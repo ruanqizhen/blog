@@ -17,4 +17,4 @@ tags:
 
 小宝还是壮一点占便宜。豆豆的强壮给他带来了两大优势：一是可爱，尤其是新生儿，瘦了容易皱巴、显黑，白白胖胖的才讨人爱。再有就是吃奶有优势啦，其他小宝裹不动的奶，豆豆却可以吃到嘴。
 
-[![DSC00384](images/dsc00384_thumb.jpg "DSC00384")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/12/dsc00384.jpg)
+![DSC00384](images/dsc00384_thumb.jpg "DSC00384")

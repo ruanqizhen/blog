@@ -33,7 +33,7 @@ tags:
     LabVIEW 中还有一个类似于 C 语言中 #if，#ifdef 的结构，就是条件禁用结构。使用条件禁用结构可以让某些代码在特定的条件下不运行。与条件结构（Case Structrue）相区别，条件结构在运行时决定执行哪一个页面中的代码；而条件禁用结构是在编译时就已决定好执行哪一个页面的代码了，不被执行的页面的代码在运行时都不会被装入内存。  
     利用条件禁用结构的这一特性，可以把分别需要在调试时和发布后的代码放在不同的条件禁用结构页面内。这样，既可以在不同条件下运行不同的代码，有不会使程序留有冗余的代码。图3 的是一个条件禁用结构应用的典型例子，用户希望在开发调试时，如果错误数据线上出现错误，则探出错误信息的对话框；而在发布之后，又错误发生，也不可以弹出对话框。
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DTbVudQ8MR1T7hyHxygMagsh_LotTYkh8KnkS61KGoh8dsOND-JXjRGEm7ZztIKQ5ErpQVlE0Sn_uPZibv9dbvILnYpPjP2o0k5BMojPUFqHpSgobbYNJp)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4AheHnKVoaCyKcQPN5rbt5go-q5Zv8YjhoxPonme1KCYJiBLi4K1M6-MXhZLij0c-tJkZXsgEX0eR-ftSzEQTk9yV2XetvDtQc_ipPza9cCgsWR56j0EVr3)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DTbVudQ8MR1T7hyHxygMagsh_LotTYkh8KnkS61KGoh8dsOND-JXjRGEm7ZztIKQ5ErpQVlE0Sn_uPZibv9dbvILnYpPjP2o0k5BMojPUFqHpSgobbYNJp)  
 图3：使用条件禁用结构控制调试时和发布后程序的不同行为
 
     点击条件禁用结构右键弹出菜单中的 Edit Condition For This Subdiagram... 条目可以弹出条件配置窗口，在这个窗口改变使本页运行的条件。LabVIEW 有一些预定义的符号（Symbol）可供条件禁用结构使用，比如 TARGET\_TYPE 表示目标代码在什么系统下运行。如果条件是“TARGET\_TYPE == Mac”表示目标代码运行在苹果机上。  

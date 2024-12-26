@@ -7,8 +7,8 @@ tags:
 
 公司的办公楼
 
-[![DSC00090](images/dsc00090_thumb.jpg "DSC00090")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/11/dsc00090.jpg)
+![DSC00090](images/dsc00090_thumb.jpg "DSC00090")
 
 我种的绿萝
 
-[![DSC00089](images/dsc00089_thumb.jpg "DSC00089")](http://ruanqizhen.wordpress.com/wp-content/uploads/2010/11/dsc00089.jpg)
+![DSC00089](images/dsc00089_thumb.jpg "DSC00089")

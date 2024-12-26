@@ -10,7 +10,7 @@ tags:
     不论何时，都应该尽量使用有意义的控件名称。比如某一控件用来表示使用触发信号的上跳沿还是下跳沿作为触发条件。假若偷懒，不给这个控件起名，或者起个很简略的名称如“方式”，用户在看到这个控件时还是无法得知其确切用途。不如将名称写的详细一些，如图1所示的“边沿触发方式”，会更便于用户理解。  
     单有控件标题还不够完善。因为这个控件的输入值只有两种，可以使用布尔数值类型来表示。但是用户并不清楚“真”值在这里表示的是上跳沿还是下跳沿。因此，还应该把表示当前状态的布尔文本也显示出来。这样用户就可以行处的知道当前是什么方式。
 
-[![](http://by2.storage.msn.com/y1pH5Es9Ox64kZKSo-Yw4VP0p8JaP90OUC1lIHhjGZE8BwQ50gQGO0otRG8LIbx6Lc07R7eh33ACr6vpWIMZ2Upj7tPyMeKNxQW?PARTNER=WRITER)](http://by2.storage.msn.com/y1pH5Es9Ox64kbdospmuA3vCnTRwz-i5fXR5T3xJRaqlGCDgEy2lpV5Yr1dAQ3tQoKoS1UujBcZODg0dI7Or9VbOkNKgQ0x2sgq?PARTNER=WRITER)  
+![](http://by2.storage.msn.com/y1pH5Es9Ox64kZKSo-Yw4VP0p8JaP90OUC1lIHhjGZE8BwQ50gQGO0otRG8LIbx6Lc07R7eh33ACr6vpWIMZ2Upj7tPyMeKNxQW?PARTNER=WRITER)  
 图1：一个布尔型控件
 
      提示条在一般程序中使用的非常广泛，把鼠标移到工具条的按钮上，就会出现一个黄色的小条提示这个按钮的用途。但是，由于 LabVIEW 有一个 Context Help 窗口，使用 LabVIEW编写的程序大多数是把帮助信息写在这个在线帮助窗口里，就不需要再为界面添加提示条了。与提示条相比，在线帮助窗口面积比较大，可以写入更详细的信息，但是有时候可能影响整个界面的美观。
@@ -22,7 +22,7 @@ tags:
     以 Import Shared Library 工具为例，下图是它的一页界面。在这个界面上其实用户真正需要选择的就只是“Error Handling Mode”这一项。界面下方的文字，是针对不同的错误处理模式的解释说明。用户选择不同的模式，给出的帮助文字也会相应调整。由于这个错误处理模式仅用文字描述还不够直观，因此界面中部还给出了图片作为帮助信息。  
     按 Ctrl+H 键，就会看到在线帮助窗口，里面有对每个界面元素的解释。如果觉得这还不够详细，可以点击界面右下方的 Help 按钮打开用户手册，阅读更为细致的解释。
 
-[![](http://by2.storage.msn.com/y1pH5Es9Ox64kb7XW7gprfJkEJWP3MoUR7AJVCS1mkKVqT8LrZAsCNcxkp3ZvfK13p9nL6sY-3JvciMs6efvHKVhVUo2kepG4-x?PARTNER=WRITER)](http://by2.storage.msn.com/y1pH5Es9Ox64kY9OUjlXc7eSvOTjaBJMYdG0xMshj_-IRxDnZvbvVXYq2lNG8xAJO5FY8Hx1tTpdX1VrgRYvbBqkE_YdkGLV9KV?PARTNER=WRITER)  
+![](http://by2.storage.msn.com/y1pH5Es9Ox64kb7XW7gprfJkEJWP3MoUR7AJVCS1mkKVqT8LrZAsCNcxkp3ZvfK13p9nL6sY-3JvciMs6efvHKVhVUo2kepG4-x?PARTNER=WRITER)  
 图2：Import Shared Library 的界面
 
 [《我和 LabVIEW》目录](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1073.entry)

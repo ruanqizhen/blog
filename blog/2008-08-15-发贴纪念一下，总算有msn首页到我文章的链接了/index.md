@@ -9,4 +9,4 @@ date: "2008-08-15"
 
 链接是：“[回顾：租房的那个时代](https://ruanqizhen.wordpress.com/2007/10/31/%e7%a7%9f%e6%88%bf%e6%97%b6%e4%bb%a3%e7%9a%84%e5%9b%9e%e9%a1%be/)”
 
-[![](http://2ujomw.bay.livefilestore.com/y1pxrd0HNJD442VXZLxrx7wb8VZCHGJGUT1ck3sKKRqMsggtV02V0XPcsBGQnfwEC2tjuvcD34NlLM?PARTNER=WRITER)](http://2ujomw.bay.livefilestore.com/y1p8fONu2CCjpeY17gC8WIEA46rfomoJkMxLo8pkYSmOKrppKrv2g0K1gONaVJxzwNMC7kKkFwUDRI?PARTNER=WRITER)
+![](http://2ujomw.bay.livefilestore.com/y1pxrd0HNJD442VXZLxrx7wb8VZCHGJGUT1ck3sKKRqMsggtV02V0XPcsBGQnfwEC2tjuvcD34NlLM?PARTNER=WRITER)

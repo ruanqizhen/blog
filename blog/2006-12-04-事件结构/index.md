@@ -13,7 +13,7 @@ tags:
 
     按照事件的产生源来区分，LabVIEW有以下几种事件：
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CUPEpY38Tn57aip6V5Fwz-WEpakzp6ekAKGVhg5rjFYhH72stkal4CjYJOK5mRJRo0w2rO5MMeUwrPJWbR-Bf_-Fj_GRR5deJHQLwztWU5h_cvhqVToeKm)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4AxBll9jpgb_Qqk_covBAFprZA4u3hZGrZKNEvjxT5bSDorXjJhjIX4luNMScc_nW8EKDaVlN1FfK4LJHz7YN9qMSI5LeFlnolLwgsLjc35lphwKZ8t3gf1)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CUPEpY38Tn57aip6V5Fwz-WEpakzp6ekAKGVhg5rjFYhH72stkal4CjYJOK5mRJRo0w2rO5MMeUwrPJWbR-Bf_-Fj_GRR5deJHQLwztWU5h_cvhqVToeKm)  
 图1：配置事件
 
     1． 应用程序事件（`<Application>`），这类事件主要反映整个应用程序状态的变化，例如：程序是否关闭，是否超时等。  
@@ -21,7 +21,7 @@ tags:
     3． 动态事件（Dynamic），用于处理用户自己定义的或在程序中临时生成的事件。  
     4． 区域事件（Pane）和分割线事件（Splitter）是LabVIEW 8中新添加的特性。LabVIEW 8中，用户可以把一个VI的前面板分割成几份，这两类事件用来处理用户对某个区域或区域分割线的状态的改变。
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CR364zchBRaD_O56J7B0GXsq4NAs94zXvXsLgLORFnygmC32Jb1cFfyUpegeHurPPjV8xUKnWRDqZy26BjwOfTdoLCF1J1SNL_gpBmn7l7VKubXRf2FTai)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4BNL7FgrmkVKxRKfS-2QnEe7xoc_dEX7POYsm0mfaopS38okOZxlTa7OROUmPOOtva0d_cZvQ4kSsFI2ik1KPvaozQoDEohESpV7TmP6KzLyD9WMq3dz3yG)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CR364zchBRaD_O56J7B0GXsq4NAs94zXvXsLgLORFnygmC32Jb1cFfyUpegeHurPPjV8xUKnWRDqZy26BjwOfTdoLCF1J1SNL_gpBmn7l7VKubXRf2FTai)  
 图2：面板上划分区域
 
     5． 控件事件（Control）是最常用的一种事件，用于处理某个控件状态的改变。例如，控件值的改变，或者鼠标键盘的操作。  
@@ -42,7 +42,7 @@ tags:
 
     下面举例说明如何使用通知型事件。我们经常需要使用到这样的字符串控件：控件用于输入电话号码，因此只接收数字和横线，对其他按键不起反应。LabVIEW没有直接提供此种控件，但是它们可以利用通知型事件被方便地实现出来。
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DcR0SvOgQgxy0kEXYYEtJ_utYxLwrcoNqFs1Xc77XRR-UZGDNzUcDNu3HF4dfaflAdnsZw03kfI5xc9Sknx90z7zdiNHMHBVyh-s1eug3HbRZhRcUnIUVg)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4D1H8lF89SK-nEOm6J2zyzNxpNGPg263emmI6rzmdNGHx2cw1tf06CODDCmmX58xQ0BbIMglfn4UjYMaavU_oB0fyT1uGEp84xGNYagIK_oDoSXli4Eho-C)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DcR0SvOgQgxy0kEXYYEtJ_utYxLwrcoNqFs1Xc77XRR-UZGDNzUcDNu3HF4dfaflAdnsZw03kfI5xc9Sknx90z7zdiNHMHBVyh-s1eug3HbRZhRcUnIUVg)  
 图3：利用 Key Down? 事件实现电话号码控件
 
     这个例子可以在这里下载：[](http://community.ni.com/examples/4f7f75288fc76ee4578b4e8b4ef65b9e73b076f463a553d765705b5776845b577b264e3263a74ef6/phone-number-control.vi)[Phone Number Control.vi](http://decibel.ni.com/content/docs/DOC-1076)
@@ -52,7 +52,7 @@ tags:
     在初始状态下，打开事件配置（Edit Events）对话框，动态事件下的一栏是空的。因为动态事件只有注册过之后才能使用。与事件相关的操作在函数选栏的 `Programming -> Dialog & User Interface -> Events` 下面。  
     用于注册事件的节点是事件注册节点（Register For Events）。需要注册某一事件时，先为它的产生者生成一个引用节点，然后将引用节点与事件注册节点的下方区域相连，再选取所需的事件。如下例：
 
-[![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4A8q2LirLQ2tyHqHa5EFiGJmCCf55d476NAKYG-TT9kDT6lW2QxkA9cmaxOKUNMBFk_dX594JvlNHRhZqw4SggxquAyFyRpLgrLwIme2BtcV_N-k5r_V2ai)](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4BSFO_PeIr5S0bK1g0hJOMB_RWpdfWRMcQPwx49hk2ZQN0T_0Gdz4jaRvqVUIPE6aWXiNAqvOwO6FRo-gL3hbxEhj9KtnPFUS19SS9CS-YXZRw-J9GEuCsp)  
+![](http://tk1.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4A8q2LirLQ2tyHqHa5EFiGJmCCf55d476NAKYG-TT9kDT6lW2QxkA9cmaxOKUNMBFk_dX594JvlNHRhZqw4SggxquAyFyRpLgrLwIme2BtcV_N-k5r_V2ai)  
 图4：注册动态事件
 
     对于当前VI上的控件或区域等类型的事件，一般来说可以在事件结构中静态地被选择，所以不需要再动态注册一遍。但有时，当前VI的程序框图已经过于复杂，我们希望在子 VI 里去处理某些控件的事件。这时就可以把控件的引用传入子 VI，在子 VI 中动态注册所需事件。在子 VI 的事件结构中处理相应的事件。
