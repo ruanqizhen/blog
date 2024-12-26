@@ -32,7 +32,7 @@ const config = {
       ({
         docs: false,
         blog: {
-		  routeBasePath: '/', // Serve the blog at the site's root
+          routeBasePath: '/', // Serve the blog at the site's root
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -44,7 +44,7 @@ const config = {
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
-		  onUntruncatedBlogPosts: 'ignore',
+          onUntruncatedBlogPosts: 'ignore',
           blogSidebarTitle: '文章列表',
           blogSidebarCount: 'ALL',
         },
@@ -62,7 +62,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '博客备份',
-		hideOnScroll: true,
+        hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -84,6 +84,7 @@ const config = {
         highlightSearchTermsOnTargetPage: true,
       },
     ],
+    "./src/plugin/plugin-image-zoom",
   ],
 };
 
