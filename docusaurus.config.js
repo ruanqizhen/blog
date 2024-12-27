@@ -61,7 +61,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: '博客备份',
+        title: '凡人琐忆',
         hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
