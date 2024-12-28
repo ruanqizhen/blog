@@ -9,7 +9,7 @@ export default function FooterWrapper(props) {
   return (
     <>
       <Footer {...props} />
-	  {!isBlogPostPage && (<a href={metadata.permalink}>查看或添加留言</a>)}
+	  {!isBlogPostPage && (<b><a href={metadata.permalink}>查看或添加留言</a></b>)}
 
     </>
   );
