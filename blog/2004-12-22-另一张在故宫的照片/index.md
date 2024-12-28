@@ -5,5 +5,5 @@ tags:
   - "我的照片"
 ---
 
-![](http://storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4DRdkmJgDdehhwsgtnNYOH9dK3YGBsLx76cE-p1woGJvVdrMXGbYPzlq7gzQ9ZSntIO89apKbu6WA)
+![](PC180144.JPG)
 
