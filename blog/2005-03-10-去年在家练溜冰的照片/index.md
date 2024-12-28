@@ -9,5 +9,5 @@ tags:
 
 回到上海还向同事们炫耀了一把。
 
-![](http://storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4BwrGWai3oxoSADPjEYoFPjj-n7oItQkDqT2WHOqAS8STt77Sag5J7EaSGFeqHVt3poMGX-Bv_WAw)
+![](PC210149.JPG)
 
