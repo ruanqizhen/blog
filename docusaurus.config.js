@@ -51,6 +51,9 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-VL39XPYKDH',
+        },
       }),
     ],
   ],
@@ -59,7 +62,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '凡人琐忆',
         hideOnScroll: true,
