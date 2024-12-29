@@ -2,7 +2,7 @@
 title: "Introduce My Hometown"
 date: "2005-08-13"
 tags: 
-  - "我的文章"
+  - "英语学习"
 ---
 
 I lived in a small town in the northeast of Inner Mongolia province, called Jagedaqi (加格达奇), before I started elementary school. It is located at the foot of the Xing’an Mountains. Although I spent many years there, I was too young to explore much of the town. I could barely remember what it looked like until one summer a few years ago when I had the chance to visit again.
