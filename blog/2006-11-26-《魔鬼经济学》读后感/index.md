@@ -2,7 +2,7 @@
 title: "《魔鬼经济学》读后感"
 date: "2006-11-26"
 tags: 
-  - "生活随笔"
+  - "读（观）后感"
 ---
 
     这本《魔鬼经济学》是我在地铁口的书摊上买的，当时也是贪个小便宜。回家打开书一看，原来是盗版书，满篇都是错别字，好在还没达到影响理解内容的程度。看来小便宜不能占啊！
@@ -19,6 +19,4 @@ tags:
     同一个行业内，个体之间也存在工资差距。原因是多方面的，原因之一是由于个人的业务水平不同，创造出的价值也不同，所以想要提高收入，必须提高自己的工作能力和水平。  
     还有一个因素，是由于每个人对工资的期望不同引起的。这一点是我在读《经济学原理》中解释价格歧视一段时突然领悟的。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
 
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1976&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)
