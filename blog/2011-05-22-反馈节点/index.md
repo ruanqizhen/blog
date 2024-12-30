@@ -7,6 +7,8 @@ tags:
 
 https://labview.qizhen.xyz/
 
+## 基础
+
 反馈节点和移位寄存器相比，他们的功能与本质是完全相同的。反馈节点的优点在于它不需要从循环的边框上去连数据线，因此可以把程序写的更简洁美观，尤其是控制或电子行业的工程师，他们本身很熟悉反馈的概念，可以直观理解这一节点的用途。但是由于反馈节点实际依赖于循环结构，而他们之间又没有数据线相连，使用反馈节点可能一不小心就把逻辑写错。
 
 下图是一个简单的使用了反馈节点的程序代码，它的运行结果是什么？
@@ -46,3 +48,30 @@ https://labview.qizhen.xyz/
 最后大家猜一下下面这个程序的运行结果是几？
 
 ![image](images/image9.png "image")
+
+## 子VI有多个实例
+
+
+今天又想到一个问题，于是编程序验证了一下。如果一个包含反馈节点的VI在主VI中有多个调用实例，那么它们之间是共享一个移位寄存器呢，还是每个实例有自己的移位寄存器呢？
+
+这是子VI：  
+![image](images/image.png "image")
+
+这是主VI：  
+![image](images/image1.png "image")
+
+程序运行结果如下：  
+![image](images/image2.png "image")
+
+看来它们是分享了同一个移位寄存器。
+
+甚至子VI在不同的循环中被调用，它们也还是共用同一个顶层移位寄存器。比如下图这个程序：  
+![image](images/image33.png "image")
+
+运行结果：  
+![image](images/image34.png "image")
+
+只有把子VI设置成为每个实例都生成副本的[可重入运行方式](http://ruanqizhen.wordpress.com/2006/07/19/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-vi-%E7%9A%84%E9%87%8D%E5%85%A5%E5%B1%9E%E6%80%A7%EF%BC%88reentrant%EF%BC%89/)时，不同的子VI实例才会有独立的移位寄存器。
+
+之前介绍的反馈节点内容：[http://ruanqizhen.wordpress.com/2008/08/20/循环结构的反馈节点](http://ruanqizhen.wordpress.com/2008/08/20/循环结构的反馈节点)，[http://ruanqizhen.wordpress.com/2011/05/22/反馈节点](http://ruanqizhen.wordpress.com/2011/05/22/)。
+
