@@ -1,5 +1,5 @@
 ---
-title: "谈论 删除Live Space上垃圾留言(Spam Comments)的最佳办法"
+title: "删除Live Space上垃圾留言"
 date: "2008-08-28"
 tags: 
   - "msn"
