@@ -1,5 +1,5 @@
 ---
-title: "Packed Project Libraries 1"
+title: "Packed Project Libraries"
 date: "2011-08-03"
 tags: 
   - "我和labview"
