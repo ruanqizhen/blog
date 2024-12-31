@@ -2,7 +2,7 @@
 title: "预防近视要从婴儿抓起"
 date: "2007-07-16"
 tags: 
-  - "生活随笔"
+  - "读（观）后感"
 ---
 
     今天早上看书，看到《心理学》关于视觉的一章了。其中一个非常有用的信息，以前居然从没听说过。这是一项关于婴儿睡眠和近视眼的统计数据。
@@ -13,6 +13,3 @@ tags:
 
     如果大家不想让自己的后代患上近视眼，一定要记得在卧室安装全遮光的窗帘，在孩子睡觉时拉好窗帘，关闭灯光。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/default.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!2401&_c11_BlogPart_BlogPart=blogentry&_c=BlogPart&_c02_owner=1&wa=wsignin1.0)
