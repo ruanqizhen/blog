@@ -2,7 +2,7 @@
 title: "父母与同伴对孩子的影响"
 date: "2007-06-28"
 tags: 
-  - "生活随笔"
+  - "读（观）后感"
 ---
 
     人是天性和教养（基因和环境影响）共同的结果。虽然基因很重要，但他是我们所不能改变的。而教养的影响使得我们有可能通过自己的努力，使自己或帮助别人取得更大成绩。所以，不论基因的影响有多大，作为一个个体，把精力关注到后天教养上，才会对自己更有好处。
@@ -17,6 +17,3 @@ tags:
 
     想起了孟母三迁的故事。孟妈妈肯定没做过大量的调查研究，但她的直觉还真是不错。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!2372&_c11_BlogPart_BlogPart=blogentry&_c=BlogPart&_c02_owner=1)
