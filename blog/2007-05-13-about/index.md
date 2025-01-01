@@ -1,5 +1,5 @@
 ---
-title: "关于这个博客"
+title: "关于这个Wordpress博客"
 date: "2007-05-13"
 ---
 
