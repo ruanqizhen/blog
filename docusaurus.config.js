@@ -14,10 +14,9 @@ const config = {
   tagline: '博客备份',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://qizhen.vercel.app/',
+  url: 'https://blog.qizhen.xyz/',
   baseUrl: '/',
-  projectName: 'blog', // Usually your repo name.
+  projectName: 'blog', 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
    
@@ -38,10 +37,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:'https://github.com/ruanqizhen/blog/edit/main/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'ignore',
@@ -76,6 +72,25 @@ const config = {
       },
     }),
   plugins: [
+    function monitorPlugin(context, options) {
+      return {
+        name: 'monitor-plugin',
+        injectHtmlTags({content}) {
+          return {
+            postBodyTags: [`
+               <script type="text/javascript" src="https://hm.baidu.com/hm.js?b3f6e7ec9302021671173e3fad14f4cd"></script>
+               <script type="text/javascript">
+                 (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                 })(window, document, "clarity", "script", "jxmn1qjx88");
+               </script>
+            `],
+          };
+        },
+      };
+    },
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
