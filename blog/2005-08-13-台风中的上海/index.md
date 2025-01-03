@@ -2,7 +2,7 @@
 title: "台风中的上海"
 date: "2005-08-13"
 tags: 
-  - "美丽图片"
+  - "浮光掠影"
 ---
 
  _Quote_ [台风中的上海](http://spaces.msn.com/members/superjing/blog/cns!1pfTx4oMo1PNplINeo_2PqXA!282.entry)
