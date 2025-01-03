@@ -2,7 +2,7 @@
 title: "可互换虚拟仪器驱动程序的开发"
 date: "2005-10-27"
 tags: 
-  - "我的文章"
+  - "我和labview"
 ---
 
 原文发表在[《测控技术》](http://www.mct.com.cn/zuixin-yaomu/zuixinyaomukan.asp?num=195)

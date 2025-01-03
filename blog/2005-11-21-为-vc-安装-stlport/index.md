@@ -2,7 +2,7 @@
 title: "为 VC 安装 STLPort"
 date: "2005-11-21"
 tags: 
-  - "我的文章"
+  - "码农札记"
 ---
 
 1. 从 [www.stlport.com](http://www.stlport.com) 下载。
