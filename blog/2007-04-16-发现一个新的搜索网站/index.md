@@ -2,7 +2,7 @@
 title: "发现一个新的搜索网站"
 date: "2007-04-16"
 tags: 
-  - "我的文章"
+  - "光阴片语"
 ---
 
     网站名叫“有道 Youdao”：[http://www.yodao.com/](http://www.yodao.com/)  
