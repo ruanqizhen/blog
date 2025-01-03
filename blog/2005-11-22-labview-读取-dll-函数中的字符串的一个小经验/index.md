@@ -2,7 +2,7 @@
 title: "LabVIEW 读取 DLL 函数中的字符串的一个小经验"
 date: "2005-11-22"
 tags: 
-  - "码农札记"
+  - "我和labview"
 ---
 
 我们以前在编写 LabVIEW 调用 C DLL 的程序的时候，使用以下策略读取 DLL 函数中的字符串：
