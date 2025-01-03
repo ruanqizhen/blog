@@ -2,7 +2,7 @@
 title: "公司十周年庆典"
 date: "2008-03-06"
 tags: 
-  - "生活随笔"
+  - "心路历程"
 ---
 
     今年是NI上海分公司成立的第十个年头。昨天，公司在举办了一次隆重的庆典。庆典分两部分：
@@ -25,5 +25,5 @@ tags:
     [http://liudibo.spaces.live.com/photos/cns!ED3FFE7293541AAC!209](http://liudibo.spaces.live.com/photos/cns!ED3FFE7293541AAC!209 "http://liudibo.spaces.live.com/photos/cns!ED3FFE7293541AAC!209")  
    
 
-[《生活随笔》目录](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
+
 ```
