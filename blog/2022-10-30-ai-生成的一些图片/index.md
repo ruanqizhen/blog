@@ -3,7 +3,7 @@ title: "AI 生成的一些图片"
 date: "2022-10-30"
 tags: 
   - "浮光掠影"
-  - "计算机技术"
+  - "码农札记"
 ---
 
 这几天在电脑上运行了 Stable Diffusion 玩了玩。这是我正的测试页面：[https://qizhen.xyz/genimg](https://qizhen.xyz/genimg)

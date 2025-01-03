@@ -2,7 +2,7 @@
 title: "今天把我的 Hotmail 变成了 Live Mail"
 date: "2006-01-04"
 tags: 
-  - "计算机技术"
+  - "码农札记"
 ---
 ```
   ![](images/27_57_582e036d90b6bb0.jpg)  

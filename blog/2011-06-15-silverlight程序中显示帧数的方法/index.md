@@ -2,7 +2,7 @@
 title: "Silverlight程序中显示帧数的方法"
 date: "2011-06-15"
 tags: 
-  - "计算机技术"
+  - "码农札记"
 ---
 
 接到一个需求：要在Silverlight程序的界面上放置一些控制选项，可以开关Silverlight的EnableFrameRateCounter，EnableRedrawRegions等和显示效率相关的一些设置项。我开始在网上查了一下，这几个与显示性能相关的设置主要被用在装载Silverlight控件的HTML文本中。在Silverlight程序启动之后，这几个属性仍然可以被修改，除EnableGPUAcceleration之外。问题在于，如果EnableGPUAcceleration没有在HTML文件中被设置为True的话，EnableCacheVisualization和EnableFrameRateCounter也无法工作。看来微软给出这几个属性就是为了帮助开发显卡加速的动画的。

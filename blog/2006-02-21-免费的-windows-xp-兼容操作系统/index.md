@@ -2,7 +2,7 @@
 title: "免费的 Windows XP 兼容操作系统"
 date: "2006-02-21"
 tags: 
-  - "软件"
+  - "码农札记"
 ---
 
     React是指 "反抗、抗拒" 的意思。这个 ReactOS 操作系统就是为了反抗 Windows 而诞生的。

@@ -2,7 +2,7 @@
 title: "正常访问Google网页快照的方法"
 date: "2006-09-22"
 tags: 
-  - "计算机技术"
+  - "码农札记"
 ---
 
 转载的，原文在：[http://www.williamlong.info/archives/634.html](http://www.williamlong.info/archives/634.html)  

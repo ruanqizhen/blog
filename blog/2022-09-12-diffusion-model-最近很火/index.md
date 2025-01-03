@@ -2,7 +2,7 @@
 title: "Diffusion Model 最近很火"
 date: "2022-09-12"
 tags: 
-  - "计算机技术"
+  - "码农札记"
   - "浮光掠影"
 ---
 
