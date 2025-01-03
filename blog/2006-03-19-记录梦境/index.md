@@ -1,8 +1,8 @@
 ---
-title: "记录梦境"
+title: "记录梦境：火星任务"
 date: "2006-03-19"
 tags: 
-  - "我的文章"
+  - "幽梦拾遗"
 ---
 
 最近可能是因为换了个环境，有几个晚上睡觉做梦都是情景清晰，内容连贯的故事。把昨晚的故事记录下来吧，说不定哪天又有一部电影和我做的梦差不多。
@@ -35,8 +35,3 @@ tags:
 
     后来的情节就记不清楚了......       ![](images/smile_regular.gif)
 
-**相关文章：**
-
-    [Talking about 我昨晚的梦](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!982.entry)
-
- [编辑](http://spaces.msn.com/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1242&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

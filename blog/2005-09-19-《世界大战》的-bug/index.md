@@ -29,8 +29,3 @@ tags:
 
     可以让我们的英雄逮住一个生了病的外星人，于是人类受到了启发，开始研制生物武器。最终合成了一种专门针对外星人的恶性病毒。这种病毒把人类当成中间宿主，但不侵害人类。接着是给所有的人都注射这种病毒，之后外星人继续捕捉人类，比抽取人类的血液作为供给。于是这种病毒就被传染给了外星人。最后人类利用生物武器取得了胜利![](images/smile_teeth.gif)  （还是很俗，不过精致了一点）
 
-**相关文章：**
-
-    [Talking about 我昨晚的梦](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!982.entry)
-
- [编辑](http://spaces.msn.com/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!984&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

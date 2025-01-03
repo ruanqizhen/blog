@@ -2,7 +2,8 @@
 title: "Talking about 我昨晚的梦"
 date: "2005-09-19"
 tags: 
-  - "我的文章"
+  - "幽梦拾遗"
+  - "读（观）后感"
 ---
 
 昨天在电影院看了“War of The Warld” 《世界大战》。天哪，其中一段居然和我几个月前做的一个梦一模一样。当时这个梦就很清晰，所以印象特深，还背我记到blog里了。
@@ -11,7 +12,7 @@ tags:
 
 _Quote_
 
-> [我昨晚的梦](http://spaces.msn.com/members/ruanqizhen/blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!647.entry)  
+> 《我昨晚的梦》
 > 
 > 我昨晚梦见外星人入侵地球了。
 > 

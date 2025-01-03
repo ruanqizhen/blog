@@ -1,8 +1,8 @@
 ---
-title: "记录梦境 3"
+title: "记录梦境：金钟罩"
 date: "2006-10-08"
 tags: 
-  - "生活随笔"
+  - "幽梦拾遗"
 ---
 
     昨晚做了个梦，因为特别清晰，所以记录下来。在梦里我指挥着几个弟兄围堵恐怖分子。为了减少伤亡，我发明出了一种罩子，罩在每个人身上，就刀枪不入了。  
@@ -10,6 +10,3 @@ tags:
 
     前天，国庆假期还没结束就跑到公司来了。打开信箱一看，满屏都是红颜色，有几百封未读邮件。赶紧又把信箱给关了。今天正式上班才开始看信，等把所有的信看一边，该回的回掉，基本上一天也过去了。
 
-    [《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1843&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)
