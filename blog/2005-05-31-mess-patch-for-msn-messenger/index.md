@@ -2,7 +2,7 @@
 title: "Mess Patch for MSN Messenger"
 date: "2005-05-31"
 tags: 
-  - "码农札记"
+  - "msn"
 ---
 
 这是最新版, for MSN Messenger 7.0.**0813**
