@@ -2,7 +2,7 @@
 title: "MSI Installer 中的升级"
 date: "2005-11-21"
 tags: 
-  - "码农札记"
+  - "光阴片语"
 ---
 
     这是我遇到的一个 MSI Installer 的问题。
