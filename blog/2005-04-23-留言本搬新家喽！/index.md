@@ -1,9 +1,9 @@
 ---
-title: "留言本搬新家喽！"
+title: "旧博客的留言本"
 date: "2005-04-23"
 tags: 
-  - "留言"
+  - "光阴片语"
 ---
 
-欢迎到到[新留言本](http://ruanqizhen.spaces.live.com/guestbook)给我留言！  
+旧博客的留言本  
   

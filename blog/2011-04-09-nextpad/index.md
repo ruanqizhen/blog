@@ -2,7 +2,7 @@
 title: "nextpad"
 date: "2011-04-09"
 tags: 
-  - "杂文"
+  - "光阴片语"
 ---
 
 https://labview.qizhen.xyz/
