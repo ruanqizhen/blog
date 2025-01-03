@@ -115,4 +115,3 @@ RF模块仪器
     \[6\] [可互换虚拟仪器驱动程序的开发](http://ruanqizhen.spaces.msn.com/blog/cns!5852D4F797C53FB6!1060.entry)，阮奇桢. 2006. 
     \[7\] [其它相关技术文章](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!1073.entry)  
 
-[编辑](http://spaces.msn.com/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1239&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

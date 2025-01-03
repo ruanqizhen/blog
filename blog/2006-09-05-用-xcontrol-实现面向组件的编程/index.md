@@ -25,9 +25,3 @@ tags:
     现在，XControl 仍然不太令人满意的地方是它还不支持用户自定义的事件。
 
     XControl 具有封装的特性。因此我在《[利用 LabVIEW 工程库实现面向对象编程](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!783.entry)》一文中提到，同样可以使用 XControl 来达到面向对象的编程方法。但是 XControl 不具备继承和多态的特性。与之相比较，Library 和 LVClass 只能够把程序中的某些功能封装成模块，而涉及到包含界面的模块，就无能为力了。XControl 则非常适合制作有界面的程序组件。
-
-**参考文章：**    [一个 XControl 的实例](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1973.entry)  
-    [我和 LabVIEW](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)  
-    [面向对象与面向组件小议](http://zhuweisky.cnblogs.com/archive/2005/09/13/235648.html)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1559&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

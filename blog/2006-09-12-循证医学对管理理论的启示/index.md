@@ -3,6 +3,7 @@ title: "循证医学对管理理论的启示"
 date: "2006-09-12"
 tags: 
   - "读（观）后感"
+  - "久病成医"
 ---
 
     循证医学（evidence-based medicine, EBM）的思想起源于19世纪中叶，但是直到最近的十几年间才开始流行起来。循证医学是指遵循科学依据（证据）的医学。其核心思想是医疗决策（即患者的处理、治疗指南和医疗政策的制定等）应在现有的最好的临床研究依据（证据）基础上作出。
@@ -24,9 +25,3 @@ tags:
 
      把循证医学的思想引入到管理领域，不是我的创意。我是在以前曾经读到的一篇文章里看到这个想法的。当时我正在上生物医学专业的课程，所以对这个想法印象比较深。今天又突然想起了这件事，所以把我的想法总结一下，记录下来作为备考。
 
-**参考资料：**  
-    《[循证医学](http://www.wanfangdata.com.cn/qikan/periodical.Articles/zhwlyx/zhwl2000/0004/000434.htm)》  
-    《[循证医学与21世纪医学教育](http://www.ebm.org.cn/upload/jiaoyu1.htm)》  
-    [《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1789.entry)

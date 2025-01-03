@@ -27,6 +27,3 @@ tags:
 
     小结一下：不论站在什么角度，都不能呆在一个位置上长期不动。跳槽可以解决很多问题。但是为了不让老板们太恨我，给出一条比跳槽稍微缓和的出路：在公司内部换个部门也可以解决一些问题。
 
- [《生活随笔》](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1551&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

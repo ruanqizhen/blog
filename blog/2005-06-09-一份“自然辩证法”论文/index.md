@@ -57,10 +57,3 @@ tags:
 
     由此可见，积极进取的自然观是人来进步的必要条件之一，也正是我们应该树立的自然观。
 
-相关文章：
-
-    [本文发表在奇迹文库](http://www.qiji.cn/eprint/abs/2861.html)
-
-    [其他文章](http://spaces.msn.com/ruanqizhen/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
-
- [编辑](http://ruanqizhen.spaces.live.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!1pU-rgQVTuuWM1TX8W8PfmDA!692&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

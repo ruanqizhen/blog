@@ -18,6 +18,3 @@ tags:
 
     今天早上出了门，一溜号，突然想不起来有没有锁门了。于是只好掏出钥匙，开了门再重锁。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_BlogPart=blogentry&_c=BlogPart&_c02_owner=1&handle=cns!5852D4F797C53FB6!2353)

@@ -16,12 +16,3 @@ tags:
     网站的所有文章的修改记录都应被保存下来。读者可以查看文章的旧版本内容。  
 
   
- 
-
-**相关文章**
-
-    [用 T Wiki 搭建公司内部网站](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1411.entry)
-
-    [生活随笔](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1696&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

@@ -28,6 +28,3 @@ tags:
     我是在外企工作的，外企到中国开研发部历史还不长，真正的核心技术挪到中国的并不多。如果一直接触不到核心技术，想成为专家也很难。  
     狭隘意义上的技术并不是每个人所必须的，不成为专家，也有很多其它方法让自己生活过的很好。但管理知识是必须的，每个人至少要学会管理一个人，就是自己，否则无论做什么都不可能成功。反正管理知识是一定要学的，还不如专心学管理。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1862&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

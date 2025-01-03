@@ -24,9 +24,5 @@ tags:
 ```
 <table cellspacing="0" cellpadding="3" border="1"><tbody><tr><td style="width:91px;text-align:left;"></td><td style="font-weight:bold;width:269px;text-align:center;">Label</td><td style="font-weight:bold;width:282px;text-align:center;">Caption</td></tr><tr><td style="font-weight:bold;width:91px;text-align:center;">底层 VI</td><td style="width:269px;">显示出来</td><td style="width:282px;">使用 LabVIEW 的默认状态，即 Caption 为空。</td></tr><tr><td style="font-weight:bold;width:91px;text-align:center;">用户界面 VI</td><td style="width:269px;">隐藏<br>多语言版本中，只使用英语</td><td style="width:282px;">显示<br>多语言版本中，使用本地化语言</td></tr><tr><td style="font-weight:bold;width:91px;text-align:center;">程序接口 VI</td><td style="width:269px;">隐藏<br>多语言版本中，只使用英语<br>不用标注控件的默认值</td><td style="width:282px;">显示<br>多语言版本中，使用本地化语言<br>在后面加一括号，括号内标注控件的默认值和数据单位</td></tr></tbody></table>
 
-  
 
-查看[《我和 LabVIEW》的其他文章](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
-
-[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1506&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)
 ```

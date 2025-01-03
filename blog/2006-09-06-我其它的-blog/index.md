@@ -30,5 +30,3 @@ tags:
 [http://www.chinavib.com/space/?55879](http://www.chinavib.com/space/?55879)
 
 [http://LabVIEW.tianyablog.com/](http://LabVIEW.tianyablog.com/)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1735&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

@@ -3,6 +3,7 @@ title: "医用软件概述"
 date: "2006-02-25"
 tags: 
   - "我的文章"
+  - "久病成医"
 ---
 
 **医用软件概述**
@@ -174,4 +175,3 @@ tags:
 
 31\. 数字化医院建设成本效益分析  吴昊， 刘国祥， 李书章， 陈黎明 - 解放军医院管理杂志, 2004
 
-[编辑](http://spaces.msn.com/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1&handle=cns!5852D4F797C53FB6!1225)

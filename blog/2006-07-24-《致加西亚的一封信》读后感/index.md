@@ -24,6 +24,3 @@ tags:
     我也浏览过《致加西亚的信》，给我留下深刻印象的只有一句话：“一个人应该永远同时从事两件工作：一件是目前所从事的工作；另一件则 是真正想做的工作。如果你能将该做的工作做得和想做的工作一样认真，那么你一定会成功 ，因为你在为未来做准备，你正在学习一些足以超越目前职位，甚至成为老板或老板的老板 的技巧。当时机成熟，你已准备就绪了。”  
    你现在是雇员，那么也不要只站在雇员的角度看待一切。应该说，雇员的忠诚和敬业，对老板和对雇员本人都是有利的。当你欣赏和赞美周围的人的时候，别忘了把同样的赞美恩施给你的老板、上司、长辈和师长。
 
-[《生活随笔》](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1550&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

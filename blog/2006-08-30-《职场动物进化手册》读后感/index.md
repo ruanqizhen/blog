@@ -26,9 +26,3 @@ tags:
     外企之中，最常见的动物就数蠢驴了。因为，大多数的舆论都是鼓励人们作蠢驴的。我也一度非常喜欢蠢驴这个角色，但是人的思想是会变得，我现在开始不喜欢这个角色了。脱离这个角色，首要的任务就是培养政治头脑。蠢驴们并非智商或情商低，想不通政治这东西，而是很多蠢驴本身对政治这东西有抵触情绪。如果能消除这种抵触，意识到它也是帮助个人成功不可缺少的一门学问，蠢驴是可以一跃进化为猎犬的。
 
     当然，敏感的政治头脑不是看一两本书就能养成的，还需要长期的熏陶和培养。咱先从身边的政治开始学起吧。这本书看完，我总算是朝着狗狗的方向，进化了第一步。
-
-**相关文章**  
-    [《职场动物进化手册》全文](http://book.sina.com.cn/nzt/1096014690_zhichangdw/index.shtml)  
-    [《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1717&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

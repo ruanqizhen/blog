@@ -41,7 +41,3 @@ tags:
     谷歌输入法上的用户词库自动同步功能蛮好的，但是除了同自己的词库同步以外，还可以考虑建立一些共同的小组，用户可以选择和某些组织的词库也同步起来。比如一个公司内部的员工会用到相当多共同词汇，这个公司的员工可以都选测同步到一个帐号上去。某个行业也可以有自己的词库。
 
     这几天试用谷歌输入法，发现它竟然不具备语法分析的功能，因此还不能算是和智能狂拼、微软拼音等一样的完整整句输入法。希望它后续的版本能把这些功能完善起来。
-
-《[生活随笔](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)》
-
- [编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!2139&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

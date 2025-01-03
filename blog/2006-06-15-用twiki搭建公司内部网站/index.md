@@ -15,10 +15,3 @@ TWiki可以允许用户直接在网页上进行修改，而且被修改的内容
 
 不过这是内部网站，所以只有NI同事可以看。
 
-**相关文章：**
-
-    [整合 wiki, blog 和 forum](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1696.entry)
-
-    [技术文章](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
-
-[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_handle=cns!5852D4F797C53FB6!1411&_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1)

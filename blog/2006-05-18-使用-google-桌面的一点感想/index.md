@@ -15,8 +15,3 @@ tags:
 
   
    我觉得一个可行的改进措施是公司IT部门利用 Google Desktop 提供的 API 做一些针对性地开发。比如在在某一台服务器上设置搜索引擎，负责抓取我们本地所有文件服务器上的文件，和公共的 Lotus Notes 数据库。员工可以利用浏览器访问这台服务器查询搜索结果。
-
-  
-[**其它相关文章**](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
-
-[编辑](http://ruanqizhen.spaces.msn.com/PersonalSpace.aspx?_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1&handle=cns!5852D4F797C53FB6!1305)

@@ -28,6 +28,3 @@ tags:
     如果这个模块在程序中只有一个实例还好办，若要支持多个实例，那数据部分就要设计个更为复杂以确保模块不同实例之间的数据不会混乱。  
     最重要的是现在 LabVIEW 自身已经开始支持面向对象的功能了。在 LVClass 中，既可以有数据，也可以有方法；方法可以被定义为是私有的或共有的；另外之支持继承、多态等。所有这些都为功能模块的封装和接口提供了更好的解决方案。与其费尽心机的自己想办法把格模块包装的更合理，不如直接利用 LVOOP 已有的功能。把自己的的模块都设计为 LVClass。
 
-[《我和 LabVIEW》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_handle=cns!5852D4F797C53FB6!2375&_c11_BlogPart_BlogPart=blogentry&_c=BlogPart&_c02_owner=1)

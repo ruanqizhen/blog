@@ -19,7 +19,3 @@ tags:
 
     IVI Spacific Driver 是针对某一型号的仪器专用的 IVI 驱动程序。它是不能被用到其它型号的一起上的，就算是只用到通用属性也不行。原因有两个，一个是每个仪器的命令可能是不同的，另一个是驱动程序在初始化的时候就会检查仪器是不是自己所支持的。如果两个型号的仪器所用的命令完全相同，你也好要改一下 Init 函数的源代码才能把驱动用到另一台仪器上。
 
-**相关文章：**    [可互换虚拟仪器驱动程序的开发](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1060.entry)  
-    [一个 IVI 驱动程序的开发过程](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!1472.entry)
-
-[编辑](http://ruanqizhen.spaces.live.com/?_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1&handle=cns!5852D4F797C53FB6!2034)

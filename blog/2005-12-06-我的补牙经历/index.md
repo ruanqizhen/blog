@@ -2,7 +2,7 @@
 title: "我的补牙经历"
 date: "2005-12-06"
 tags: 
-  - "我的文章"
+  - "久病成医"
 ---
 
     我是大概在3个月前补了一次牙。
@@ -22,5 +22,3 @@ tags:
     我唯一有一点担心的是汞离子是对人体有毒的，我上网查了一下。这种银汞填充物已经被使用了大约150年了，从来没有患者中毒的报告。这才放心了。也许汞原子不是那么容易变成离子的吧。
 
     不过故事到这里还远没有结束。医生说我这两个洞太大了。牙齿被钻得只剩下一层薄壁了，迟早会裂开，必须装牙套。除此之外，我还有两颗智齿需要拔掉，七八颗有严重契状磨损的牙齿需要补。![](images/smile_cry.gif)惨哪！
-
-[编辑](http://spaces.msn.com/members/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_handle=cns!1pU-rgQVTuuWM1TX8W8PfmDA!1111&_c11_BlogPart_blogpart=blogentry&_c11_BlogPart_frompart=myspace&_c=BlogPart&_c02_owner=1)

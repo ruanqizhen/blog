@@ -77,6 +77,3 @@ tags:
     \[16\]. 系统生物学研究进展  杨胜利 - 中国科学院院刊, 2004  
     \[17\]. 跨学科时代的基因工程研究  司徒琳莉， 于敦亮 - 牡丹江师范学院学报: 自然科学版, 1997  
     
-
-[编辑  
-](http://spaces.msn.com/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1&handle=cns!5852D4F797C53FB6!1224)

@@ -33,7 +33,3 @@ tags:
 　　Queue与 STL中的 Queue 相类似。是元素先进先出的集合。  
 　　Stack与 STL中的 Stack 相类似。是元素先进后出的集合。
 
-  
- 
-
-[编辑](http://spaces.msn.com/members/ruanqizhen/PersonalSpace.aspx?_c11_BlogPart_blogpart=blogentry&_c=BlogPart&_c02_owner=1&frompart=myspace)
