@@ -1,6 +1,9 @@
 ---
 title: "使用大语言模型翻译书籍"
 date: "2023-12-10"
+tags: 
+  - "我和labview"
+  - "码农札记"
 ---
 
 最近开始大语言模型把 LabVIEW 书翻译成英语：[https://lv.qizhen.xyz/en/](https://lv.qizhen.xyz/en/)
