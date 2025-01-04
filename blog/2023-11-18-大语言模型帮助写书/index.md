@@ -3,6 +3,7 @@ title: "大语言模型帮助写书"
 date: "2023-11-18"
 tags: 
   - "我和labview"
+  - "码农札记"
 ---
 
 最近一个多月的时间，差不多把业余时间全部用来写一本 Python 编程书了 [https://py.qizhen.xyz/](https://py.qizhen.xyz/)
