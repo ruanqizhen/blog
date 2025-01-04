@@ -1,5 +1,5 @@
 ---
-title: ":)"
+title: "MSN Space 用户"
 date: "2005-05-10"
 tags: 
   - "msn"
