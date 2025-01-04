@@ -1,6 +1,8 @@
 ---
 title: "《我和LabVIEW – 一个NI工程师的十年编程经验》"
 date: "2010-11-11"
+tags: 
+  - "我和labview"
 ---
 
 本书现在已经作为一个开源项目放在Github上了： [https://lv.qizhen.xyz/](https://lv.qizhen.xyz/)
