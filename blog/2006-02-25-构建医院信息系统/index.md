@@ -5,182 +5,183 @@ tags:
   - "浮生若梦"
   - "久病成医"
 ---
-```
-**构建医院信息系统 （草稿）**
 
-              **阮奇桢**
+## 摘要
 
-**摘　要：**
+本文旨在提供一套适用于中小型医院的现代化信息系统解决方案，阐述其架构设计、功能模块、技术选型以及实施要点，以期为医院信息化建设提供参考。
 
-本文提供了一个构建中小型医院通用信息系统的解决方案。
+## 一、概述
 
-## 一. 概述
+### 1. 医院信息系统的必要性
 
-### 1.      为什么要使用医院信息系统
+医院信息系统（HIS）是现代医院管理的重要组成部分，它将先进的管理理念、丰富的业务经验与现代信息技术深度融合，优化医院运营流程，提高管理效率，最大限度地利用人力、物力资源，提升医疗服务质量。HIS能够全面记录和管理医院的各项数据，为临床循证决策、科研分析和绩效评估提供有力的数据支撑。
 
-医院信息系统将医院的管理思想、医院各部门的业务经验以及当今最新计算机技术的完美统一起来。运用医院信息系统将大大提高医院的整体效率，最大限度地发挥人力、物力资源，从而创造更大利润。医院的数据将全部保留，为临床循证管理决策提供科学数据。
+对管理者而言，HIS提供实时、准确的医院运营数据，辅助管理者快速掌握医院运行状况，及时发现并解决管理漏洞，从而进行科学决策和合理规划，提升医院的整体管理水平。
 
-对于管理者来说，医院信息系统将帮助他们快速、准确地掌握医院情况、从而消除管理漏洞、未经来做出准确决策和合理规划。
+### 2. 系统组成
 
-### 2.      通用信息系统组成
+本文介绍的通用信息系统面向中小型医院，覆盖了医院的主要管理职能和患者就诊的核心环节。系统主要功能模块包括：
 
-本文将要介绍的是一个较完整的面向中小型医院的通用信息系统。它覆盖了医院主要管理职能和病人在医院就诊的各主要环节。
+- **门诊管理：** 挂号、收费、医生工作站、药房管理、门诊病历管理等；
+- **住院管理：** 住院登记、病房管理、医嘱管理、护理管理、药房管理、费用结算、出院管理等；
+- **医技科室管理：** 放射科、检验科、功能科等医技科室的工作站管理、报告管理、设备管理等；
+- **药库管理：** 药品采购、入库、出库、盘点、库存管理、财务管理等；
+- **物资管理：** 医疗器械、耗材等物资的采购、入库、出库、盘点、维护等；
+- **固定资产管理：** 固定资产的登记、折旧、维护、报废等；
+- **人力资源管理：** 人事档案管理、薪酬管理、考勤管理、绩效考核等；
+- **财务管理：** 会计核算、成本核算、预算管理、财务报表等；
+- **病案管理：** 病案的收集、存储、借阅、归档、统计分析等；
+- **患者服务：** 预约挂号、报告查询、费用查询、健康档案管理等；
+- **系统管理：** 用户权限管理、系统日志管理、数据备份与恢复、系统监控等。
 
-该系统大致实现如下管理、运营等功能：
+### 3. 系统设计原则
 
-门诊部门的：收费、医生工作站、药房管理；
+一个完善的HIS应遵循以下原则：
 
-住院部门的：结算、药房划价、医生工作站、药房管理、病房医嘱管理；
+- **功能全面性：** 满足医院管理人员、医务人员、系统管理人员以及患者等多类用户的需求。
+- **实用性：** 符合中国医院的实际业务流程和操作习惯，提供友好、直观的用户界面，易学易用。
+- **技术先进性：** 采用成熟、稳定的技术架构，保证系统的高效运行和持续服务能力。
+- **安全可靠性：** 建立完善的安全机制，保障数据的安全性、完整性和保密性，有效抵御病毒和网络攻击。
+- **模块化设计：** 采用模块化设计，方便系统的扩展、升级和维护，降低维护成本。
+- **信息共享性：** 实现院内各部门之间的信息共享和协同工作，提高工作效率。
+- **强大的查询和统计功能：** 提供灵活、强大的数据查询和统计分析功能，支持多条件组合查询和报表生成，为管理决策提供数据支持。
+- **良好的可维护性：** 系统结构清晰、代码规范，方便系统的维护和升级。
 
-医技工作站（放射、功能科等）；
+## 二、硬件体系结构
 
-药库：物流管理、财务管理；
+### 1. 总体结构
 
-其它设备、物资、固定资产等的管理；
+系统采用以太网技术构建覆盖全院的局域网，实现各部门之间的互联互通。网络拓扑结构采用经典的三层网络模型（核心层、汇聚层、接入层）或更现代的脊叶式架构，以提高网络的性能和可靠性。
 
-人事部门：人事管理、工资系统；
+- **核心层：** 采用高性能、高可靠性的冗余交换机或路由器，作为网络的核心枢纽，负责高速数据交换和路由。
+- **汇聚层：** 连接核心层和接入层，负责数据汇聚、流量控制和策略实施。
+- **接入层：** 连接终端设备（如医生工作站、护士站、收费处等），提供用户接入网络的接口。
 
-针对病人的：病案管理、收费管理；
+医院内部主干网络应采用千兆或万兆光纤连接，部门内部采用千兆或百兆以太网连接，以满足不同部门的带宽需求。
 
-查询系统，等。
+### 2. 硬件配置建议
 
-### 3.      系统设计要求
+考虑到硬件技术的快速发展，本文不再提供具体的硬件配置最低要求，而是给出配置建议，医院应根据自身规模、业务量和预算选择合适的硬件设备。
 
-一个较为完善的医院信息管理系统用应满足以下要求：
+- **服务器：**
+    - **数据库服务器：** 建议采用多核CPU、大内存、高速固态硬盘（SSD）和RAID磁盘阵列，以保证数据库的高性能和高可用性。可考虑采用虚拟化技术，提高服务器资源的利用率。
+    - **应用服务器：** 用于部署应用程序和提供Web服务，配置可根据访问量进行调整。
+    - **备份服务器：** 用于数据备份和灾难恢复，配置可适当降低。
+    - **影像存储服务器（PACS服务器）：** 用于存储和管理医学影像数据，需要大容量存储空间和高速数据传输能力。
+- **客户端：** 采用性能稳定的商用计算机或瘦客户机，配置应满足日常办公和应用软件运行的需求。
+- **网络设备：** 包括核心交换机、汇聚交换机、接入交换机、路由器、防火墙等，应根据网络拓扑和带宽需求进行选择。
+- **其他设备：** 包括打印机、扫描仪、条码扫描器、UPS电源等。
 
-在功能方面，医院信息系统需要满足医院三类用户的需求，即医院的领导和管理人员、各类医务人员和保障系统运行的系统管理人员。还需要为公众提供所需的查询服务。
+## 三、软件体系结构
 
-实用性要求：需要符合我国医院实际操作流程的习惯，界面友好、易学易用。
+### 1. 总体结构
 
-技术先进：能够不间断服务，且高速、便捷。
+系统采用经典的三层或多层架构，将应用划分为：
 
-安全可靠：能够保证数据安全，不收病毒、黑客的攻击。
+- **表现层（Presentation Layer）：** 负责用户交互，提供用户界面。采用Web浏览器、移动App或客户端应用程序等形式。
+- **业务逻辑层（Business Logic Layer）：** 处理业务规则和逻辑，是连接表现层和数据访问层的桥梁。
+- **数据访问层（Data Access Layer）：** 负责与数据库进行交互，执行数据的增删改查操作。
+- **数据层（Data Layer）：** 存储医院的各种数据，包括患者信息、病历信息、药品信息、财务信息等。
 
-模块化设计，具有良好的可扩充性，更新、升级方便。
+采用多层架构的优点是：
 
-信息共享、准确及时交流信息。
+- **高内聚、低耦合：** 各层之间职责清晰，降低了系统开发的复杂性，提高了代码的可维护性和可重用性。
+- **易于扩展和升级：** 各层可以独立进行修改和升级，不会影响其他层的功能。
+- **良好的可移植性：** 可以方便地将系统移植到不同的平台和环境中。
 
-维护方便。
+### 2. 技术选型建议
 
-查询功能强大：可以对每个系统的业务情况、统计报表，在任意时间内进行汇总、查询，同时对几种情况可以任意组合查询、统计；院领导通过查询系统，可及时了解业务情况、财务情况。
+- **操作系统：** 服务器端可选择Windows Server或Linux等操作系统，客户端可选择Windows、macOS或Linux等操作系统。
+- **数据库：** 可选择Microsoft SQL Server、Oracle、MySQL、PostgreSQL等关系型数据库管理系统。
+- **开发语言和框架：** 可选择Java、.NET、Python等开发语言和相应的Web框架（如Spring、ASP.NET Core、Django等）。
+- **中间件：** 可根据需要选择消息队列、缓存服务器等中间件，提高系统的性能和可靠性。
 
-## 二. 硬件体系结构
+### 3. 系统安全
 
-### 1.      总体结构
+系统安全性至关重要，应采取以下措施：
 
-本系统将采用以太网技术，将全院构建为统一的局域网。
+- **访问控制：** 实施严格的用户权限管理，控制用户对系统资源的访问权限。
+- **数据加密：** 对敏感数据进行加密存储和传输，防止数据泄露。
+- **防火墙和入侵检测系统：** 部署防火墙和入侵检测系统，监控网络流量，阻止恶意攻击。
+- **数据备份和恢复：** 定期进行数据备份，并建立完善的灾难恢复计划。
+- **安全审计：** 记录系统操作日志，进行安全审计，及时发现和处理安全事件。
 
-<table cellspacing="0" cellpadding="0" border="0"><tbody><tr style="height:39pt;"><td valign="top" width="516"><p><span lang="EN-US" style="font-size:14pt;line-height:150%;"><font color="#000000" size="3"></font></span></p></td></tr></tbody></table>
+## 四、软件开发
 
-网络拓扑采用经典的“三层层次模型”和二层设计相结合的设计方法。在医院网络的核心层一级骨干的主交换机采用采用全冗余无单点故障的千兆路由交换机；主要服务其余各部门之间连接均采千兆骨干光纤接口以及及核心交换机间的均衡链路连接；部门内工作站，才有百兆以太网连接。
+软件开发应采用规范的软件工程方法，包括需求分析、概要设计、详细设计、编码、测试、部署和维护等阶段。
 
-### 2.      硬件最低要求
+### 1. 开发工具
 
-数据库服务器：数量：2；CPU：Intel Pentium 4  2.4GHz；内存：1 GB；硬盘：120 G SCSI  RAID 5；
+根据选择的开发语言和框架选择相应的开发工具，例如Visual Studio、Eclipse、IntelliJ IDEA等。
 
-DICOM数据库服务器服务器：数量：1；CPU：Intel Pentium 4  2.4GHz；内存：1 GB；硬盘：400 G SCSI  RAID 5； 配光盘塔；
+### 2. 门诊挂号模块示例
 
-web服务器：数量：10；CPU：Intel Pentium 4  2.4GHz；内存：1 GB；硬盘：40 G SCSI；
+门诊挂号是HIS的重要组成部分，其功能包括：
 
-客户端：数量：500；CPU：x86 兼容 500MHz；内存：256M；硬盘：40 G。
+- **号源管理：** 管理医生出诊信息、号源数量等。
+- **预约挂号：** 支持患者通过多种渠道（如窗口、电话、网络、App等）进行预约挂号。
+- **现场挂号：** 支持患者在医院窗口进行现场挂号。
+- **退号和改号：** 支持患者进行退号和改号操作。
+- **费用结算：** 完成挂号费用的收取和结算。
+- **统计报表：** 提供挂号量、科室分布、医生工作量等统计报表。
 
-## 三. 软件体系结构
+### 3. 用户界面设计
 
-### 1.      总体结构
+用户界面设计应遵循以下原则：
 
-采用的是比较流行的三层的Browse/Server结构。这种结构将整个应用划分为三层：用户界面层、商业逻辑层和数据库层。用户界面层负责处理用户的输入和向用户的输出，但并不负责解释其含义，但进行合法性验证；商业逻辑层是上下两层的纽带，它用来建立实际的数据库连接，根据用户的请求生成SQL语句检索或更新数据库，并把结果返回给客户端，这一层以动态链接库的形式实现；数据库层负责实际的数据存储和检索。请参阅下图。
+- **简洁直观：** 界面布局清晰，操作流程简单，减少用户的学习成本。
+- **一致性：** 保持界面风格和操作方式的一致性，提高用户体验。
+- **易用性：** 考虑不同用户的操作习惯和技术水平，提供人性化的交互设计。
+- **可访问性：** 考虑残障人士的使用需求，提供相应的辅助功能。
 
-<table cellspacing="0" cellpadding="0" width="576" border="1"><tbody><tr style="height:139.75pt;page-break-inside:avoid;"><td valign="top" width="576"><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><p><font face="Times New Roman" color="#000000" size="3"></font><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><br><p><font face="Times New Roman" color="#000000" size="3"></font><span lang="EN-US"><font size="3"><font color="#000000"><font face="Times New Roman"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></font></font></span></p><p><font face="Times New Roman" color="#000000" size="3"></font><table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="border-right:#ece9d8;border-top:#ece9d8;border-left:#ece9d8;border-bottom:#ece9d8;background-color:transparent;"><div><p align="center"><span style="font-family:宋体;"><font color="#000000" size="3">存储过程</font></span></p><p align="center"><span style="font-family:宋体;"><font color="#000000" size="3">事务处理</font></span></p><p align="center"><span style="font-family:宋体;"><font color="#000000" size="3">数据维护</font></span></p><p align="center"><span style="font-family:宋体;"><font color="#000000" size="3">并发处理</font></span></p><p align="center"><span style="font-family:宋体;"><font color="#000000" size="3">……</font></span></p></div></td></tr></tbody></table><span style="z-index:7;left:0;"><table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="border-right:#ece9d8;border-top:#ece9d8;border-left:#ece9d8;border-bottom:#ece9d8;background-color:transparent;"><div><p><span style="font-family:宋体;"><font color="#000000" size="3">建立连接</font></span></p><p><span style="font-family:宋体;"><font color="#000000" size="3">分析请求</font></span></p><p><span style="font-family:宋体;"><font color="#000000" size="3">分发请求</font></span></p><p><span style="font-family:宋体;"><font color="#000000" size="3">获取结果</font></span></p><p><span style="font-family:宋体;"><font color="#000000" size="3">……</font></span></p></div></td></tr></tbody></table></span><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><br><p><font face="Times New Roman" color="#000000" size="3"></font><span style="z-index:1;left:0;"><table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="border-right:#ece9d8;border-top:#ece9d8;border-left:#ece9d8;border-bottom:#ece9d8;background-color:transparent;"><div><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p></div></td></tr></tbody></table></span><font face="Times New Roman" color="#000000" size="3"></font><font face="Times New Roman" color="#000000" size="3"></font><font face="Times New Roman" color="#000000" size="3"></font><font size="3"><font color="#000000"><span style="font-family:宋体;">发送处理请求</span><span lang="EN-US"></span></font></font></p><p><font color="#000000" size="3"></font><font color="#000000" size="3"></font><font color="#000000" size="3"></font><font size="3"><font color="#000000"><span lang="EN-US"><span><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-family:宋体;">……</span><span lang="EN-US"></span></font></font></p><p><font color="#000000" size="3"></font><font color="#000000" size="3"></font><font color="#000000" size="3"></font><font size="3"><font color="#000000"><span style="font-family:宋体;">返回结果</span><span lang="EN-US"></span></font></font></p><p><span lang="EN-US"><font size="3"><font color="#000000"><font face="Times New Roman"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></font></font></span></p><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><p><font size="3"><font color="#000000"><b><i><span style="font-family:宋体;">用户界面层</span></i></b><b><i><span lang="EN-US"><font face="Times New Roman"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></span></i></b><b><i><span style="font-family:宋体;">商业逻辑层</span></i></b><b><i><span lang="EN-US"><span><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></i></b><b><i><span style="font-family:宋体;">数据库层</span></i></b><b><i><span lang="EN-US"></span></i></b></font></font></p><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p><p><span lang="EN-US"><font face="Times New Roman" color="#000000" size="3">&nbsp;</font></span></p></td></tr></tbody></table>
+以下是一个简化的挂号流程示例：
 
-采用三层结构的优点是各逻辑层既相互独立又紧密联系，任何一层的改动都不会影响到其它逻辑层的工作，非常有利于系统的扩充。随着医疗改革的不断深入，医院的现行业务必然会有所改变，由于体系结构上的特点，本产品能够很方便、迅速的做出调整，适应这种变化。
+1.  患者选择挂号科室和医生。
+2.  系统显示医生出诊时间和号源信息。
+3.  患者选择就诊时间并确认挂号。
+4.  系统生成挂号单和排队号码。
+5.  患者支付挂号费用。
 
-其中服务和客户端采用web服务加浏览器模式。这种模式的好处是，客户端不需要另外安装软件，大大节省了系统安装、维护和生级的成本。
+## 五、费用估算
 
-### 2.      数据库服务
+费用估算应根据医院的实际情况进行详细评估，以下是一个大致的估算，仅供参考：
 
-操作系统Windows 2003 Server，数据库服务软件采用Microsoft SQL Server 2000。
+- **硬件设备：** 包括服务器、客户端、网络设备等，费用取决于设备的性能和数量，难以给出具体数值。建议根据实际需求进行询价。
+- **软件许可：** 包括操作系统、数据库、开发工具等，费用取决于软件的版本和授权方式。
+- **软件开发：** 费用取决于开发团队的规模、开发周期和功能复杂度。
+- **实施和培训：** 包括系统安装、配置、数据迁移、用户培训等，费用取决于实施的范围和难度。
+- **维护和支持：** 包括系统维护、技术支持、升级更新等，费用通常按年收取。
 
-SQL Server 2000是一项全面完整的数据库与分析产品。从借助浏览器实现的数据库查询功能到内容丰富的扩展标记语言（XML）支持特性均可有力地证明，SQL Server 2000无谓为全面支持Web功能的数据库解决方案。与此同时，SQL Server 2000还在可伸缩性与可靠性方面保持着多项基准测试纪录，完全满足一个医院的数据库需求。
+建议医院在进行HIS建设前进行详细的预算规划，并选择合适的供应商进行合作。
 
-### 3.      web服务
+## 六、实施要点
 
-商业逻辑层使用web服务完成。操作系统Windows 2000 Advance Serve，web服务软件采用Microsoft Internet Information Service 6.0。
+HIS的实施是一个复杂的系统工程，需要周密的计划和组织。以下是一些重要的实施要点：
 
-### 4.      客户端
+- **需求分析：** 充分了解医院的业务流程和需求，制定详细的需求规格说明书。
+- **项目管理：** 成立项目组，明确各方职责，制定项目计划和时间表，进行有效的项目管理。
+- **数据迁移：** 将原有系统的数据迁移到新的HIS系统中，确保数据的完整性和准确性。
+- **用户培训：** 对医院员工进行系统操作培训，确保他们能够熟练使用新的系统。
+- **系统测试：** 进行全面的系统测试，包括功能测试、性能测试、安全测试等，确保系统的稳定性和可靠性。
+- **上线和运行维护：** 制定详细的上线计划，并提供持续的运行维护和技术支持。
 
-操作系统Windows 9x 系列或NT系列，客户端软件Microsoft Internet Explorer 5.0 或以上。
+## 七、未来展望
 
-## 四. 软件开发
+随着信息技术的不断发展，HIS也在不断演进。未来的HIS将更加注重：
 
-具体开发过程仅实现了一个例子：门诊挂号功能
+- **互联互通：** 实现医院之间、医院与区域医疗平台之间的信息共享和协同。
+- **智能化：** 引入人工智能、大数据分析等技术，提供更智能化的医疗服务和管理决策支持。
+- **移动化：** 提供移动应用，方便医护人员和患者随时随地使用系统。
+- **以患者为中心：** 更加关注患者的需求，提供个性化的医疗服务和健康管理。
 
-### 1.      开发工具
+通过不断的技术创新和应用拓展，HIS将为医疗卫生事业的发展做出更大的贡献。
 
-由于采用了web服务加浏览器模式，全部开发工作均在服务端完成。服务端按照部门分布在10台左右服务器上。任何一台服务器均可向全体用户提供服务，不同服务器之间数据交换通过数据库完成。服务程序采用.NET架构。
+## 参考文献
 
-开发语言：asp .NET  C#版
+1.《现代远程医疗与医院信息系统（HIS）建设全书》，光明日报出版社
+2.《医院信息系统软件设计应注意的几个问题》，郭根栓，山西省职业病防治研究所
+3.《葫芦岛市中以医院计算机管理系统建设》，李筱筠，葫芦岛市中以医院信息中心
+4.《医院管理软件大世界》
 
-开发工具：Microsoft Visual Studio 7.1
 
-### 2.      门诊系统工作流程
 
-门诊挂号位于流程最前端，它需要完成以下几个功能：
-
-1、门诊计划:
-
-专家应诊计划配置：为选定科室的专家进行应诊时间配置，分别为某一天进行配置，和对全周进行配置。
-
-2、挂号：选择挂号类别、挂号医生、挂号科室，根据系统初始定义自动生成挂号费单据。挂专家号时必须输入挂号医生。
-
-3、改号：已经退号的病人是不能进行换号的。对已挂号的病人进行换号，选定要换号的病人，将挂号信息自动显示出来，并选择要进行新挂号的科室等信息，保存换号信息。也可以对选定的病人进行退号操作, 已退号的病人不能进行退号操作。
-
-4、工作量统计：用户根据工作需要自己选择分类标准
-
-### 3.      界面
-
-以下是挂号服务界面：
-
-<table cellspacing="0" cellpadding="0" border="0"><tbody><tr style="height:147.75pt;"><td valign="top" width="573"><p><span lang="EN-US" style="color:black;"><font size="3"></font></span></p></td></tr></tbody></table>
-
-考虑到不使病人等待太久，挂号服务应尽量简洁。比如如图所示界面，病人编号、姓名由病人所持社保卡或就医卡自动输入，挂号医生只需选择管好类型和科室。
-
-其中，挂挂专家号时，页面自动跳到医生情况查询页面。查询所需科室专家的时间按状况，为病人选择合适的医生和时间。
-
-号结束后，客户端打印机根据挂号信息、打印出收费单据，和就医时的排队编号。挂号信息由门诊部们服务器提交至数据库。需要提供医疗服务的科室的服务器发现数据更新，则向医师发出提示。
-
-比如图示的例子，内科服务器发现专家工作安排有变化，则下载最新的日程按排道专家的客户机，以供专家查阅。
-
-### 4.      程序设计
-
-使用Visual Studio .net 的可视化编成环境，可以使得程序编写变得非常简单。按照Visual Studio .net向导的提示，为服务创见一个工程。为每个服务创建一个aspx文件。例如如上所述的挂号服务。首先在aspx页面添加界面控件，简单程序可就在aspx文件内完成，否则可以添加新的C# 模块。如下图所示事例：
-
-<table cellspacing="0" cellpadding="0" width="576" border="1"><tbody><tr style="height:15.75pt;"><td valign="top" width="576"><p><span lang="EN-US" style="color:black;"><font size="3"></font></span></p></td></tr></tbody></table>
-
-## 五. 费用估算
-
-### 1.      服务器15台 + 系统软件：￥1,000,000
-
-### 2.      路由器交换机等：￥100,000
-
-### 3.      客户机500台\+ 系统软件：￥3,000,000
-
-### 4.      网络布线：￥200,000
-
-### 5.      软件开发：10人，六个月，￥1,000,000
-
-### 6.      合计约：￥6,000,000
-
-**参考资料：**
-
-\[1\].《现代远程医疗与医院信息系统（HIS）建设全书》，光明日报出版社
-
-\[2\].《医院信息系统软件设计应注意的几个问题》，郭根栓，山西省职业病防治研究所
-
-\[3\].《葫芦岛市中以医院计算机管理系统建设》，李筱筠，葫芦岛市中以医院信息中心
-
-\[4\].《医院管理软件大世界》，http://www.chis.com.cn
-
-- [生物信息学的发展、现状与展望](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!1224.entry)
-- [医用软件概述](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!1225.entry)
-
-```
