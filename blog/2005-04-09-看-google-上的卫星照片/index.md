@@ -2,7 +2,7 @@
 title: "看 google 上的卫星照片"
 date: "2005-04-09"
 tags: 
-  - "光阴片语"
+  - "只言片语"
 ---
 
 我们公司：[http://maps.google.com/maps?ll=30.408021,-97.726039&spn=0.005558,0.007832&t=k&hl=en](http://maps.google.com/maps?ll=30.408021,-97.726039&spn=0.005558,0.007832&t=k&hl=en)
