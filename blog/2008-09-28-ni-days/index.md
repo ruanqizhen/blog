@@ -16,4 +16,3 @@ date: "2008-09-28"
 ![](http://digital.ni.com/worldwide/china.nsf/87e62f4c89ea9df9862564250075e6e4/6cee3a5a07377a8d482574c2001c4547/BodyText/20.47EC?OpenElement&FieldElemFormat=gif)[  
 ](Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
 
-[《生活随笔》目录](Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)

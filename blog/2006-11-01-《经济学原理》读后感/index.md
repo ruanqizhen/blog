@@ -42,4 +42,4 @@ tags:
 
     10. Society faces a short-run tradeoff between inflation and unemployment. 社会面临通货膨胀与失业之间的短期权衡取舍。
 
-[《生活随笔》](http://ruanqizhen.spaces.live.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1123.entry)
+

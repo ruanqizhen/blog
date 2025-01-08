@@ -29,4 +29,4 @@ tags:
 
 2006.04 Las Vegas
 
-[《生活随笔》](http://ruanqizhen.wordpress.com/essay/)
+
