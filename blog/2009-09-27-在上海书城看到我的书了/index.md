@@ -9,6 +9,6 @@ tags:
 
 书城里有关LabVIEW的书还挺多的，不下十几种。《我和LabVIEW》摆在一堆LabVIEW书籍当中。数量不是很多，我去看的时候只有7本，没有旁边几种LabVIEW教程的数量多。
 
-![](images/smile_tongue.gif)
 
-[](http://ruanqizhen.wordpress.com/wp-content/uploads/2009/09/8bf215459417684a664d7bbc55c5da57.jpg)[《我和LabVIEW》的写作过程](mmm2009-09-01_09.47/blog/cns!5852D4F797C53FB6!4321.entry)
+
+[](images/8bf215459417684a664d7bbc55c5da57.jpg)

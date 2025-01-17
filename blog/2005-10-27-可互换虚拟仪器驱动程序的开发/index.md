@@ -90,13 +90,3 @@ b) 降低了系统的维护和升级费用。IVI构架系统可以适用不同�
 
     2． NI公司在其2005年推出的校准系统中也使用了IVI体系结构。该校准系统将提供给世界各地校准实验室使用，因此，该校准系统必须能供控制型号千差万别的各类标准仪器。IVI体系结构保证了该系统在不改变代码的前提下适应任何实验室的仪器设备。
 
-### 参考文献：
-
-    \[1\] Dany Cheij, The Anatomy of an Interchangeable Test System, [http://www.ni.com/idnet](http://www.ni.com/idnet), 3-2002  
-    \[2\] National Instruments, IVI Driver Development Course, 10-2003  
-    \[3\] IVI Foundation, IVI Specifications, [http://www.ivifoundation.org](http://www.ivifoundation.org/), 2005  
-    \[4\] [用 LabVIEW 编写 Wizard 类型的应用程序](http://ruanqizhen.spaces.msn.com/blog/cns!5852D4F797C53FB6!1272.entry), 阮奇桢, 2006  
-    \[5\] [其他相关技术文章](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry)  
-    \[6\] [一个 IVI 驱动程序的开发过程](http://ruanqizhen.spaces.msn.com/blog/cns!5852D4F797C53FB6!1472.entry), 阮奇桢, 1999  
-    \[7\] [回答一个关于 IVI 仪器驱动程序的问题](http://ruanqizhen.spaces.live.com/blog/cns!5852D4F797C53FB6!2034.entry)     
-

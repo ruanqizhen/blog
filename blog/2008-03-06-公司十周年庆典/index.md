@@ -11,13 +11,5 @@ tags:
 
 第二部分是晚宴，地点在金茂二楼宴会厅。公司还特地邀请了一些已经离职的老员工回来参加。虽然我和大多数老同事一直保持着联系，但这次重聚依然让我感触颇深。大家围坐在一起，聊起过去的趣事，仿佛时光倒流。
 
-下面是我的相册。有些照片我和同事的合照，没得到人家授权，不敢公布:)
-
-http://picasaweb.google.com/ruanqizhen/20080310"
-
-以及其他同事的相册：  
-  http://cid-8e722c4178b3fbd7.spaces.live.com/Photos/cns!8E722C4178B3FBD7!340
-  http://cindydoris.spaces.live.com/photos/cns!31B3D9BFA6DFB5B5!1133/
-  http://liudibo.spaces.live.com/photos/cns!ED3FFE7293541AAC!209  
 
 
