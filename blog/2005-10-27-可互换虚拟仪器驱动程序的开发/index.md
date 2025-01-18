@@ -45,7 +45,7 @@ IVI, Instrument Driver, LabVIEW, LabWindows/CVI
 
     为了实现互换性，IVI基金会将同类仪器的共性提取出，并作了规范。目前已经发布的八类仪器规范是：示波器（IviScope）、数字万用表（IviDmm）、信号发生器（IviFGen）、直流电源（IviDCPower）、开关矩阵/多路复用器（IviSwitch）、功率表（IviPwrMeter）、频谱分析仪（IviSpecAn）和射频信号发生器（IviRFSigGen），其他类型仪器的规范也将被陆续制定发布。每一类的仪器都有各自的类驱动程序（IVI Class Driver）。类驱动程序包含了该类仪器通用的各种属性和操作函数。运行时，类驱动程序通过调用每台仪器的专用驱动程序（IVI Specific Driver）中相应的函数来控制仪器。
 
-![](http://tk.files.storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4C_7W7C9sakFZXbTcI7KbeaMMaJxGxjVOSI1Zfql1IJnCMyQm6jOfIzrfA43Zpg-pxO9wCO9njkOZxye-y5e9oC-uJsVsVulQqg0_2bDSqdHLxgpdgwpcZO)  
+
 图1： IVI体系结构
 
   

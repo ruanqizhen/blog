@@ -37,7 +37,6 @@ tags:
 **三. 常用信号调理模块  
 **    1. 目前最常使用的信号调理模块是NI公司的SCXI系列信号调理模块。 
 
-![](http://storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4CQ6zGN_cZZ_jdxiYZJWW3ZLDDSi_y_zUEEH4Pa5xE29taKafwPTjCwiyz_89oWLw3KGrCqXIBCe3ioMpImE649duhMxK2o8IflSaXQxIUcmT0evUkeXBxl)
 
 图2：信号调理系统
 
@@ -53,7 +52,6 @@ tags:
     2. 另外一类较为常用的信号调理系统是SCC系统。  
 SCC是适用于低通道应用的便携式信号调理平台。不象SCXI一个模块同时处理一组信号，平台为每一个信号提供单独的模块。SCC平台还提供了切换开关、LED，以及BNC和LEMO等常用的连接端子。无论是SCXI，还是SCC平台都有用于测量、激励、隔离和过滤的模块。下图是SCC系统的展示图。
 
-![](http://storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4A2s8MToq45oA5Z3sTh-1dxHaDeM4JmmWyU2rqlgZvNLrypWykU42t3YhyB6TeDKNP-EGfxe3FH28pF1NiWhSJc7oVzSxdigyPOdxkVnhLt50QHQiv3oWo8)
 
 图3：SCC信号调理
 
@@ -67,7 +65,5 @@ SCC是适用于低通道应用的便携式信号调理平台。不象SCXI一个�
     4. 计算机选用：选用PXI-1010 PXI机箱以及控制器，外接显示器。PXI-1010 PXI机箱为一混合式PXI机箱，可同时插入PXI零槽控制器、7个PXI仪器模块和4个SCXI信号调理模块。  
     5. 功能实现：8路温度信号经信号调理模块SCXI-1102调理后通过SCXI背板模拟总线送至数据采集模块PXI-6070E进行A/D转换，数据再由系统数据总线送至分析软件。实现分析、显示和存储功能。
 
-### 相关文章：
 
-    [技术文章](http://ruanqizhen.spaces.msn.com/Blog/cns!1pU-rgQVTuuWM1TX8W8PfmDA!1073.entry) 
 ```

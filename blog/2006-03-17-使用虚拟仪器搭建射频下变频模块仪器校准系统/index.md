@@ -79,7 +79,6 @@ RF信号发生器需要提供频率高达3GHz的信号，可以选用Agilent公�
 常见的功率计有Agilent公司的AGESP系列，和Rohde & Schwarz公司的NRVD系列。需要注意的是，功率计还需要选择适合的传感器探头。由于在校准过程中，功率计的两个通  
   
 
-[](http://www.paper.edu.cn/)  
 道分别测量RF段和IF段的信号，因此，我们所选用的传感器探头的测量频率范围应分别为20MHz~2.8GHz和3MHz~27MHz。  
 四. 软件系统  
 仪器的校准软件往往要提供给不同的校准实验室使用，而每个实验室所拥有的标准仪器都不尽相同，这就要求编写的校准程序必须具有仪器可互换性。IVI（可互换虚拟仪器）架构为我们的校准系统实现仪器可互换提供了保证。\[5\]  
@@ -99,7 +98,6 @@ RF模块仪器
 功率计、频谱仪、RF信号发生器  
 图2： 软件系统结构
 
-[](http://www.paper.edu.cn/)
 
   
 图3： 校准PXI-5600内部时钟的LabVIEW程序
@@ -112,6 +110,4 @@ RF模块仪器
     \[3\] National Instruments，NI PXI-5600 Specification \[M\]. US. 2005. 
     \[4\] National Instruments，NI RFSA Manual \[M\]. US. 2005. 
     \[5\] IVI Foundation，IVI Specifications \[M\]. US. 2002. 
-    \[6\] [可互换虚拟仪器驱动程序的开发](http://ruanqizhen.spaces.msn.com/blog/cns!5852D4F797C53FB6!1060.entry)，阮奇桢. 2006. 
-    \[7\] [其它相关技术文章](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!1073.entry)  
 

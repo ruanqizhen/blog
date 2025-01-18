@@ -15,7 +15,6 @@ tags:
 
     NASA里有一块月亮上的石头，可以让有人摸。于是我赶紧凑过去摸了两下，也算是摸过月亮了。还很多模型，这是我给月球车模型照的相。
 
-![](http://tk.files.storage.msn.com/x1pnp_rgmi5o50VQfbvYrXGFWi0M8OVwmegyRbj_DzdGYW14s-capC53p5c41zi-Oh84wd5BhAtExa6fL2PXjV93hM-nukMS_Lcp8Nzsi4Rd_jgMrhoiYa9ntqCO89pWl048aCgPOEsirY)
 
     从NASA出来，就差不多该吃晚饭了。大家都没来过休斯敦，于是决定到市中心去找一件饭店吃晚饭。到了市中心才发现，这是个很傻的决定。市中心都是办公楼，没什么居民，又是周末晚上，几乎看不到什么人，有那么几家餐馆也都打烊了。最后还是把车看到郊区，我们宾馆附近吃的Lubbys。
 
@@ -27,7 +26,6 @@ tags:
 
     这是我在姚餐厅门口照的相：
 
-![](http://tk.files.storage.msn.com/x1pnp_rgmi5o50VQfbvYrXGFZp5JGDsisCEJJ594FySUA7IHlLuGvi8r38OAU80-kbbxGIpSCMciPIfHOrta373mX3PvtNe2rHe6c3zeF9iOSwnpHjrZr2WGFnUBAeLNZTw8hYQ5X16Dsk) 
 
     姚明开的餐厅，随然名气大，但里边的饭菜实在是不敢恭维。我一进屋，里边几个同事已经在等了。我望他们桌子上一看，已经有几盘一模一样黑乎乎的菜在那了。于是我就问，咱们这不是到中餐馆来吃饭来了吗，怎么还是按照美国的习惯分盘吃啊？ 他们无奈的一笑，说你仔细看，这儿是六盘不同的菜。我仔细看了看还真是，不过他们的色香味，不论哪一样，不仔细辨别，都还真差不多。
 
@@ -37,11 +35,11 @@ tags:
 
     这是丰田体育中心，休斯敦火箭队的主场：
 
-![](http://tk.files.storage.msn.com/x1pnp_rgmi5o50VQfbvYrXGFZp5JGDsisCE9vxiFihK03-jvUjj_Cquf0GOWBDg8q4-LFt_Dv5RUl6h5KhThV3at1j4xzYt72gkXjzZ1dPCYqpzX8y5dhWi8M9XYFa4Kmj3XLjxEDbShAc)
+
 
    球赛气氛不错，姚明表现的也甚好，只不过火箭队最近太衰了。本来还领先十几分，再快终场的时候被对手追平，然后的加时赛输了两分。
 
-![](http://tk.files.storage.msn.com/x1pnp_rgmi5o50VQfbvYrXGFWi0M8OVwmegoyfIDpQPN1tEshdMafW5mv0pJUZB8goefFrIqdmsXPVLSQ8lNBjyHX62vdIACy4QABFzxSxfFQQEqzWqWv3tVgtjHPwY4WZltfipNtQJE68)
+
 
     我不太喜欢体育，所以这次是我头一次现场观看的体育赛事。现在才知道为什么客场作战不利，原来观众们对客场的球队真是一点都不客气。每次敌方得球，观众席上都是一片嘘声。尤其在对方球员罚球的时候，篮板后面的观众全都站起来起哄。还有球迷会的人组织起哄的，谁的起哄声最大可以得到一件T血作奖励。
 
@@ -49,14 +47,10 @@ tags:
 
    这是从丰田体育中心往外看：
 
-![](http://tk.files.storage.msn.com/x1pnp_rgmi5o50VQfbvYrXGFZp5JGDsisCEOTkJfzEbm6guFu5Sjn1Irs3QIOO3brtK8L8CkMpPcxGQh6OFqoVhn69nKkzi8KeURCxXNCOauUI_XrKOKTXKn0uY0G_fBaMyVlcEVDo-PPA)
 
- 我的休斯敦相册：
+
+
 
 ![](images/200603Houston.jpg)
 
-[
 
-2006.03 Houston
-
-](http://picasaweb.google.com/ruanqizhen/200603Houston)

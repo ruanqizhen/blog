@@ -291,7 +291,5 @@ return 1;
 ```
 以上为sizeof的基本用法，在实际的使用中要注意分析VC的分配变量的分配策略，这样的话可以避免一些错误。
 
-**相关文章：**
 
-    [技术文章](http://spaces.msn.com/ruanqizhen/blog/cns!5852D4F797C53FB6!1073.entry)
 
