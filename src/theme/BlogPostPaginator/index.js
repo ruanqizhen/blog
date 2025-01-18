@@ -9,7 +9,7 @@ export default function BlogPostPaginatorWrapper(props) {
   return (
     <>
       <BlogPostPaginator {...props} />
-	  <br />
+	  <div id="giscom"><br /></div>
 	  <Giscus
 		repo='ruanqizhen/blog'
 		repoId='R_kgDONgfJkA'
