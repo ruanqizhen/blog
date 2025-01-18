@@ -5,65 +5,108 @@ tags:
   - "我和labview"
 ---
 
-阮奇桢
+## 一. 虚拟仪器系统和信号调理模块
 
- **一. 虚拟仪器系统和信号调理模块**
+虚拟仪器（Virtual Instrument）是当前测试技术与仪器制造领域广泛关注的热点话题。虚拟仪器系统是一种基于计算机的自动化仪器系统，是现代计算机技术与传统仪器技术完美结合的产物。通过将计算机强大的图形界面和数据处理能力与仪器模块相结合，虚拟仪器能够实现测量数据的采集、分析和显示。
 
-       虚拟仪器（Virtual Instrument）是目前测试技术界和仪器制造界十分关注的热门话题。虚拟仪器系统是一种基于计算机的自动化仪器系统，是现代计算机技术和仪器技术完美结合的产物。它利用加在计算机上的一组软件与仪器模块相联接，以计算机为核心，充分利用计算机强大的图形界面和数据处理能力提供对测量数据的分析和显示。
+**图 1** 展示了一个典型的虚拟仪器测试系统，它通常由以下三个主要部分组成：
+1. 混合总线测量仪器及数据采集模块。
+2. 专用转接及信号调理模块。
+3. 被测对象。  
 
-    图1是一个典型的虚拟仪器测试系统，它由混合总线测量仪器及数据采集模块、专用转接及信号调理模块、被测对象三大部分组成。信号调理模块是连接前端传感器和后端数据采集设备的中间环节。 ![](http://storage.msn.com/x1pxOYwqu4SjF5G0W4dmEwaKLtSa4ws0-_l23pai0BiY4Dg5X4MyVaFHgPKrE3NPqOvsMxZ2QKkd_Rrkq9miTqfsfcq0gVvWOMS5mtuS85Ke8UfF6YZL01bhTKOzQcEbaXYtiRTvzwM5kaq2cWUwzjEnnbf3jHXiZU_) 
-
-图1：虚拟仪器测试系统组成
-
-**二. 信号调理模块的功能**
-
-    对于绝大多数数据采集和控制系统来说，信号调理是非常重要的。典型的系统一般都需要信号调理硬件，用于将原始信号以及传感器的输出接口到数据采集板或模块上。通过信号调理的各种功能，如信号的放大、隔离、滤波、多路转换以及直接变送器调理等，使得数据采集系统的可靠性及性能得到极大地改善。
-
-    具体来说，信号调理模块主要具有以下几点功能：  
-    1. 传感器驱动：包括为无源传感器提供所需的电压源或电流源，为有源传感器提供其运转所需的特殊电路结构。下表列出了几种不同类型传感器对信号调理模块的要求：  
-```
-<table style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse;" cellspacing="0" cellpadding="0" border="1"><tbody><tr><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:silver 1pt solid;width:108pt;border-bottom:silver 1pt solid;" valign="top" width="144"><p>传感器</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:189pt;border-bottom:silver 1pt solid;" valign="top" width="252"><p>信号调理模块</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p>热电偶</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>模拟低压输入</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>模拟高压输入，输出</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p>热敏电阻</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>模拟输入</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p>加速计</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>频率至电压转换</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p>LVDT, RVDT</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>电阻，多路复用器，矩阵变换电路</p></td></tr><tr><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:108pt;border-bottom:1pt solid;" valign="top" width="144"><p>应变片</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:189pt;border-bottom:1pt solid;" valign="top" width="252"><p>电阻，模拟电压输出，模拟电流输出</p></td></tr></tbody></table>
-
-    2. 信号放大：为了提高模拟信号转换成数字信号时的精度，我们希望输入的模拟信号的最大值刚好等于A/D转换设备输入范围。大多数传感器的输出范围在mV级，而A/D转换设备输入范围为Volt级。因此我们需要使用信号调理模块对传感器的信号放大。下表列出了信号调理模块对信号放大倍数与信噪比的关系
-
-<table style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse;" cellspacing="0" cellpadding="0" border="1"><tbody><tr style="height:13.1pt;"><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:silver 1pt solid;width:90pt;border-bottom:silver 1pt solid;height:13.1pt;" width="120"><p>&nbsp;</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:45pt;border-bottom:silver 1pt solid;height:13.1pt;" width="60"><p>模拟信号幅值</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:63pt;border-bottom:silver 1pt solid;height:13.1pt;" width="84"><p>信号调理模块放大倍数</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:36pt;border-bottom:silver 1pt solid;height:13.1pt;" width="48"><p>噪声幅值</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:63pt;border-bottom:silver 1pt solid;height:13.1pt;" width="84"><p>数据采集模块放大倍数</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:54pt;border-bottom:silver 1pt solid;height:13.1pt;" width="72"><p>数字信号幅值</p></td><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:medium none;width:36pt;border-bottom:silver 1pt solid;height:13.1pt;" width="48"><p>信噪比</p></td></tr><tr style="height:10.05pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:10.05pt;" width="120"><p>只有数据采集模块放大</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:45pt;border-bottom:1pt solid;height:10.05pt;" width="60"><p><span lang="EN-US">.01V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p>无</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><span lang="EN-US">.001V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p><span lang="EN-US">X100</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:54pt;border-bottom:1pt solid;height:10.05pt;" width="72"><p><span lang="EN-US">1.1V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><b><span lang="EN-US">10</span></b></p></td></tr><tr style="height:10.05pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:10.05pt;" width="120"><p>数据采集模块和信号调理模块均放大</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:45pt;border-bottom:1pt solid;height:10.05pt;" width="60"><p><span lang="EN-US">.01V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p><span lang="EN-US">X10</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><span lang="EN-US">.001V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p><span lang="EN-US">X10</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:54pt;border-bottom:1pt solid;height:10.05pt;" width="72"><p><span lang="EN-US">1.01V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><b><span lang="EN-US">100</span></b></p></td></tr><tr style="height:10.05pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:10.05pt;" width="120"><p>只有信号调理模块放大</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:45pt;border-bottom:1pt solid;height:10.05pt;" width="60"><p><span lang="EN-US">.01V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p><span lang="EN-US">X100</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><span lang="EN-US">.001V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:63pt;border-bottom:1pt solid;height:10.05pt;" width="84"><p>无</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:54pt;border-bottom:1pt solid;height:10.05pt;" width="72"><p><span lang="EN-US">1.001V</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:36pt;border-bottom:1pt solid;height:10.05pt;" width="48"><p><b><span lang="EN-US">1000</span></b></p></td></tr></tbody></table>
-
-    3. 隔离 在测量高电压信号时，隔离电路可以保护你的后端设备被意外的高电压输入损坏。常用的有光隔离和磁隔离。隔离放大电路的缺点是有可能引入噪声。
-
-    4. 信号滤波：模拟信号在数字化前必须进行低通滤波，以消除噪声和防止混叠现象。同时也可以使用信号调理模块滤除50-60Hz的工频噪声。  
-    5. 扩展通道数：有些信号调理模块具有多路转换器或矩阵变换电路的功能，可以把通道信号通道扩展至上千路。  
-    6. 其他功能：信号调理模块还可以实现信号衰减、采样同步、频率-电压的转换等功能。
-
-**三. 常用信号调理模块  
-**    1. 目前最常使用的信号调理模块是NI公司的SCXI系列信号调理模块。 
+信号调理模块作为连接前端传感器和后端数据采集设备的中间环节，其作用不可忽视。
 
 
-图2：信号调理系统
+## 二. 信号调理模块的功能
 
-    SCXI(Signal Conditioning eXtensions for Instrumentation) 系统是一个多用途、高性能的信号调理平台。适用于通道超过一定数量，封装条件恶劣、并且对信号调理的要求很高的应用系统。SCXI可以用作插卡式数据采集板、VXI模块或PXI模块的调理前端，还可以将它做为完整的远程数据采集系统。通过SCXI系统强大的多路能力，SCXI系统可以将多达3072路信号接入到一块数据采集板上。对于多通道、缓变的数据采集系统，如温度监测系统，SCXI是一种高可靠性的选择。
+信号调理在大多数数据采集和控制系统中起着至关重要的作用。典型系统通常配备信号调理硬件，用于将原始信号或传感器输出接口到数据采集板或模块。信号调理通过放大、隔离、滤波、多路转换以及直接调理变送器等功能，大幅提升了数据采集系统的可靠性和性能。
 
-  
-    下表是SCXI信号调理模块可以实现的功能：
+### 2.1 功能概述
 
-<table style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse;" cellspacing="0" cellpadding="0" border="1"><tbody><tr style="height:15pt;"><td style="border-right:silver 1pt solid;border-top:silver 1pt solid;border-left:silver 1pt solid;width:324pt;border-bottom:silver 1pt solid;height:15pt;" valign="top" width="432" colspan="2"><p><span lang="EN-US">SCXI</span>系统信号调理功能</p></td></tr><tr style="height:6.75pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:6.75pt;" valign="top" width="120"><p>模拟输入</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:234pt;border-bottom:1pt solid;height:6.75pt;" valign="top" width="312"><p style="text-align:left;" align="left">热电偶<span> <span lang="EN-US">Thermocouple<br></span></span>热电阻<span lang="EN-US"> RTD</span>，<span lang="EN-US">thermistor<br></span>应变器<span lang="EN-US"> Strain gauge<br></span>毫伏源<span lang="EN-US"> Millivolt source<br></span>电压源<span lang="EN-US"> Voltage Source (</span>可达<span lang="EN-US"> 250 Vrms)<br></span>电流源<span> <span lang="EN-US">Current Source (4-20mA)<br></span></span>频率输入<span lang="EN-US"> Frequency Input<br></span>动态信号<span lang="EN-US"> Dynamic Signal</span></p></td></tr><tr style="height:8.25pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:8.25pt;" valign="top" width="120"><p>模拟输出</p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:234pt;border-bottom:1pt solid;height:8.25pt;" valign="top" width="312"><p style="text-align:left;" align="left">电压、电流</p></td></tr><tr style="height:15.75pt;"><td style="border-right:1pt solid;border-top:medium none;border-left:1pt solid;width:90pt;border-bottom:1pt solid;height:15.75pt;" valign="top" width="120"><p>数字<span lang="EN-US">I/O</span></p></td><td style="border-right:1pt solid;border-top:medium none;border-left:medium none;width:234pt;border-bottom:1pt solid;height:15.75pt;" valign="top" width="312"><p style="text-align:left;" align="left">光隔离<span lang="EN-US">I/O (Optically isolated I/O)</span></p></td></tr></tbody></table>
+信号调理模块的主要功能包括：  
+
+1. **传感器驱动**  
+
+包括为无源传感器提供所需的电压源或电流源，为有源传感器提供其运转所需的特殊电路结构。下表列出了几种不同类型传感器对信号调理模块的要求：  
+
+| **传感器类型** | **信号调理模块功能**           |
+|----------------|------------------------------|
+| 热电偶         | 模拟低压输入                  |
+| 热敏电阻       | 模拟输入                     |
+| 加速度计       | 频率至电压转换                |
+| LVDT, RVDT    | 电阻、多路复用器、矩阵变换电路 |
+| 应变片         | 电阻、模拟电压输出、模拟电流输出 |
+
+2. **信号放大**  
+
+为了提高模拟信号转换成数字信号时的精度，我们希望输入的模拟信号的最大值刚好等于A/D转换设备输入范围。大多数传感器的输出范围在mV级，而A/D转换设备输入范围为Volt级。因此我们需要使用信号调理模块对传感器的信号放大。下表列出了信号调理模块对信号放大倍数与信噪比的关系  
+
+| **方案**               | **信号幅值** | **调理模块放大倍数** | **噪声幅值** | **采集模块放大倍数** | **输出信号幅值** | **信噪比** |
+|-----------------------|-------------|--------------------|-------------|--------------------|----------------|----------|
+| 仅数据采集模块放大    | 0.01 V      | 无                 | 0.001 V     | ×100              | 1.1 V          | 10       |
+| 数据采集与调理模块放大 | 0.01 V      | ×10               | 0.001 V     | ×10               | 1.01 V         | 100      |
+| 仅信号调理模块放大    | 0.01 V      | ×100              | 0.001 V     | 无                | 1.001 V        | 1000     |
+
+3. **信号隔离**  
+
+在测量高电压信号时，隔离电路可以保护你的后端设备被意外的高电压输入损坏。常用的有光隔离和磁隔离。隔离放大电路的缺点是有可能引入噪声。
+
+4. **信号滤波**  
+
+模拟信号在数字化前必须进行低通滤波，以消除噪声和防止混叠现象。同时也可以使用信号调理模块滤除50-60Hz的工频噪声。
+
+5. **扩展通道数**  
+
+有些信号调理模块具有多路转换器或矩阵变换电路的功能，可以把通道信号通道扩展至上千路。
+
+
+6. **其他功能**  
+
+信号调理模块还可以实现信号衰减、采样同步、频率-电压的转换等功能。
+
+
+## 三. 常用信号调理模块
+
+目前常用的信号调理模块包括 NI（National Instruments）公司的 SCXI 系列模块。
+
+### 3.1 SCXI 系统简介
+
+SCXI(Signal Conditioning eXtensions for Instrumentation) 系统是一个多用途、高性能的信号调理平台。适用于通道超过一定数量，封装条件恶劣、并且对信号调理的要求很高的应用系统。SCXI可以用作插卡式数据采集板、VXI模块或PXI模块的调理前端，还可以将它做为完整的远程数据采集系统。通过SCXI系统强大的多路能力，SCXI系统可以将多达3072路信号接入到一块数据采集板上。对于多通道、缓变的数据采集系统，如温度监测系统，SCXI是一种高可靠性的选择。
+
+以下为 SCXI 系统的主要功能：
+
+| **功能类别** | **支持信号**                                                                 |
+|--------------|-------------------------------------------------------------------------------|
+| 模拟输入     | 热电偶、热电阻（RTD）、应变片、毫伏源、电压源（最高 250 Vrms）、电流源等      |
+| 模拟输出     | 电压输出、电流输出                                                           |
+| 数字 I/O     | 光隔离输入/输出                                                              |
+
+SCXI 系统支持多达 12 个调理机箱，每个机箱可容纳 4 至 12 个模块，满足大规模、多样化数据采集需求。
 
     SCXI多通道信号调理系统可以适用于以ISA、PCMCIA、PCI、PXI、VXI等为采集总线的计算机系统。您可以将SCXI做为数据采集前端，或通过并行接口与采集设备组成外挂式数据采集系统。一个SCXI系统最多可以接入十二个调理机箱，每个调理机箱中可以插入最多四个(SCXI-1000)或十二个(SCXI-1001)调理模块。各种传感器信号通过接线端子或前端接入到调理模块，经调理模块调理后的信号，则通过SCXI系统总线送入相应的数据采集设备。
 
-    2. 另外一类较为常用的信号调理系统是SCC系统。  
+### 3.2 另外一类较为常用的信号调理系统是SCC系统
+
 SCC是适用于低通道应用的便携式信号调理平台。不象SCXI一个模块同时处理一组信号，平台为每一个信号提供单独的模块。SCC平台还提供了切换开关、LED，以及BNC和LEMO等常用的连接端子。无论是SCXI，还是SCC平台都有用于测量、激励、隔离和过滤的模块。下图是SCC系统的展示图。
 
 
-图3：SCC信号调理
+## 四. 信号调理系统实例  
 
-**四. 一个信号调理系统实例**
+以下通过一个应用实例，介绍如何在测试系统中选择信号调理模块并搭建信号调理系统：  
 
-下面以一个应用实例来说明如何在测试系统中选用信号调理模块和搭建信号调理系统：
+1. **系统需求**  
+   对8路温度信号进行采集，并通过温度测量软件进行转换和分析。测量结果需在显示器上显示，并存储至硬盘供后续分析处理。  
 
-    1. 系统要求：对8路温度信号进行采集，利用温度测量软件转换分析后，在显示器上显示出来，并将测量结果存储到硬盘上，以备事后分析处理。  
-    2. 选用信号调理模块：采用SCXI-1102B。SCXI-1102B具有32个差分输入通道，可调理各种热电偶信号、毫伏、伏、4~20mA、0~20mA的输入信号，每个通道可独立设置（1或100倍）放大倍数200Hz低通滤波，333kSa/s扫描率。  
-    3. 选用数据采集模块：选用PXI-6070E。PXI-6070E为一个12位多功能数据采集卡，它具有16路单端或8路差分输入通道，最高采样率为1.25MSa/s。  
-    4. 计算机选用：选用PXI-1010 PXI机箱以及控制器，外接显示器。PXI-1010 PXI机箱为一混合式PXI机箱，可同时插入PXI零槽控制器、7个PXI仪器模块和4个SCXI信号调理模块。  
-    5. 功能实现：8路温度信号经信号调理模块SCXI-1102调理后通过SCXI背板模拟总线送至数据采集模块PXI-6070E进行A/D转换，数据再由系统数据总线送至分析软件。实现分析、显示和存储功能。
+2. **信号调理模块选型**  
+   选用 **SCXI-1102B** 模块。该模块具备32个差分输入通道，能够调理多种输入信号，包括热电偶信号、毫伏信号、伏信号以及4~20mA和0~20mA电流信号。每个通道可独立设置放大倍数（1倍或100倍），支持200Hz低通滤波，并具有高达333kSa/s的扫描速率。  
 
+3. **数据采集模块选型**  
+   选用 **PXI-6070E** 数据采集模块。这是一款12位多功能数据采集卡，具有16路单端输入或8路差分输入通道，最高采样速率为1.25MSa/s。  
 
-```
+4. **计算机配置**  
+   配备 **PXI-1010** PXI机箱及其控制器，并外接显示器。PXI-1010是混合式PXI机箱，可同时插入PXI零槽控制器、7个PXI仪器模块和4个SCXI信号调理模块。  
+
+5. **功能实现**  
+   8路温度信号首先通过信号调理模块 **SCXI-1102B** 进行处理，随后经SCXI背板模拟总线传输至数据采集模块 **PXI-6070E** 进行A/D转换。转换后的数据通过系统数据总线传递至分析软件，实现信号分析、显示和存储功能。  
+
+通过上述配置，该系统能够高效完成温度信号采集、处理及后续分析任务。
