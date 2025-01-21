@@ -5,471 +5,675 @@ tags:
   - "我和labview"
 ---
 
-这篇文章是我本科的毕业论文，它只是对我实习工作的记录，描述了开发一个IVI驱动程序的全过程，谈不上什么技术含量。
+## 摘要
 
-可惜的年头已久，我竟然找不到它的最终版本了，我只从备份光盘里翻出了一个未完成的版本。
+在虚拟仪器系统中，仪器驱动程序作为连接仪器与用户界面的关键桥梁，对系统设计至关重要。近年来，IVI（Interchangeable Virtual Instrument）驱动程序凭借其优越的性能和灵活性，逐渐成为仪器驱动程序的发展趋势。本文系统阐述了IVI驱动程序的工作原理，并以实例说明如何利用LabWindows/CVI开发环境为YOKOGAWA FG200/FG300系列信号发生器编写IVI驱动程序的全过程。  
 
-以前的很多东西我没有注意保存下来，真是可惜啊！今天想找出一份我以前写的代码，也找不到了。以后我就会把写的东西都放到网上来，以免这为数不多的东西再被遗失了。  
-   
+**关键词**：虚拟仪器、IVI驱动程序、信号发生器、FG200/FG300、VXI即插即用规范、LabWindows/CVI  
 
-* * *
 
-**\[****摘要\]**
+## 第一章 驱动程序工作原理  
 
-在虚拟仪器系统中，仪器驱动程序是连接仪器与用户界面的桥梁，是系统设计的一个关键。IVI驱动程序（Interchangeable Virtual Instrument Driver 可互换性虚拟仪器驱动程序），虽然刚出现不久，但因其性能卓越，IVI驱动程序已成为了驱动程序的发展方向。本文论述了IVI驱动程序的工作原理。并结合实例，讲述了用LabWindows/CVI语言为YOKOGAWA FG200/FG300 系列信号发生器编写IVI驱动程序的全过程。
+### 1.1 驱动程序的发展背景  
 
-**关键词**：虚拟仪器、可互换虚拟仪器驱动程序、信号发生器、FG200/FG300、VXI即插即用规范、LabWindows/CVI。
+#### 1.1.1 测试系统的工作方式  
 
-**\[Abstract\]**
+在工业生产中，测试过程通常涉及多种复杂仪器的使用。通过计算机实现对这些仪器的控制，并生成用户界面，已成为现代化自动测试系统的重要技术手段。随着工业生产规模的扩大，大型生产线往往需要成百上千台测试仪器的协同工作，自动化测试成为实现高效生产的核心需求。  
 
-In virtual instrument system, the instrument drivers are the bridges between instruments and user interface. It is also the key technique of system design. IVI driver is a new technology in industry science. Because of its excellent performance, IVI already became the direction of driver development. The principle of IVI driver is discussed. And we paid more attention in the implementation of IVI driver for FG200/FG300 series function generators with LabWindows/CVI.
+在计算机控制仪器发展的早期阶段，仪器与计算机之间的通信主要通过GPIB（General Purpose Interface Bus）接口实现。此时，编程语言通常采用BASIC，并通过I/O操作语句完成设备控制。然而，每台仪器都有自己专属的ASCII命令集，程序开发人员在编写测试程序时，需深入了解每台仪器的硬件特性及指令集。这一过程不仅耗时耗力，且对软件开发人员的硬件知识要求较高，增加了开发难度。  
 
-**Key words:** virtual instrument, IVI, interchangeable virtual instrument driver, function generator, FG200/FG300, VXI plug&play specification, LabWindows/CVI.
+尤其是在测试系统涉及多种型号仪器时，不同设备的接口和命令差异显著，导致开发人员不得不重复编写大量底层代码，极大降低了开发效率。  
 
-**第一章** **驱动程序工作原理**
+#### 1.1.2 面临的挑战  
 
-**一、** **驱动程序的发展背景：**
+1. **开发效率低**：编程人员需要为不同仪器编写大量重复性代码，耗费大量时间和资源。  
+2. **学习成本高**：开发者需掌握每台仪器的特定指令集，这对缺乏硬件背景的人员极具挑战性。  
+3. **系统维护困难**：当仪器型号发生变化或需要扩展系统功能时，原有代码的修改工作繁琐且易引入错误。  
 
-**1、** **测试系统的工作方式：**
+### 1.2 驱动程序的解决方案  
 
-在工业生产中，测试过程需要使用到各种各样的仪器。计算机被用来控制这些仪器及生成用户界面。现代的大规模生产线需要用到成百上千的测试仪器，要实现自动化测试必须使用计算机控制这些仪器。
+针对上述问题，驱动程序的出现为自动化测试系统的开发带来了革命性改进。通过抽象底层命令，将设备控制封装为高层接口函数，开发人员在编程时仅需调用这些高层函数即可完成仪器的控制，极大降低了开发复杂性。  
 
-在计算机控制仪器发展的早期，仪器与仪器之间、仪器与计算机之间的接口大多通过GPIB接口总线；编程采用的是BASIC语言的I/O操作语句。每一台仪器都有自己的一套ASCII命令集。测试程序的编写者在编写测试程序前需要熟悉硬件设备和其一大套命令，这对于一般的软件人员来说较为困难。
+1. **模块化设计**：驱动程序将仪器底层命令抽象为统一的接口，开发者无需直接接触底层实现。  
+2. **提高复用性**：高层接口函数可以跨不同测试项目重复使用，减少开发时间和成本。  
+3. **增强兼容性**：通过支持标准化接口（如IVI和VXI），驱动程序实现了对多种仪器的兼容，便于系统的扩展与维护。  
 
-编程常常成为开发自动检测系统中最耗费时间的意向工作，当检测系统使用到多种不同型号的仪器时，情况会更遭。并且，变成人员还会发现当他们在为一台仪器编写新的应用程序时，需要做大量的重复性工作，浪费严重。
+驱动程序的这一特性使其成为现代自动化测试系统中不可或缺的重要组成部分。  
 
-**2、** **解决办法：**
 
-显而易见，如果编程人员在编写程序时，只调用一些例行程序的高层函数，而不需要直接面对低层的函数命令，则开发费用和开发时间都会大大下降。这些可被重复利用的理性函数就是仪器驱动程序。
+### 1.2 设备驱动程序的发展历史  
 
-**二、** **设备驱动程序的发展历史：**
+#### 1.2.1 GPIB接口总线标准  
 
-1、**GPIB****接口总线标准。**计算机与仪器之间的接口总线以GPIB（通用并接口总线）最为常见，其它还有RS232、485、VXI等。GPIB总线的雏形是惠普公司（Hewlett Packard）在60年代制定的公司内部总线标准HP-IB。在此基础上，美国国家工程师协会于1975年制定了意在统一接口总线结构的IEEE488接口总线标准。1978年，又对IEEE标准在编码、格式、传输协议方面作了修订，这就是IEEE488.2标准。我们现在开发的GPIB设备驱动程序都必须遵循以上标准。此类标准中的最新版本是于1990年制定的SCPI（Standard Commands for Programmable Instruments）标准。
+计算机与仪器之间的接口通信，最早以GPIB（General Purpose Interface Bus，通用接口总线）为主。除了GPIB外，RS232、RS485、VXI等接口标准也在不同领域得到了广泛应用。  
 
-2、**VXI plug&play****标准的出现。**VXI是一种仪器工业中常见的总线结构，通常我们把采用这种接口总线进行信息传送的集成卡式仪器也称为VXI。由于这种卡式仪器没有用户界面，通常被用来与计算机配合使用。VXI plug&play 标准的产生是为给VXI板卡制造商们提供一个统一的接口标准。后来VXI plug&play 标准被引用到整个仪器及计算机板卡制造业。现在大多数仪器制造商的产品都支持VXI plug&play 标准。
+GPIB总线的最初版本是惠普公司（Hewlett-Packard）在20世纪60年代制定的内部总线标准HP-IB。基于此，美国国家标准协会（ANSI）在1975年推出了IEEE 488接口总线标准，以统一接口总线的通信结构。随后，在1978年，该标准进一步修订，形成了IEEE 488.2版本，对编码、数据格式以及通信协议进行了规范。  
 
-VXI plug&play 标准也为驱动程序的编写提供了固定格式。如驱动程序向仪器发送命令时必须遵守以下步骤：1〉初始化仪器。2〉设置变量参数。3〉设置测量命令。4〉进一步数据分析。5〉关闭进程。
+为进一步简化测试系统的开发，1990年制定了SCPI（Standard Commands for Programmable Instruments，可编程仪器标准命令）标准，提供了统一的仪器控制命令格式，使得开发者能够更加高效地编写GPIB设备驱动程序。  
 
-由于使用诸如LabWindows/CVI一类的编程语言可以方便的产生满足VXI plug&play结构框架的驱动程序，VXI plug&play标准的出现极大的推动了现有仪器的发展。
+#### 1.2.2 VXI plug&play标准的出现  
 
-3、**VISA****标准。** VXI plug&play 标准制定了驱动程序的结构框架，但这还不够完全。现在，许多驱动程序的数据类型都采用的是VISA（Virtual Instrument Software Architecture）标准。VISA标准还统一了驱动程序中一部分用户接口函数，这就为设备的互换奠定了基础。
+VXI（VME eXtensions for Instrumentation）是一种专为测试和测量系统设计的模块化总线标准，常用于高性能仪器的通信与集成。采用VXI标准的模块化仪器通常不包含用户界面，而是通过与计算机的结合来实现控制与操作。  
 
-4、**IVI****标准。**VXI标准并不是最新的设备驱动程序标准。IVI（Interchangeable Virtual Instrument）驱动程序标准在此基础上又向前迈进了一步，VIV标准产生的时间是1998年7月。
+为了进一步规范VXI设备的使用，行业引入了VXI plug&play标准，旨在为仪器制造商和板卡制造商提供统一的接口设计框架。此标准后来被推广应用到整个仪器与计算机板卡制造业，成为跨行业支持的主流接口标准。目前，大多数仪器制造商的产品都兼容VXI plug&play标准。  
 
-**三、** **IVI****驱动程序的特点和优点：**
+VXI plug&play标准不仅规范了硬件接口，还为驱动程序的开发提供了固定的编程框架，主要包括以下步骤：  
+1. **初始化仪器**：建立设备与驱动程序的通信连接。  
+2. **设置变量参数**：定义仪器的运行参数。  
+3. **发送测量命令**：向仪器发送操作指令。  
+4. **处理返回数据**：完成数据分析和存储。  
+5. **关闭进程**：释放资源并结束设备通信。  
 
-1、**可互换性：** IVI驱动程序完全符合VXI plug&play和VISA标准，是对以上两种标准的发展和完善。“IVI协会”为五大类仪器（数字万用标、示波器、信号发生器、开关、电源）定义了标准属性（Classic attribute）和标准用户接口函数（Classic function）。因此，使用IVI驱动程序的仪器设备在标纯特性范围内可以实现互换。对于每种型号仪器的特独特性能，可以通过非标准属性和非标准用户接口实现。
+通过LabWindows/CVI等高级开发工具，可以便捷地生成符合VXI plug&play标准的驱动程序。该标准的出现，不仅提升了驱动程序开发的效率，也极大促进了仪器工业的发展。  
 
-2、**智能化与状态缓存功能：**IVI驱动程序引入了状态缓存（State Cache）功能。现代设备控制中，影响系统速度提升的主要瓶颈是仪器与计算机间的信息传输速率。VXI p&p标准的驱动程序不存在状态缓存功能，因此，每执行一条测量函数都要对仪器进行一次设置，即便仪器已经设置正常也是如此。而IVI的驱动程序可以自动将仪器状态放入缓冲区，并根据此次状态截断向仪器发送的冗余设置命令。以此优化命令结构，提高系统效率。
+#### 1.2.3 VISA标准  
 
-3、**模拟功能：**模拟状态指在缺少真实仪器的情况下，IVI驱动程序可以产生一个模拟的输出值，以保证高层程序正常工作。使用模拟功能可以帮助我们自在没有仪器的情况下开发驱动程序、编写、检查测试程序，以及检测新的仪器是否与测试程序匹配。
+尽管VXI plug&play标准在驱动程序的设计框架上做出了重要贡献，但其在数据类型及接口函数上的统一性仍显不足。为解决这一问题，行业推出了VISA（Virtual Instrument Software Architecture，虚拟仪器软件架构）标准。  
 
-4、**安全的多线程工作方式：**这使得测试工程师可以充分利用多线程程序的优点。
+VISA标准为驱动程序的部分用户接口函数提供了统一的实现方案，极大简化了不同设备间的通信接口开发。这一标准的核心优势在于其跨平台和多协议支持，使得不同仪器和通信总线的驱动程序能够实现互操作，为设备互换性奠定了基础。  
 
-5、**数据范围检测和状态检测功能：**这些工具减轻了测试程序编写人员的工作量并提高了程序的可靠性。
+#### 1.2.4 IVI标准  
 
-**四、** **IVI****驱动程序的结构和工作原理：**
+IVI（Interchangeable Virtual Instrument，可互换虚拟仪器）标准是设备驱动程序发展的最新阶段，于1998年7月正式发布。相比于VXI标准，IVI标准在以下几个方面进行了进一步拓展和优化：  
+1. **高层次抽象接口**：通过统一的编程接口屏蔽底层通信协议的复杂性，使得开发者能够更加专注于应用程序的功能实现。  
+2. **增强的设备互换性**：IVI标准通过定义一致的函数命名和接口逻辑，使同类型设备间可以实现无缝替换，而无需修改高层应用程序代码。  
+3. **动态加载支持**：IVI驱动程序支持运行时动态加载功能，可以根据实际需求加载相应模块，提高系统的灵活性与资源利用率。  
 
-1、 IVI驱动程序是建立在由“国际IVI协会”制定的仪器属性模型的基础上的。我们对五大类仪器（数字万用表类、示波器类、信号发生器类、开关类、电源类）分别定义了其属性模型，使其具有可互换性，状态缓存等功能。
+IVI标准的提出，标志着设备驱动程序在互换性、扩展性和易用性方面达到了新的高度，成为现代仪器驱动开发的主流方向。  
 
-仪器设备上的每一个参数设置都对应一条属性。如信号发生器，我么可以把它的输出波形，频率电压等都定义为其属性。IVI驱动程序的“SetAttribute”和“GetAttribute”两个低层函数时对用户开放的。高级用户可以直接在他们的测试程序中设置仪器的某个独立属性。但是，以为在大多数情况下，仪器的各个属性之间是有联系的，IVI驱动程序提供了高层函数来一次性设置一组相关联的几个属性。这些高层函数减轻了用户的任务。
 
-2、 IVI驱动程序的工作过程：
+### 1.3 IVI驱动程序的特点与优点  
 
-IVI结构的核心是IVI引擎对仪器属性的读写。
+#### 1.3.1 可互换性  
+IVI（Interchangeable Virtual Instrument）驱动程序完全兼容VXI plug&play和VISA标准，并在此基础上进一步扩展和完善。IVI协会为五类主要仪器（数字万用表、示波器、信号发生器、开关和电源）定义了**标准属性**（Classic Attributes）和**标准用户接口函数**（Classic Functions）。通过这些规范，IVI驱动程序在标准功能范围内实现了仪器的高度互换性，无需修改高层应用程序即可更换同类型仪器。  
 
-IVI驱动程序利用CallBack函数（回调函数）对仪器设置进行读写操作，利用RangTable（取值范围表）核查仪器属性的取值是否合法。IVI引擎会自动选择实际访问RangeTable和CallBack函数。
+对于某些仪器的独特特性，IVI驱动程序通过**非标准属性**和**非标准用户接口函数**支持个性化操作，同时保持对核心功能的统一性。这种灵活性显著提高了测试系统的适应性和扩展性。  
 
-例如：我们要使用FG300\_ConfigureTriangleSymmetry函数来设置仪器产生的三角波的对称度，并假设其对称度为30(30%)。
+#### 1.3.2 智能化与状态缓存功能  
+IVI驱动程序引入了**状态缓存**（State Cache）机制，以优化仪器与计算机间的通信效率。传统VXI plug&play驱动程序缺乏状态缓存，每次调用测量函数都会向仪器发送完整的设置命令，即使设备状态未发生变化，也重复执行设置操作，浪费系统资源。  
 
-当用户调用FG300\_ConfigureTriangleSymmetry函数后，驱动程序和IVI引擎需要作以下工作：
+而IVI驱动程序则通过缓存仪器状态，自动对比当前状态和目标状态，仅发送必要的变更命令，避免冗余通信。这种优化大幅提升了系统效率，尤其在复杂测试场景中效果显著。  
 
-1〉 驱动程序调用Ivi\_SetAttributeViReal64()函数，对属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的值进行设置。同时，SetAttribute函数将会激发IVI引擎。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="22">&nbsp;</td></tr><tr><td>&nbsp;</td><td><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image001.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image001" border="0" alt="clip_image001" src="images/clip_image001.gif" width="361" height="433"></a></td></tr></tbody></table></td></tr></tbody></table>
-```
-2〉 如果继承属性（Ingerent attribute）FG300\_ATTR\_RANGE\_CHECK的值为VI\_TRUE（值为真，允许值范围检查），IVI引擎则自动调用属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的RangeCheckCallBack函数。检查值30是否在属性的RangTable的允许范围内。如果取值超出范围，SetAttribute函数会结束任务，并将出错代码作为返回值返回。有时，IVI引擎还利用RangeTable把输入值强行转换至某一范围内。
+#### 1.3.3 模拟功能  
+IVI驱动程序提供**模拟模式**，允许在缺少实际硬件的情况下生成模拟输出值，以支持高层应用程序的正常运行。这一功能具有以下优点：  
+- **开发便利性**：在仪器交付前即可进行驱动开发和测试程序编写。  
+- **系统兼容性测试**：快速验证新仪器与现有测试程序的适配性。  
+- **错误检测**：在无仪器环境下调试代码，提高开发效率。  
 
-3〉 如购继承属性FG300\_ATTR\_CACHE的值为VI\_TRUE（允许状态缓存），IVI引擎会检查属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的当前值是否就是30。如果是这样，SetAttribute函数立即结束任务，并正常返回。
+#### 1.3.4 安全的多线程支持  
+IVI驱动程序为多线程环境设计了完善的支持机制，确保在并发操作中能够安全地访问仪器资源。这一特性使测试工程师能够充分发挥多线程编程的优势，例如实现并行任务执行，提高测试吞吐量和系统响应速度。  
 
-4〉 如果继承属性FG300\_ATTR\_SIMULATE的职位VI\_TRUE（允许模拟状态），IVI引擎将值30赋给属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY后即正常返回，不进行任何I/O操作。
+#### 1.3.5 数据范围检测与状态监控  
+IVI驱动程序内置了**数据范围检测**与**状态监控**功能，用于实时校验输入数据的有效性和设备运行状态。这些功能的引入不仅减轻了测试程序编写者的负担，还显著提高了测试系统的可靠性与稳定性，减少因数据错误导致的测试故障或设备损坏风险。  
 
-5〉 如果以上情况都不成立，IVI引擎会调用属性FG300\_ATTR\_FUNC\_TRIANGLE\_SYMMETRY的CallBack函数，通过CallBack函数中的I/O操作命令设置值输出至仪器。
 
-6〉 如果继承属性FG300\_ATTR\_QUERY\_INSTR\_STATUS的值为VI\_TRUE（允许状态检查），IVI引擎会调用CheckStatusCallBack函数读取仪器的状态。
 
-**第二章 FG300信号发生器**
+### 1.4 IVI驱动程序的结构和工作原理
 
-**一、** **信号发生器的工作原理：**
+#### 1.4.1 IVI驱动程序的属性模型  
+IVI驱动程序基于由国际IVI协会制定的**仪器属性模型**，为五大类仪器（数字万用表、示波器、信号发生器、开关、电源）定义了统一的属性体系。这种模型支持仪器的**可互换性**、**状态缓存**等高级功能。  
 
-**1、** **信号发生器的分类：**
+每个仪器参数均以属性形式表示。例如，在信号发生器中，输出波形、频率、电压等均定义为其属性。IVI驱动程序通过提供**SetAttribute**和**GetAttribute**低层函数，允许用户直接读取和设置单一属性值。对于仪器间属性相关性较强的情况，驱动程序还提供高层函数来批量设置多组相关属性。这种设计既支持高级用户的灵活操作，又显著降低普通用户的开发复杂度。  
 
-根据信号波形产生的原理可将信号发生器分为以下三类：
+#### 1.4.2 IVI驱动程序的工作原理  
 
-1〉 **模拟发生器**（Analog generation）**。**模拟发生器利用积分运算电路和比较运算电路来产生三角波和矩形波信号。正弦波由三角波信号通过一个由二极管和电阻组成的电路来产生。模拟发生器的价格便宜，大多数信号发生器都是采用这种方式工作的。但是模拟发生器的频率精度比较低，而且低频工作状态不稳定。
+![](images/clip_image001.gif)
 
-2〉 **PLL****发生器**（Phase-locked loop generation 锁相环路发生器）。PLL发生器电路包括：（a）一个电压可调的振荡器，用输入电压来调节输出频率；（b）一个可编程可任意设置的分频器；（c）一个基准振荡器；（d）一个低通滤波器；（e）一个相位比较器，用于比较基准振荡器发出的信号波于滤波器输出波形之间的相位差异。
+IVI驱动程序的核心是通过**IVI引擎**实现对仪器属性的高效读写。其关键流程包括以下几个步骤：  
 
-工作时，PLL发生器用相位差异来调节控制电压，使输出频率与基准振荡器经分频器产生的频率保持一致。因此它的频率精度非常高。PLL发生器的缺点是价格高、频率变化缓慢，低频工作状态不稳定。
+1. **属性调用与激活**  
+   当用户调用如 `FG300_ConfigureTriangleSymmetry` 的高层函数（用于设置信号发生器的三角波对称性）时，该函数调用底层函数 `Ivi_SetAttributeViReal64`，以设置属性 `FG300_ATTR_FUNC_TRIANGLE_SYMMETRY` 的值，并激发IVI引擎执行后续操作。  
 
-3〉 **DDS****发生器**（Direct digital synthesis generation 直接数字合成发生器）。DDS发生器把各种样式的波形的数字信息纪录于内存。当用户选定波形与频率，发生器则按照选定的时钟频率将波形数据读出。取出的数据通过D/A转换器转变为模拟信号。由于采用了全数字的方法，DDS发生器已经克服了传统信号发生器的缺点。
+2. **取值范围检查（Range Check）**  
+   如果继承属性 `FG300_ATTR_RANGE_CHECK` 的值为 `VI_TRUE`（启用范围检查），IVI引擎调用属性的 `RangeCheckCallBack` 函数，校验输入值是否在属性的合法范围内（由 `RangeTable` 定义）。  
+   - 若值超出范围，函数终止并返回错误代码。  
+   - 在某些情况下，IVI引擎可能根据配置强制将输入值调整到合法范围内。  
 
-**2、** **DDS****信号发生器的工作原理：**
+3. **状态缓存检查（State Cache）**  
+   如果继承属性 `FG300_ATTR_CACHE` 的值为 `VI_TRUE`（启用状态缓存），IVI引擎会验证当前缓存中的属性值是否已经是目标值。  
+   - 若相符，则跳过冗余操作并直接返回结果。  
 
-1〉 原理图：
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image002.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image002" border="0" alt="clip_image002" src="images/clip_image002.gif" width="454" height="232"></a></p></td></tr></tbody></table>
-```
-其电路中包括：晶体振荡器，用来产生基准时钟信号；相位运算部分；波形存储区；数/模转换器；低通滤波器。波形存储器存储了样本信号在一个完整周期内的数据。存储单元的地址与相位相对应。
+4. **模拟模式检查（Simulate Mode）**  
+   如果继承属性 `FG300_ATTR_SIMULATE` 的值为 `VI_TRUE`（启用模拟模式），IVI引擎直接将目标值存入缓存而不进行任何I/O操作，适用于缺少实际仪器的开发与调试场景。  
 
-2〉 工作过程：
+5. **属性写入（Callback 操作）**  
+   如果上述情况均不成立，IVI引擎调用属性的 `CallBack` 函数，通过实际的I/O命令将目标值设置到仪器。  
 
-首先，根据用户选择的频率确定N值。锁存器的输出在第一个时钟周期内也是N，这就是第一次读波形存储器时的地址。锁存器的输出值反馈给加法器，以后每个时钟周期，锁存器的输出都会增加N（2N、3N、4N……）,波形存储器会根据这些地址信号送出波形数据，再由D/A转换器转换成模拟信号。你可以通过改变N值来修改输出频率。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image004.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image004" border="0" alt="clip_image004" src="images/clip_image004.gif" width="230" height="97"></a></p></td></tr></tbody></table>
-```
-**二、** **FG300****的主要性能指标：**
+6. **状态检查（Query Instrument Status）**  
+   若继承属性 `FG300_ATTR_QUERY_INSTR_STATUS` 的值为 `VI_TRUE`（启用状态检查），IVI引擎调用 `CheckStatusCallBack` 函数，读取仪器当前状态以验证设置的成功性。  
 
-生产厂家： YOKOGAWA
+#### 1.4.3 具体工作实例  
+以调用 `FG300_ConfigureTriangleSymmetry` 函数设置三角波对称性为例，假设设置值为 30（即 30%）：  
+1. 调用 `FG300_ConfigureTriangleSymmetry`，触发 `Ivi_SetAttributeViReal64` 函数以设置属性 `FG300_ATTR_FUNC_TRIANGLE_SYMMETRY`。  
+2. IVI引擎依次检查是否启用范围检查、状态缓存或模拟模式，并根据配置决定执行路径。  
+3. 若所有检查通过，调用 `CallBack` 函数将属性值写入仪器，同时根据配置执行状态检查。  
 
-波形输出：
+通过上述流程，IVI驱动程序在灵活性与高效性之间实现了平衡，为测试系统开发人员提供了可靠的工具。  
 
-输出通道数： 2
 
-输出波形： 正弦波、矩形波、三角波、脉冲波、任意波形
 
-输出信号： 连续输出、触发输出、门控输出、直流输出
+## 第二章 FG300信号发生器
 
-频率：
+### 2.1 信号发生器的工作原理
 
-频率范围： 正弦波、矩形波： 1μHz – 15 MHz
+#### 2.1.1 信号发生器的分类  
 
-三角波、脉冲波、任意波形： 1μHz – 200 kHz
+根据波形生成的原理，信号发生器可分为以下三类：  
 
-分辨率： 1μHz ；九位数字
+1. **模拟信号发生器（Analog Generator）**  
+   - **工作原理**：利用积分运算电路和比较运算电路生成三角波与矩形波信号，正弦波通过三角波信号经由二极管和电阻网络的转换获得。  
+   - **优点**：成本低，适用于多数常规信号发生需求。  
+   - **缺点**：频率精度较低，在低频条件下表现出较大的不稳定性。  
 
-精度： ±20 PPM
+2. **锁相环路（PLL）信号发生器（Phase-Locked Loop Generator）**  
+   - **组成电路**：包含电压控制振荡器（Voltage-Controlled Oscillator，VCO）、可编程分频器、基准振荡器、低通滤波器以及相位比较器。  
+   - **工作原理**：PLL通过比较基准振荡器输出信号与反馈信号的相位差异调节控制电压，使输出频率与基准频率相匹配。  
+   - **优点**：频率精度高，适用于需要高稳定性的场景。  
+   - **缺点**：成本较高，频率调整响应速度较慢，在低频状态下性能受限。  
+
+3. **直接数字合成（DDS）信号发生器（Direct Digital Synthesis Generator）**  
+   - **工作原理**：将波形样本的数字信息存储于内存中，根据用户选择的波形和频率，以固定时钟频率读取存储的数据，并通过数模转换（D/A）生成模拟信号。  
+   - **优点**：采用全数字化方法，克服了传统信号发生器在频率精度和波形稳定性方面的缺陷。  
 
-稳定性： ±20 PPM
+#### 2.1.2 DDS信号发生器的工作原理  
 
-基准频率： 40.2107 MHz
+![](images/clip_image002.gif)
 
-输出特性：
+1. **DDS电路结构**  
+   DDS信号发生器的核心部件包括：  
+   - **晶体振荡器**：提供基准时钟信号。  
+   - **相位累加器**：计算波形的相位变化。  
+   - **波形存储器**：存储信号波形的单周期样本数据。  
+   - **数/模转换器（D/A Converter）**：将数字波形数据转换为模拟信号。  
+   - **低通滤波器**：去除D/A转换后信号中的高频成分，确保输出波形平滑。  
 
-最大输出电压： ±10 V
+![](images/clip_image004.gif)
 
-幅值调节范围： ±20 Vpp （分辨率：1 mVpp）
+2. **DDS信号发生过程**  
 
-幅值精度： ±（0.8%×幅值＋14 mVpp）
+- **步骤 1**：用户选择输出信号的频率 `f_out`，系统计算相位累加器的增量值 `N`，并在晶振基准时钟 `f_clk` 的控制下进行累加。  
+- **步骤 2**：相位累加器在每个时钟周期输出一个地址值，指向波形存储器中对应的样本数据。  
+- **步骤 3**：波形存储器根据地址信号输出波形数据，D/A 转换器将数字数据转换为对应的模拟信号。  
+- **步骤 4**：通过改变相位累加器的增量值 `N`，可以调整波形输出的频率。增大 `N` 时，累加速度加快，波形周期缩短，从而提升输出频率。  
 
-幅值频率特性：
+#### 2.1.3 DDS技术优势  
+- **频率分辨率高**：由于DDS生成频率是基于数字运算和高精度时钟的，可实现极小频率步进。  
+- **输出波形精度高**：内存中的样本数据和数字运算确保了波形的高保真度。  
+- **频率切换速度快**：无需调整物理电路即可快速切换频率或波形。  
+- **可扩展性强**：通过调整存储器内容，可以支持复杂或自定义波形的生成。  
 
-正弦波： ≤100 kHz ±0.1 dB
 
-≤1 MHz ±0.2 dB
+### 2.2 FG300的主要性能指标  
 
-≤10 MHz ±0.5 dB
+#### **生产厂家**  
+- **品牌**：YOKOGAWA（横河电机）  
 
-≤15 MHz ±1 dB
+#### **波形输出**  
+- **输出通道数**：2  
+- **支持的波形类型**：  
+  - 正弦波  
+  - 矩形波  
+  - 三角波  
+  - 脉冲波  
+  - 任意波形  
+- **输出信号模式**：  
+  - 连续输出  
+  - 触发输出  
+  - 门控输出  
+  - 直流输出  
 
-矩形波、脉冲波(50% duty cycle)：
+#### **频率性能**  
+- **频率范围**：  
+  - **正弦波、矩形波**：1 μHz – 15 MHz  
+  - **三角波、脉冲波、任意波形**：1 μHz – 200 kHz  
+- **分辨率**：1 μHz（九位数字）  
+- **频率精度**：±20 PPM  
+- **频率稳定性**：±20 PPM  
+- **基准频率**：40.2107 MHz  
 
-≤10 kHz ±2%
+#### **输出特性**  
+- **最大输出电压**：±10 V  
+- **幅值调节范围**：±20 Vpp（分辨率：1 mVpp）  
+- **幅值精度**：±（0.8% × 幅值 + 14 mVpp）  
+- **幅值频率特性**：  
+  - **正弦波**：  
+    - ≤100 kHz：±0.1 dB  
+    - ≤1 MHz：±0.2 dB  
+    - ≤10 MHz：±0.5 dB  
+    - ≤15 MHz：±1 dB  
+  - **矩形波、脉冲波**（50%占空比）：≤10 kHz：±2%  
+  - **三角波**：≤10 kHz：±3%  
+- **偏移电压范围**：±10 V  
+- **输出阻抗**：50 Ω ±1%  
+- **输出衰减**：1/1、1/10、1/100  
 
-三角波： ≤10 kHz ±3%
+#### **调制特性**  
+- **调制方式**：  
+  - 调幅（AM）  
+  - 双边带调幅（DSBAM）  
+  - 调频（FM）  
+  - 调相（PM）  
+  - 偏移调制（Offset Modulation）  
+  - 脉宽调制（PWM）  
+- **调制波形**：正弦波、矩形波、三角波、脉冲波、任意波形  
+- **调制波频率**：1 mHz – 50 Hz  
 
-偏移电压范围： ±10V
+#### **通用特性**  
+- **预热时间**：30 分钟  
+- **工作环境**：  
+  - **温度范围**：5°C – 40°C  
+  - **湿度范围**：20% – 80%  
+- **电源要求**：  
+  - **电压**：100 – 240 V AC  
+  - **频率**：50 Hz – 60 Hz  
+  - **功率**：125 W  
+- **外形尺寸**：350 × 213 × 132 mm（长 × 宽 × 高）  
+- **重量**：5 kg  
 
-输出阻抗： 50Ω±1%
+### 2.3 FG300的工作原理
 
-输出衰减： 1/1、1/10、1/100
+FG300是一种基于直接数字合成（DDS）技术的高性能信号发生器，其工作过程如下：  
 
-调制特性：
+#### 信号处理流程 
+1. **波形数据存储**：  
+   FG300将预设的波形数据存储在内置的波形存储器中，支持多种波形类型（正弦波、方波、三角波等）。  
 
-调制方式： 调幅（AM）、双边调幅（DSBAM）、调频（FM）、调相（PM）、偏移调制（Offset Modulation）、脉宽调制（PWM）
+2. **相位递增计算**：  
+   - 通过一个48位相位计算器完成相位的递增计算。  
+   - 波形存储器的地址与相位计算器的输出值相对应，从而生成对应的波形数据。  
 
-调制波波形： 正弦波、矩形波、三角波、脉冲波、任意波形
+3. **数字信号转换**：  
+   - 存储器的数字输出信号通过一个12位的D/A转换器，转变为模拟信号。  
 
-调制波频率： 1 mHz – 50 Hz
+4. **高频谐波滤除**：  
+   - 转换后的模拟信号通过滤波器去除高频谐波，确保信号纯净性。  
 
-通用特性：
+5. **方波生成**：  
+   - FG300中的方波是通过将正弦波信号送入比较器和锁存器生成的。  
 
-预热时间： 30分钟
+6. **通道选择**：  
+   - 经滤波后的模拟信号通过多路转换器选择适合的输出通道。  
 
-工作环境温度： 5○C – 40○C
+7. **幅值与偏移调整**：  
+   - 模拟信号的幅值和偏移量通过内置调整模块进行精确调节，以满足用户的需求。  
 
-工作环境湿度： 20% – 80%
+8. **信号放大与衰减**：  
+   - 信号经过放大器或衰减器处理，以实现目标输出电平。  
 
-电源电压： 100 – 240 V Ac
+9. **信号输出**：  
+   - 最终信号通过FG300的连接器输出至外部设备或负载。  
 
-电源频率： 50 Hz – 60 Hz
+### 2.4. 编程准备
 
-功率： 125 W
+FG300信号发生器采用**消息型通信方式（message-based communication）**，通过标准化的字符串消息与控制器（如计算机）进行交互。  
 
-外形尺寸： 350×213×132 mm （长×宽×高）
+#### 消息分类  
+1. **程序消息（Program Message）**：  
+   - 控制器发送给仪器的消息，用于设置参数或启动特定功能。  
 
-重量： 5 kg
+2. **反馈消息（Response Message）**：  
+   - 仪器发送回控制器的消息，用于反馈设备状态或测量结果。  
 
-**详细资料参见附录。**
+#### 消息结构  
+- 每条程序消息可以由多个**消息单元**组成。一个消息单元包含以下部分：  
+  - **命令头（Command Header）**：标识操作类型和目标属性，例如设置频率或幅值。  
+  - **参数（Parameter）**：为命令提供具体的数值或设置项。  
 
-**三、** **FG300****的工作原理：**
+#### 通信特点  
+- **字符串格式**：采用通用的字符串表示形式，便于用户理解和调试。  
+- **标准化**：遵循国际通信协议（如SCPI），具备良好的兼容性。  
+- **实时性**：支持同步和异步通信模式，满足不同应用场景的需求。  
 
-1、 FG300是DDS类的信号发生器。
 
-2、 信号流程：
 
-1〉 它将信号的波形数据存储在波形存储器中。
+## 第三章 LabWindows/CVI开发语言  
 
-2〉 相位的递增计算由一个48bit的相位计算器完成。波形存储器的地址输入至于相位计算器的输出值相对应。
+### 3.1 LabWindows/CVI开发环境简介
 
-3〉 波形存储器的数字输出信号经过一个12位的D/A转换器，转换为模拟信号。
+![](images/clip_image006.gif)
 
-4〉 模拟信号首先要经过滤波器滤除高频谐波。
 
-5〉 FG300中的方波是由正弦波通入比较锁存器后产生的。
+LabWindows/CVI是一种以C语言为基础的开发系统，提供了一个交互式的程序开发环境，专为数据采集与仪器控制设计，广泛应用于测试与测量领域。相较于传统的C语言开发工具，LabWindows/CVI具有以下特点：  
 
-6〉 经滤波后的模拟信号由多路转换器选择输出通道。
+1. **集成开发环境**：  
+   提供交互式编程环境，支持代码编写、调试和运行，优化了C语言开发流程。  
 
-7〉 幅值调整和偏移量调整。
+2. **丰富的库函数**：  
+   CVI内置功能强大的函数库，涵盖数据采集、分析、显示等各个阶段，简化了程序设计。  
 
-8〉 通入放大器和衰减器。
+3. **仪器控制功能**：  
+   包括专用工具和驱动程序，支持多种仪器接口（如GPIB、VXI、RS-232），极大提升了对外部设备的控制能力。  
 
-9〉 信号由FG300的连接器输出。
+4. **灵活的兼容性**：  
+   可以调用外部C语言模块、动态链接库（DLL）以及LabWindows/CVI特有的仪器驱动程序，实现高度灵活的开发。  
 
-**四、** **编程准备：**
 
-FG300信号发生器采用的是消息型通讯方式（message-based）。就是说，FG300与计算机或控制器之间的通讯采用字符串的方式，我们称这些标准字符为消息（message, MSG）。从控制器发送至仪器的消息成为程序消息（program message）；从仪器发送至控制器的消息成为反馈消息（response message）。
+### 3.2 LabWindows/CVI的功能模块  
 
-每条程序消息可以由数个程序消息单元组成，
+#### 3.2.1. 数据采集类函数库  
+   包含以下关键函数库，用于实现与硬件设备的高效通信：  
+   - **GPIB/IEEE 488.2函数库**：支持仪器的通用接口总线协议。  
+   - **数据采集函数库**：针对数据采集卡（DAQ卡）提供的接口函数。  
+   - **DAQ卡I/O操作函数库**：用于控制和管理数据采集硬件。  
+   - **RS-232函数库**：支持串行通信协议。  
+   - **VISA库**：提供一种跨平台的虚拟仪器标准接口。  
+   - **VXI库**：用于控制基于VXI总线的仪器设备。  
 
-**第三章 LabWindows/CVI开发语言**
+#### 3.2.2 数据分析类函数库  
+   LabWindows/CVI在数据处理方面提供了以下工具：  
+   - **数据格式转换和标准化函数库**：支持多种数据格式的转换与规范化处理。  
+   - **基础数据分析函数库**：涵盖数学运算、统计分析等功能。  
+   - **高级数据分析函数库**：提供更复杂的算法，如FFT分析、滤波处理等。  
 
-**一、** **LabWindows/CVI****开发环境简介**
+#### 3.2.3 数据显示类函数库  
+   CVI配备了丰富的用户界面开发工具，包括：  
+   - **用户界面函数库**：支持图形化界面的设计与交互，用于数据可视化和实时监控。  
 
-LabWindows/CVI是一种C语言开发系统。与其它开发系统相比，CVI增添了一个交互式程序开发环境、数据采集函数库、仪器控制工具等工具。同时，LabWindows/CVI包含一整套用来进行数据采集、分析、显示等处理的软件工具。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image006.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;margin:0;" title="clip_image006" border="0" alt="clip_image006" src="images/clip_image006.gif" width="240" height="168"></a></p></td></tr></tbody></table>
-```
-你可以利用CVI的交互式环境编写调试ANSI C语言（美国国家标准C语言），还可以使用LabWindows/CVI自带的库函数以及调用其它的C语言模块、动态链接库函数、C语言库函数、仪器驱动程序等。
+#### 3.2.4 网络与信息交换类函数库  
+   提供多种通信协议支持，适用于分布式系统和信息交互：  
+   - **动态数据交换（DDE）函数库**：实现跨应用程序的数据交换。  
+   - **信息交换控制协议（TCP）函数库**：支持基于TCP/IP协议的网络通信。  
+   - **X Property控件函数库**：用于访问和修改Windows属性。  
+   - **ActiveX控件函数库**：支持ActiveX组件的加载与操作。  
 
-CVI最大的优势在于功能强的的函数库。它的函数库包含了对数据处理的每一过程及仪器进行控制的各种函数。具体分类如下：
+#### 3.2.5 仪器控制类函数库  
+   LabWindows/CVI特有的仪器控制库支持多种接口和设备：  
+   - 内置支持GPIB、VXI、RS-232等接口的驱动程序。  
+   - 提供丰富的现成驱动程序，适配各种常见仪器（如示波器、万用表等）。  
+   - 用户可利用LabWindows/CVI的开发工具套件，自定义开发适合特定仪器的驱动程序。  
 
-1〉 数据采集类包括以下函数库：GPIB/IEEE 488.2函数库、数据采集函数库、DAQ卡的IO操作函数库、RS-232函数库、VISA库、VXI库。
+### 3.3 LabWindows/CVI的优势  
 
-2〉 数据分析方面：数据格式转换和标准化函数库、数据分析函数库、高级数据分析函数库。
+1. **模块化设计**：提供高度分工明确的功能模块，易于快速集成和扩展。  
+2. **广泛的硬件支持**：内置驱动支持主流仪器设备，减少开发成本。  
+3. **高效的数据处理能力**：内置分析工具和算法库，为复杂的测试与测量提供解决方案。  
+4. **友好的开发环境**：通过交互式编程工具和直观的调试界面，提高了开发效率和用户体验。  
 
-3〉 数据显示方面有用户界面函数库。
 
-4〉 在网络操作和信息交换方面有四个函数库：动态数据交换（DDE）函数库、信息交换控制协议（TCP）函数库、X Property控件函数库和Active X控件函数库。
 
-仪器控制函数库是CVI特有的，它包括了各种采用GPIB、VXI、和RS-232接口的仪器的驱动程序，例如示波器、万用表等。用户还可以利用CVI全套的驱动程序开发软件工具开发自己的驱动程序。
+### 3.4 LabWindows/CVI程序开发过程简介
 
-**二、** **LabWindows/CVI****程序开发过程简介：**
+LabWindows/CVI的开发过程与其他编程语言类似，但其针对数据采集和仪器控制进行了优化，能够有效提升开发效率和程序性能。以下是开发过程的详细说明：  
 
-1〉 通开发其它语言的程序一样，在书写程序源代码前，你先要设计好程序个部分的功能，并以文件的形式记录下来。
+#### 3.4.1 程序功能设计 
+在编写源代码之前，需要明确程序的功能需求，并设计程序的总体结构。建议将设计方案以文档形式记录下来，包括以下内容：  
+- 程序的总体目标和功能说明  
+- 各模块的功能划分和相互关系  
+- 数据流图或流程图  
 
-2〉 LabWindows/CVI是一种在一起操作方面大大增强了的C语言。在使用CVI之前，你一定要熟悉C语言。
+#### 3.4.2 LabWindows/CVI的编程基础 
+LabWindows/CVI基于ANSI C语言，但在交互性和仪器控制方面进行了增强。因此，开发者在使用CVI之前，应熟悉C语言的基本语法和结构，这为后续开发奠定基础。  
 
-3〉 CVI程序的结构。通常，一个CVI程序由以下几部分组成：
+#### 3.4.3 CVI程序的基本结构  
+一个典型的CVI程序包含以下主要部分：  
+- **用户界面（UI）**：提供与用户交互的图形界面。  
+- **主控程序**：协调程序的整体逻辑和模块交互。  
+- **数据采集模块**：实现对外部设备的数据获取。  
+- **数据分析模块**：对采集的数据进行处理与分析。  
 
-Ø 用户界面
+#### 3.4.4 用户界面设计  
+LabWindows/CVI的用户界面编辑工具能够轻松制作交互式图形界面，使程序更直观和友好。  
+- **UI的功能**：表达程序用途，提供参数设置、数据显示、控制按钮等功能。  
+- **设计流程**：从用户界面开始程序开发，根据实际需求确定界面布局，并定义交互元素（如按钮、文本框、图表等）。  
 
-Ø 主控程序
+#### 3.4.5 程序框架和代码生成 
+LabWindows/CVI能自动根据设计的用户界面生成程序框架，包括以下部分：  
+- **回调函数（Callback Functions）**：响应用户界面交互事件的函数。  
+- **主函数（Main Function）**：负责初始化用户界面并启动程序的主入口。  
 
-Ø 数据采集
+通过代码生成器，开发者可以显著减少编写底层界面调用代码的时间，将更多精力投入到核心功能的开发中。  
 
-Ø 数据分析
+#### 3.4.6 主控程序开发  
+主控程序是程序的核心部分，负责协调以下模块的工作：  
+- **数据采集模块**：调用驱动程序和接口函数实现数据读取。  
+- **数据分析模块**：调用分析函数对采集的数据进行处理。  
+- **用户界面模块**：控制UI的响应逻辑和交互流程。  
 
-4〉 用户界面：使用LabWindows/CVI的用户界面编辑工具可以轻易的制作出精美的交互式用户界面。使用图形化用户界面可以使你的程序更加友好，更加确切的表达出你的程序的功能和用途。因此，我们编写一个CVI程序往往是从事及用户界面开始的。
+开发者需要根据设计需求手动编写主控程序代码，并可参考LabWindows/CVI自带的示例项目。  
 
-5〉 程序框架和代码生成：LabWindows/CVI会自动根据设计好的用户界面生成程序框架。这个程序框架内包括用户界面的调用函数（Callback Function）和装载用户界面的主函数（Main Function）。CVI的代码生成器可以大大节约用户编写Windows程序的时间。
+#### 3.4.7 数据采集模块  
+LabWindows/CVI为数据采集提供了广泛支持，内置了以下驱动程序和接口函数：  
+- **GPIB驱动程序**：实现与GPIB设备的通信。  
+- **RS-232驱动程序**：支持串口通信。  
+- **VXI驱动程序**：控制基于VXI总线的仪器。  
 
-6〉 主控程序部分：主控程序用来协调数据采集、数据分析、和用户界面部分的工作，控制程序执行的流程。大部分主控程序部分的程序代码要由用户自己书写，你可以参考LabWindows/CVI软件包中的范例程序。
+开发者可以直接调用这些函数完成与外部设备的数据交互。  
 
-7〉 数据采集：LabWindows/CVI已经包含有控制GPIB、RS-232和VXI设备的驱动程序和接口函数，用户可直接调用这些函数。
+#### 3.4.8 数据分析模块  
+数据分析是程序开发中的重要部分。LabWindows/CVI提供了强大的数据分析工具，涵盖以下功能：  
+- 数据的格式转换和预处理  
+- 基本统计分析（如平均值、标准差计算等）  
+- 高级分析功能（如频谱分析、滤波等）  
 
-8〉 数据分析。
+通过结合内置的分析函数库，开发者能够快速完成复杂的信号处理和数据分析任务。  
 
-**第四章 驱动程序开发步骤**
 
-**第一节 整理仪器属性和用户界面函数**
 
-为了确保仪器的可互换性，国际IVI协会为仪器驱动程序的开发制定了一系列的标准。其中一个重要部分就是制定了标准的通用仪器属性和通用高层接口函数。针对信号发生器部分的文件是《IviFgen Class Specification》。
+## 第四章 驱动程序开发步骤
 
-《IviFgen Class Specification》文件包含了信号发生器的最常用功能，绝大多数的信号发生器都支持这些功能。但每台仪器实现这些功能的方法可能是不同的；仪器与计算机之间的通讯方式和指令也存在较大差别。
+### 4.1 整理仪器属性和用户界面函数
 
-驱动程序中，基本上每条属性（Attribute）对应一条仪器设置命令。在开始工作前，要熟悉仪器的命令体系和IVI通用属性（Classic Attribute）及用户界面函数(Classic Function)的定义。
+在开发仪器驱动程序时，为了确保不同品牌和型号的仪器可以互换使用，国际IVI协会制定了一系列标准，以规范仪器的控制接口。最为重要的规范之一就是定义了通用的仪器属性和高层接口函数。这些标准定义了如何将不同厂商的仪器功能统一表示和调用。对于信号发生器而言，相关的标准文件为《IviFgen Class Specification》。
 
-首先，要满足文件《IviFgen Class Specification》 中定义的属性和界面函数。
+#### 4.1.1 《IviFgen Class Specification》概述
 
-**第二节** **使用仪器驱动程序开发向导创建驱动程序文件：**
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image008.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image008" border="0" alt="clip_image008" src="images/clip_image008.gif" width="316" height="182"></a></p></td></tr></tbody></table>
-```
-一、 打开LabWindows/CVI的主工作窗口，在“Tools”菜单下选取“Create IVI Instrument Driver”，开始进入驱动程序开发向导。
+《IviFgen Class Specification》文件规定了信号发生器的常见功能，这些功能通常被绝大多数信号发生器所支持。尽管如此，不同仪器在实现这些功能时可能存在差异，包括仪器与计算机之间的通信协议以及具体的指令集。
 
-二、 在“Select an Instrument Driver”对话框中，选取显见驱动程序的信息：
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image010.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image010" border="0" alt="clip_image010" src="images/clip_image010.gif" width="340" height="227"></a></p></td></tr></tbody></table>
-```
-1〉 新建一个驱动程序（Create a new driver）。
+文件中定义了信号发生器的核心功能，并为开发者提供了统一的接口函数。这些标准化接口函数使得用户无需关心具体仪器的实现细节，只需通过标准的调用方式来控制仪器。
 
-2〉 接口中线类型为：GPIB。
+#### 4.1.2 仪器属性与用户界面函数
 
-3〉 仪器类型为信号发生器（Function Generator）。
+在驱动程序开发中，仪器的每个设置通常对应一个属性（Attribute）。属性通常表示仪器的一个可配置参数，比如频率、幅度等。而高层函数（Classic Function）则为这些属性提供操作接口，通过这些函数，用户可以方便地获取或设置属性的值。
 
-按下“Next”键，进行下一步。
+开发驱动程序时，首先需要理解并熟悉以下内容：
+- **仪器的命令体系**：每种仪器都通过一套特定的指令来进行控制。要确保驱动程序能够正确地将用户的请求转换为仪器能够理解的指令。
+- **IVI通用属性（Classic Attribute）**：这些属性是IVI标准中定义的，用于描述仪器可配置的各种特性。通过这些属性，用户可以控制仪器的工作状态。
+- **用户界面函数（Classic Function）**：这些函数提供了更高层次的接口，简化了用户与仪器的交互。它们隐藏了低层的实现细节，用户只需调用这些函数即可完成各种操作。
 
-三、 在“General Information”对话框中，填写以下信息：
+#### 4.1.3 确保符合《IviFgen Class Specification》要求
 
-1> 仪器的名称：“TOKOGAWA FG300 Function Generator”;
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image012.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image012" border="0" alt="clip_image012" src="images/clip_image012.gif" width="344" height="231"></a></p></td></tr></tbody></table>
-```
-2> 仪器前缀名：“FG300”;
+开发驱动程序时，必须确保其实现符合《IviFgen Class Specification》中的要求。这包括：
+- **支持标准化的属性和接口**：驱动程序需要支持《IviFgen Class Specification》中定义的属性，并能够正确地处理高层接口函数。
+- **实现命令映射**：根据不同仪器的具体实现，开发者需要将通用的IVI属性映射到仪器的实际命令和响应中。
+- **确保可互换性**：在设计时要确保，尽管每台仪器的实现方式可能不同，但通过IVI驱动程序，用户仍然可以以相同的方式控制各种品牌和型号的信号发生器。
 
-3> 作者姓名及公司等；
+#### 4.1.4 开发步骤
 
-4> 程序方在何目录下。
+在实际开发过程中，整理仪器的属性和高层函数通常包括以下步骤：
+1. **分析仪器命令体系**：理解仪器支持的基本功能和指令，梳理每个功能所需的属性和命令。
+2. **映射标准属性**：将仪器的具体命令映射到IVI标准属性上，以保证兼容性。
+3. **实现高层函数**：编写符合《IviFgen Class Specification》的接口函数，确保它们能够处理用户的请求，并与底层命令交互。
+4. **测试与验证**：确保驱动程序可以在各种仪器间正常工作，并与计算机系统顺利通信。
 
-按下Next键，进行下一步。
 
-四、 在General Command Strings 对话框中填写以下信息：
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image014.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image014" border="0" alt="clip_image014" src="images/clip_image014.gif" width="344" height="231"></a></p></td></tr></tbody></table>
-```
-1〉 填写默认的设置命令，FG300可以不需要默认的设置命令。
 
-2〉 列出仪器的通道数，FG300共有两个通道。
+### 4.2 使用仪器驱动程序开发向导创建驱动程序文件
 
-按下Next键，进行下一步。
 
-五、 在Stand Operation对话框种选择仪器支持的基本操作。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image016.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image016" border="0" alt="clip_image016" src="images/clip_image016.gif" width="352" height="235"></a></p></td></tr></tbody></table>
-```
-六、 在ID Query对话框中填入仪器用来询问ID号的命令，以及希望得到的返回值。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image018.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image018" border="0" alt="clip_image018" src="images/clip_image018.gif" width="364" height="244"></a></p></td></tr></tbody></table>
-```
-七、 在Reset对话框中填入仪器用来进行重设置的命令。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image020.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image020" border="0" alt="clip_image020" src="images/clip_image020.gif" width="364" height="244"></a></p></td></tr></tbody></table>
-```
-八、 在Self Test对话框中填入以下内容：
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image022.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image022" border="0" alt="clip_image022" src="images/clip_image022.gif" width="364" height="243"></a></p></td></tr></tbody></table>
-```
-1〉 在自检命令控制栏中填入自检命令:“\*RST?”；
 
-2〉 FG300的自检返回信息中只有状态码；
+#### 4.2.1 启动LabWindows/CVI的驱动程序开发向导
 
-3〉 选择“%hd”通用符作为格式化模式。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image024.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image024" border="0" alt="clip_image024" src="images/clip_image024.gif" width="364" height="243"></a></p></td></tr></tbody></table>
-```
-九、 在Error Query对话框中填入以下信息：
+![](images/clip_image008.gif)
 
-1〉 FG300的错误查询命令为：“:STAT:ERR?”；
+1. 打开LabWindows/CVI主工作窗口，选择“Tools”菜单中的“Create IVI Instrument Driver”选项，启动驱动程序开发向导。
 
-2〉 FG300的错误查询返回值中即包括错误代码，也包含错误信息。
+#### 4.2.2 选择仪器驱动程序信息
 
-3〉 选择通配符“%ld,\\”%256\[”\\”\]”作为格式化模式。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image026.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image026" border="0" alt="clip_image026" src="images/clip_image026.gif" width="352" height="235"></a></p></td></tr></tbody></table>
-```
-十、 在Revision对话框中填入FG300的版本询问命令：“\*IDN?”；并选用通配符“%x\[^,\],%x\[^,\],%x\[^,\],%256\[^\\n\]”作为返回信息的格式化模式。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image028.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image028" border="0" alt="clip_image028" src="images/clip_image028.gif" width="352" height="235"></a></p></td></tr></tbody></table>
-```
-十一、 Test对话框：
+![](images/clip_image010.gif)
 
-如果这台仪器已经连在计算机上，你可以在建立驱动程序前，先测试以下你在前面几个对话框中输入的命令是否正确。
+在“Select an Instrument Driver”对话框中，选择相关的驱动程序信息：
 
-1〉 填入仪器的GPIB地址；
+1. **新建一个驱动程序**：选择“Create a new driver”选项以创建新的驱动程序文件。
+2. **接口类型**：设置接口类型为**GPIB**（General Purpose Interface Bus），这是最常见的仪器通信接口之一。
+3. **仪器类型**：选择仪器类型为**信号发生器**（Function Generator）。  
+   选择完成后，点击“Next”按钮进入下一步。
 
-2〉 填入仪器的复位时间和自检时间。
+#### 4.2.3 填写仪器的基本信息
 
-3〉 按下Run Tests键，CVI开始检查仪器。
+![](images/clip_image012.gif)
 
-十二、 按下Next键，CVI就会按前面输入的信息生成该仪器驱动程序的程序框架。
+在“General Information”对话框中，填写以下仪器的基本信息：
 
-**第三节** **编辑仪器的属性：**
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image030.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image030" border="0" alt="clip_image030" src="images/clip_image030.gif" width="269" height="277"></a></p></td></tr></tbody></table>
-```
-当时用“仪器驱动程序开发向导”生成了驱动程序的框架后，可以直接装入属性编辑器，也可以在将来的任何时候，通过选择Tools菜单中的Edit Instrument Attributes项来调出属性编辑器编辑仪器属性。
+1. **仪器名称**：“TOKOGAWA FG300 Function Generator”。
+2. **仪器前缀名**：“FG300”。
+3. **作者姓名及公司信息**：填写开发者的姓名、公司及其他相关信息。
+4. **程序存储目录**：指定驱动程序文件存储的目录路径。
 
-一、 制定仪器属性：
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image032.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image032" border="0" alt="clip_image032" src="images/clip_image032.gif" width="312" height="269"></a></p></td></tr></tbody></table>
-```
-选定你要编辑的属性，按Edit键，或按下Add Attribute添加新的属性，就会进入Edit Attribute对话框。在此对话框内，需要填写或修改以下内容：
+点击“Next”按钮继续进行下一步。
 
-1〉 属性的名称；
+#### 4.2.4 填写命令字符串和通道信息
 
-2〉 属性的描述性名称；
+![](images/clip_image014.gif)
 
-3〉 属性的数据类型；
+在“General Command Strings”对话框中，填写以下信息：
 
-4〉 属性的取值范围表；
+1. **默认设置命令**：FG300信号发生器可以不需要默认的设置命令，若有特殊需求可根据实际情况进行填写。
+2. **通道数**：根据FG300信号发生器的实际情况，填写仪器的通道数，FG300有**两个输出通道**。
 
-5〉 属性的默认值；
+完成设置后，点击“Next”按钮进入下一步。
 
-6〉 属性需要达到的精度；
+#### 4.2.5 驱动程序文件生成
 
-7〉 该实行的简要说明；
+![](images/clip_image016.gif)
 
-8〉 属性的一些特殊标志；
+接下来的步骤将继续生成驱动程序的函数接口和其他相关代码。通过向导提供的信息，LabWindows/CVI将自动为用户创建一个适用于指定仪器的IVI驱动程序框架。此框架包括必要的库函数、属性设置、以及与仪器交互所需的其他功能。
 
-9〉 该属性与其它属性或函数之间的关系。
 
-二、 编写或修改属性的Callback函数。
+### 4.2.6 填写ID查询命令
 
-一个仪器的属性可能会用到六个Callback函数。通常，每个Callback函数的作用如下：
+![](images/clip_image018.gif)
 
-1〉 Read Callback函数，用来读取仪器当前的设置值或数据信息，该函数一般由几个询问仪器设置或数据的命令组成。
+在“ID Query”对话框中，填写用于查询仪器ID号的命令，并指定期望的返回值格式。
 
-2〉 Write Callback函数，用来设置仪器的值或把数据传递给仪器，该函数常由一组设置命令组成。
+- **命令**：填写仪器查询ID号的命令。
+- **返回值格式**：根据仪器的返回数据格式，设置所需的返回值类型。
 
-3〉 Compare Callback函数，用来比较属性的值是否改变。
 
-4〉 Range Check Callback函数，察看属性取值范围表，检查赋给属性的值是否在允许的范围内。
 
-5〉 Coerce Callback函数，把赋给属性的值，按规律转换值一定的范围内。
+### 4.2.7 填写重置命令
 
-6〉 Range Table Callback函数，用来为仪器的当前状态选择一个合适的取值范围表。
+![](images/clip_image020.gif)
 
-在“Edit Driver Attribute”对话框中，选择要编辑的函数，按下“Go To Callback Source”键，即可找到Callback函数的源代码进行编辑。
+在“Reset”对话框中，填写用于重置仪器的命令。
 
-三、 删除无用的属性。
+- **命令**：根据仪器说明书或标准命令规范，填写所需的重置命令。
 
-由开发向导生成的驱动程序中，有一些属性在FG300中用不到。在编写驱动程序的过程中，应该删除这些属性。
 
-**第四节** **编辑高层函数。**
 
-1、编辑或创立一个高层函数。
-```
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image034.gif"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image034" border="0" alt="clip_image034" src="images/clip_image034.gif" width="348" height="291"></a></p></td></tr></tbody></table>
+### 4.2.8 填写自检命令
 
-<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top"><p><a href="http://ruanqizhen.wordpress.com/wp-content/uploads/2011/04/clip_image036.jpg"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;" title="clip_image036" border="0" alt="clip_image036" src="images/clip_image036.jpg" width="216" height="83"></a></p></td></tr></tbody></table>
-```
-用户在使用仪器时，为完成某一任务，通常需要一次设置一组相关的几个属性；很少需要对某个单个的属性进行设置。因此，IVI驱动程序为用户提供了高层函数，以方便操作。一个高层函数常常由几个设置仪器属性的自函数组成。选择Tools菜单中的“Edit function tree”项，或打开“ykfgxx0.fp”函数面板文件，就会看到驱动程序的函数树列表。我们把函数树中的每一项成为一个结点，每一个结点都对应一个高层函数。修改一个已有的函数或创建一个新的函数可以按以下步骤进行：
+![](images/clip_image022.gif)
 
-1〉 用鼠标右键点击需要修改的结点，或选择Greate菜单中的“Function Panel Window”项创建一个新的结点，就会进入“Edit Node”对话框，此对话框用来编辑结点名及其对应的函数名。
+在“Self Test”对话框中，填写自检相关的设置：
 
-2〉 编辑函数面板。为了方便用户了解和数用一个函数，CVI为每一个函数都设置了一个函数面板。面板中列出了函数的全部参数，并提供了函数及其参数的简要说明。我们同样需要为自己的函数设计一个函数面板，以方便驱动程序的使用者。
+1. **自检命令**：在自检命令控制栏中，输入自检命令：`*RST?`。
+2. **返回信息**：FG300信号发生器的自检返回信息包含状态码。
+3. **格式化模式**：选择通用符 `%hd` 作为格式化模式。
 
-3〉 如果选中的结点是新建的，先要用“Generate Source For Function Node”项为函数创建源代码。若源代码已经存在，可直接选择“Go To Definition”想找到函数源代码。
+![](images/clip_image024.gif)
 
-4〉 编写源代码。
+### 4.2.9 填写错误查询命令
 
-**第五节** **建立驱动程序的文档。**
+在“Error Query”对话框中，填写错误查询命令和返回值的相关设置：
 
-为了更清楚的向用户介绍你的驱动程序，你可以直接利用CVI为你的程序生成两种说明文档，供用户参考。
+1. **错误查询命令**：FG300的错误查询命令为 `:STAT:ERR?`。
+2. **返回值格式**：FG300的错误查询返回值包含错误代码和错误信息。
+3. **格式化模式**：选择通配符 `%ld,\ "%256[\"\]` 作为格式化模式。
 
-### 参考文献：
+![](images/clip_image026.gif)
 
-\[1\] [可互换虚拟仪器驱动程序的开发](http://ruanqizhen.wordpress.com/2005/10/27/%E5%8F%AF%E4%BA%92%E6%8D%A2%E8%99%9A%E6%8B%9F%E4%BB%AA%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%BC%80%E5%8F%91/)，Qizhen，2005   
-    \[2\] [其他相关技术文章](http://ruanqizhen.wordpress.com/technology/)  
-    \[3\] [回答一个关于 IVI 仪器驱动程序的问题](http://ruanqizhen.wordpress.com/2007/01/08/%E5%9B%9E%E7%AD%94%E4%B8%80%E4%B8%AA%E5%85%B3%E4%BA%8E-ivi-%E4%BB%AA%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%97%AE%E9%A2%98/)
+### 4.2.10 填写版本查询命令
+
+在“Revision”对话框中，填写版本查询命令及其格式化模式：
+
+- **命令**：填写FG300的版本查询命令 `*IDN?`。
+- **格式化模式**：选用格式化模式 `%x\[^,\],%x\[^,\],%x\[^,\],%256\[^\\n\]`，以匹配仪器的版本信息。
+
+![](images/clip_image028.gif)
+
+### 4.2.11 测试仪器连接
+
+在“Test”对话框中，测试仪器的连接性和命令是否正常工作：
+
+1. **GPIB地址**：填写仪器的GPIB地址。
+2. **复位和自检时间**：填写仪器的复位时间和自检时间。
+3. **运行测试**：点击“Run Tests”按钮，LabWindows/CVI将开始检查仪器的连接性和命令响应。
+
+
+
+### 4.2.12 完成驱动程序框架生成
+
+点击“Next”按钮，LabWindows/CVI将根据前面输入的所有信息生成适配于FG300的驱动程序框架。这一过程将自动生成包含必要功能的驱动程序代码，包括各种命令、属性设置以及仪器交互功能。
+
+
+### 4.3 编辑仪器的属性
+
+
+![](images/clip_image030.gif)
+
+
+在生成驱动程序框架之后，可以通过**“属性编辑器”**来进一步制定和修改仪器属性。若要访问属性编辑器，可以选择 **Tools** 菜单中的 **Edit Instrument Attributes** 项。
+
+#### 4.3.1 编辑属性的步骤
+![](images/clip_image032.gif)
+
+1. **选定属性**：选择需要编辑的属性后，点击 **Edit** 键，或点击 **Add Attribute** 来添加新的属性。这会进入 **Edit Attribute** 对话框。
+
+2. **填写或修改属性内容**：在对话框中，你可以编辑以下内容：
+   - **属性名称**：为该属性指定唯一的标识名称。
+   - **属性描述**：为属性提供一个简短的描述，帮助理解其作用。
+   - **属性的数据类型**：选择适当的数据类型（如整型、浮点型等）。
+   - **取值范围**：为属性设置允许的取值范围。
+   - **默认值**：指定属性的默认值。
+   - **精度要求**：定义该属性需要达到的精度。
+   - **属性说明**：简要说明该属性的作用及使用方式。
+   - **特殊标志**：标明该属性是否具备特殊处理需求（例如只读、写时更新等）。
+   - **属性关系**：如果该属性与其他属性或函数存在依赖关系，可以在此处说明。
+
+
+#### 4.3.2 编写或修改属性的Callback函数
+
+属性的操作通常需要对应的 **Callback函数**。这些函数负责与仪器进行交互，处理不同的操作需求。每个属性可能涉及到以下六个常见的Callback函数：
+
+1. **Read Callback函数**：用于读取仪器当前的设置或数据。通常包含询问仪器的命令。
+2. **Write Callback函数**：用于向仪器发送设置值或数据，通常由设置命令构成。
+3. **Compare Callback函数**：用于比较属性的当前值与目标值，判断是否发生变化。
+4. **Range Check Callback函数**：检查赋给属性的值是否在允许的取值范围内。
+5. **Coerce Callback函数**：将赋给属性的值强制转换至合适的范围内。
+6. **Range Table Callback函数**：为仪器当前状态选择最合适的取值范围表。
+
+在 **Edit Driver Attribute** 对话框中，选择需要编辑的 Callback 函数，并点击 **Go To Callback Source** 按钮，即可直接跳转到源代码进行修改和完善。
+
+
+#### 4.3.3 删除无用的属性
+
+在使用驱动程序开发向导生成的初步驱动程序框架中，可能会包含一些FG300信号发生器不需要的属性。这些多余的属性应该在编写和调试驱动程序时进行删除，以简化代码结构并确保程序高效运行。
+
+
+
+
+### 4.4 编辑或创建高层函数
+
+![](images/clip_image034.gif)
+
+![](images/clip_image036.jpg)
+
+在使用仪器时，用户通常需要一次性设置多个相关的属性，而不是单独设置某个属性。因此，IVI驱动程序提供了高层函数，以便用户能够高效地完成这一任务。一个高层函数通常由多个设置仪器属性的低层函数组成。
+
+要编辑或创建高层函数，用户需要操作 **“Function Tree”**，该树列出了所有的高层函数。每个结点在函数树中代表一个高层函数。可以按以下步骤修改现有函数或创建新函数：
+
+1. **编辑现有结点**：右键点击需要修改的结点，或在 **Create** 菜单中选择 **Function Panel Window**，以创建新的结点。这将进入 **Edit Node** 对话框，在该对话框中可以编辑结点名称及其对应的函数名。
+   
+2. **设计函数面板**：为了帮助用户更好地理解和使用函数，CVI为每个函数设置了一个函数面板。面板列出了函数的所有参数，并提供了简要说明。我们需要为自己编写的函数设计一个类似的函数面板，以便用户能够轻松理解并使用高层函数。
+
+3. **生成源代码**：如果选中的结点是新创建的，需要选择 **“Generate Source For Function Node”** 为该函数生成源代码。如果源代码已经存在，可以直接选择 **“Go To Definition”** 跳转至源代码进行编辑。
+
+4. **编写源代码**：根据函数的具体需求，编写源代码并将其与结点对应。
+
+
+
+### 4.5 创建驱动程序文档
+
+为了便于用户了解和使用驱动程序，CVI为每个程序生成了两种不同的说明文档。这些文档不仅包括程序的基本功能说明，还详细描述了函数的使用方法和参数设置。这些文档可以帮助用户快速上手并确保正确使用驱动程序。
+
+
