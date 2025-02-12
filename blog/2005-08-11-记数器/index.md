@@ -5,6 +5,8 @@ tags:
   - "只言片语"
 ---
 
-本页一共被访问了：
+**本页一共被访问了：**
 
-![](https://c.statcounter.com/656100/0/8408fb8f/0/)
+![](http://www.amazingcounters.com/counter.php?i=127722&c=383479)次  
+
+其中来自不同IP地址的有![](http://c6.statcounter.com/counter.php?sc_project=656100&java=0&security=8408fb8f)个。
