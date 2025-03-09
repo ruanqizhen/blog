@@ -16,12 +16,12 @@ tags:
 
 | 标准仪器 | 型号 | 主要参数 |
 |----------|------|----------|
-| 频谱仪 | Agilent ESA | 频率范围: 109 MHz ~ 111 MHz  <br> 噪声: < -130 dBm/Hz  <br> 分辨率: > 1 Hz |
-| 射频信号发生器 | Agilent ESG | 频率范围: 20 MHz ~ 2.8 GHz  <br> 功率范围: -30 dBm ~ +16 dBm  <br> 相位噪声: < -95 dBc/Hz |
+| 频谱仪 | Agilent ESA | 频率范围: 109 MHz ~ 111 MHz   噪声: < -130 dBm/Hz   分辨率: > 1 Hz |
+| 射频信号发生器 | Agilent ESG | 频率范围: 20 MHz ~ 2.8 GHz   功率范围: -30 dBm ~ +16 dBm   相位噪声: < -95 dBc/Hz |
 | 功率计和功率计探头 | Anritsu ML2438A |  |
-| 功率计和功率计探头 | Anritsu MA2421A探头 | 功率范围: -30 dBm ~ +20 dBm  <br> 频率范围: 100 kHz ~ 27 MHz  <br> 误差: 0.07 dB |
-| 功率计和功率计探头 | Anritsu MA2473A探头 | 功率范围: -70 dBm ~ +20 dBm  <br> 频率范围: 20 MHz ~ 2.8 GHz  <br> 误差: 0.11 dB |
-| 标准时钟频率源 | Datum 80403铷钟 | 频率: 10 MHz  <br> 精度: 1 ppb (±6E-10)  <br> 功率范围: > 5 dBm |
+| 功率计和功率计探头 | Anritsu MA2421A探头 | 功率范围: -30 dBm ~ +20 dBm   频率范围: 100 kHz ~ 27 MHz   误差: 0.07 dB |
+| 功率计和功率计探头 | Anritsu MA2473A探头 | 功率范围: -70 dBm ~ +20 dBm   频率范围: 20 MHz ~ 2.8 GHz   误差: 0.11 dB |
+| 标准时钟频率源 | Datum 80403铷钟 | 频率: 10 MHz   精度: 1 ppb (±6E-10)   功率范围: > 5 dBm |
 | 数字化仪 | NI PXI-5122 | |
 | 波形发生器 | NI PXI-5421 | |
 
