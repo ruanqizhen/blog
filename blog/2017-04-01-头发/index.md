@@ -117,21 +117,6 @@ $$H_{\text{curly}}(i,j) = \sigma \left( \sum_{u,v} H_{\text{straight}}(i-u, j-v)
 
 #### 2.5 注意力机制
 
-为了进一步提升模型的性能和解释性，我们引入注意力机制（Attention Mechanism）。通过引导人们的注意力到头发密集的区域，来增加主观感受中的头皮遮盖率。
-
-**自注意力机制：**  
-- 自注意力机制通过计算输入特征之间的相似性，捕捉长距离依赖关系，增强模型对关键特征的关注。
-
-自注意力机制的计算公式如下：
-
-$$
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-$$
-
-其中， $Q$、 $K$ 和 $V$ 分别表示查询（Query）、键（Key）和值（Value）矩阵， $d_k$ 表示键的维度。
-
-**多头注意力机制：**  
-
 既然物理上增加发量（$da/dt > 0$）由于生物学限制难以实现，我们转向优化观察者的注意力分布。利用多头注意力机制（Multi-Head Attention），将观察者的视线从“地中海”区域强行牵引至由于保留了少量头发而显得略微浓密的侧边区域。
 定义：
 - $Q$ (Query)：旁观者的审视目光向量；
@@ -143,6 +128,8 @@ $$
 $$
 \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \text{head}_2, \ldots, \text{head}_h)W^O
 $$
+
+其中，$\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$ 表示第 $i$ 个注意力头，$W_i^Q$、$W_i^K$ 和 $W_i^V$ 是可训练的权重矩阵，$W^O$ 是输出层的权重矩阵。
 
 修正后的注意力分数为：
 
