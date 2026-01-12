@@ -107,7 +107,7 @@ $$
 **输出层：**  
 - 输出预测的发量分布和头皮健康指数，作为优化模型的输入数据，进一步提高模型的精度和鲁棒性。
 
-设输入为直发特征图 $H_{\text{straight}}$，卷积核（即“数字卷发棒”）为 $\mathcal{K}_{\text{rod}}$，则卷曲输出 $H_{\text{curly}}$ 定义为：
+设输入为直发特征图 $H_{\text{straight}}$ ，卷积核（即“数字卷发棒”）为 $\mathcal{K}_{\text{rod}}$ ，则卷曲输出 $H_{\text{curly}}$ 定义为：
 
 $$H_{\text{curly}}(i,j) = \sigma \left( \sum_{u,v} H_{\text{straight}}(i-u, j-v) \cdot \mathcal{K}_{\text{rod}}(u,v) + b_{\text{fluffy}} \right)$$
 
