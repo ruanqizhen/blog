@@ -42,7 +42,7 @@ $$
 $$
 
 $$
-\text{s.t. } \begin{cases}
+\text{s.t.} \begin{cases}
 \sum t_{ij} \le 0.8 a_{ij} \\
 \Delta h_{ij} \ge h_{\min} \\
 d_{\text{visual}}(A, A') \le \varepsilon
