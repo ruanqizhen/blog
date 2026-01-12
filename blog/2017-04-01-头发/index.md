@@ -26,10 +26,12 @@ tags:
 
 为模拟“支援中央”的策略，我们引入“祖冲之-拉普拉斯算子（Zu-Laplacian Operator）”作为填充策略：
 
-$$\mathcal{L}(A) = \begin{cases}
+$$
+\mathcal{L}(A) = \begin{cases}
 \nabla^2 a_{ij} + \lambda_{\text{illusion}}, & \text{if } a_{ij} \text{ is Empty (虚)} \\
 -\nabla \cdot (\vec{v} a_{ij}), & \text{if } a_{ij} \text{ is Dense (实)}
-\end{cases}$$
+\end{cases}
+$$
 
 其中 $\vec{v}$ 为梳头方向向量， $\lambda_{\text{illusion}}$ 为视觉欺骗补偿项。该公式的核心思想遵循兵法中的“虚则实之，实则虚之”原则[3]。
 
@@ -42,14 +44,14 @@ $$
 $$
 
 $$
-\text{s.t.} \begin{cases}
+\text{st} \begin{cases}
 \sum t_{ij} \le 0.8 a_{ij} \\
 \Delta h_{ij} \ge h_{\min} \\
 d_{\text{visual}}(A, A') \le \varepsilon
 \end{cases}
 $$
 
-其中 $\omega_1=0.67, \omega_2=0.33$（通过 AHP 层次分析法确定），$\varepsilon=0.15$ 为基于 SSIM 指标的视觉穿帮阈值。
+其中 $\omega_1=0.67, \omega_2=0.33$（通过 AHP 层次分析法确定）， $\varepsilon=0.15$ 为基于 SSIM 指标的视觉穿帮阈值。
 
 ### 2.3 地方支援中央的迁移路径规划
 
