@@ -33,6 +33,10 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-size: 1.2em;
 }
 
+.menu__link--active {
+  font-weight: bold;
+}
+
 .title_f1Hy,
 .markdown > h1 {
   font-size: 2.2em;
