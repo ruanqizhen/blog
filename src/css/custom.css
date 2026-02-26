@@ -33,8 +33,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-size: 1.2em;
 }
 
-.menu__link--active {
+a[aria-current='page'] {
   font-weight: bold;
+  background-color: rgba(50, 50, 150, 0.1);
+  border-radius: 4px;
+}
+
+html[data-theme='dark'] a[aria-current="page"] {
+  background-color: rgba(200, 200, 250, 0.15);
 }
 
 .title_f1Hy,
