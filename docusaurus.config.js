@@ -1,8 +1,11 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const BAIDU_HM_ID = 'b3f6e7ec9302021671173e3fad14f4cd';
+const CLARITY_ID = 'jxmn1qjx88';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,10 +15,9 @@ const config = {
 
   url: 'https://blog.qizhen.xyz/',
   baseUrl: '/',
-  projectName: 'blog', 
-  onBrokenLinks: 'ignore',
+  projectName: 'blog',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-   
   i18n: {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn'],
@@ -33,7 +35,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:'https://github.com/ruanqizhen/blog/edit/main/',
+          editUrl: 'https://github.com/ruanqizhen/blog/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'ignore',
@@ -55,12 +57,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       navbar: {
         title: '凡人琐忆',
         hideOnScroll: true,
         logo: {
-          alt: 'My Site Logo',
+          alt: '凡人琐忆',
           src: 'img/logo.png',
         },
       },
@@ -73,16 +74,16 @@ const config = {
     function monitorPlugin(context, options) {
       return {
         name: 'monitor-plugin',
-        injectHtmlTags({content}) {
+        injectHtmlTags({ content }) {
           return {
             postBodyTags: [`
-               <script type="text/javascript" src="https://hm.baidu.com/hm.js?b3f6e7ec9302021671173e3fad14f4cd"></script>
+               <script type="text/javascript" src="https://hm.baidu.com/hm.js?${BAIDU_HM_ID}"></script>
                <script type="text/javascript">
                  (function(c,l,a,r,i,t,y){
                     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                 })(window, document, "clarity", "script", "jxmn1qjx88");
+                 })(window, document, "clarity", "script", "${CLARITY_ID}");
                </script>
             `],
           };
@@ -90,7 +91,7 @@ const config = {
       };
     },
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      "@easyops-cn/docusaurus-search-local",
       {
         indexDocs: false,
         hashed: true,
@@ -103,10 +104,10 @@ const config = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css',
       type: 'text/css',
       integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+        'sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib',
       crossorigin: 'anonymous',
     },
   ],
