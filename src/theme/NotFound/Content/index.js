@@ -17,6 +17,12 @@ export default function NotFoundContent({ className }) {
     return () => clearInterval(timer);
   }, []);
 
+  const title = "404";
+  const subtitle = "这片回忆，似乎已经随风飘散了...";
+  const paragraph = "抱歉，您访问的页面不存在或已被移动。";
+  const countdownLabel = " 秒后自动带您回到博客首页...";
+  const buttonLabel = "立即回到首页";
+
   return (
     <main className="container margin-vert--xl">
       <div className="row">
@@ -25,47 +31,41 @@ export default function NotFoundContent({ className }) {
             textAlign: 'center',
             padding: '3rem 2rem',
             background: 'var(--ifm-card-background-color)',
-            borderRadius: 'var(--border-radius-premium)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
-            backdropFilter: 'blur(10px)',
+            borderRadius: '8px',
+            border: '1px solid var(--ifm-color-emphasis-200)',
+            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.05)',
             marginTop: '2rem'
           }}>
             <div style={{
-              fontSize: '6rem',
+              fontSize: '5rem',
               fontWeight: 800,
               lineHeight: 1,
-              background: 'linear-gradient(135deg, var(--cyber-glow-purple), var(--cyber-glow-cyan))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              marginBottom: '1rem',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '1.2rem',
               fontFamily: 'var(--ifm-heading-font-family)'
             }}>
-              404
+              {title}
             </div>
             <h1 style={{
-              fontSize: '2rem',
+              fontSize: '1.6rem',
               fontWeight: 700,
-              marginBottom: '1.5rem',
-              background: 'linear-gradient(to right, var(--ifm-heading-color) 60%, var(--cyber-glow-cyan))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              marginBottom: '1.2rem',
+              color: 'var(--ifm-heading-color)',
               fontFamily: 'var(--ifm-heading-font-family)',
               borderBottom: 'none'
             }}>
-              您似乎在算力洪流中迷失了方向
+              {subtitle}
             </h1>
             <p style={{
-              fontSize: '1.1rem',
-              color: 'var(--ifm-text-color)',
+              fontSize: '1rem',
+              color: 'var(--ifm-color-emphasis-700)',
               marginBottom: '2rem'
             }}>
-              抱歉，您所访问的页面并不存在。我们将执行“自动熔断机制”：
+              {paragraph}
             </p>
             <div style={{
-              fontSize: '1.2rem',
-              fontWeight: 600,
-              color: 'var(--ifm-color-primary)',
+              fontSize: '1rem',
+              color: 'var(--ifm-color-emphasis-600)',
               marginBottom: '2.5rem',
               display: 'flex',
               alignItems: 'center',
@@ -76,32 +76,29 @@ export default function NotFoundContent({ className }) {
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '32px',
-                height: '32px',
+                width: '28px',
+                height: '28px',
                 borderRadius: '50%',
-                background: 'rgba(139, 92, 246, 0.1)',
-                border: '1px solid var(--cyber-glow-purple)',
-                fontSize: '1.1rem'
+                background: 'var(--ifm-color-emphasis-100)',
+                border: '1px solid var(--ifm-color-primary)',
+                color: 'var(--ifm-color-primary)',
+                fontWeight: 600,
+                fontSize: '1rem'
               }}>
                 {seconds}
               </span>
-              <span>秒后自动返回书籍首页...</span>
+              <span>{countdownLabel}</span>
             </div>
             <div>
               <Link
                 className="button button--primary button--lg"
                 to="/"
                 style={{
-                  borderRadius: 'var(--border-radius-premium)',
-                  padding: '0.8rem 2rem',
+                  padding: '0.6rem 2.5rem',
                   fontWeight: 600,
-                  background: 'linear-gradient(135deg, var(--cyber-glow-purple), var(--cyber-glow-cyan))',
-                  border: 'none',
-                  boxShadow: '0 4px 15px rgba(139, 92, 246, 0.3)',
-                  transition: 'all 0.3s ease'
                 }}
               >
-                立即返回首页
+                {buttonLabel}
               </Link>
             </div>
           </div>
@@ -110,3 +107,5 @@ export default function NotFoundContent({ className }) {
     </main>
   );
 }
+
+
