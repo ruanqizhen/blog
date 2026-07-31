@@ -9,7 +9,7 @@ My favorite TV channel is the Shanghai Documentary Channel because I can always 
 
 First, let’s think about what an insect is. Is a butterfly an insect? Is a spider an insect?
 
-nsects belong to the Arthropoda phylum. Therefore, an insect must have all the characteristics of an arthropod. An arthropod has the following features: First, its body is divided into several segments. Second, it has legs that are also segmented. Now we know neither the earthworm nor the snail is an arthropod because they lack legs. Are humans arthropods? We have legs, but no! An arthropod has an exoskeleton, meaning their bones are on the outside of their bodies, whereas our bones are inside. Let's count how many arthropods we know: shrimps, crabs, spiders, butterflies, bees, ants—all of these are arthropods. But only some of them are insects.
+Insects belong to the Arthropoda phylum. Therefore, an insect must have all the characteristics of an arthropod. An arthropod has the following features: First, its body is divided into several segments. Second, it has legs that are also segmented. Now we know neither the earthworm nor the snail is an arthropod because they lack legs. Are humans arthropods? We have legs, but no! An arthropod has an exoskeleton, meaning their bones are on the outside of their bodies, whereas our bones are inside. Let's count how many arthropods we know: shrimps, crabs, spiders, butterflies, bees, ants—all of these are arthropods. But only some of them are insects.
 
 So, what sets insects apart?  
 
