@@ -3,15 +3,6 @@ tags:
   - "浪迹天涯"
 ---
 
-
-<div style={{maxWidth: '420px', margin: '0 auto'}}>
-
-![](mount_victoria.avif)
-
-</div>
-
-
-
 # 班夫游记 5 - 浴火重生
 
 
