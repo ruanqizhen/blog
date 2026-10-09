@@ -64,6 +64,12 @@ const config = {
           alt: '凡人琐忆',
           src: 'img/logo.png',
         },
+        items: [
+          {to: '/archive', label: '归档'},
+          {to: '/tags', label: '标签'},
+          {to: '/about', label: '关于'},
+          {href: 'https://qizhen.xyz', label: '← 主页', position: 'right'},
+        ],
       },
       prism: {
         theme: prismThemes.github,
