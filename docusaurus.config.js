@@ -66,6 +66,19 @@ const config = {
           src: 'img/logo.png',
         },
       },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: '导航',
+            items: [
+              {label: '返回主页', href: 'https://qizhen.xyz'},
+              {label: 'GitHub', href: 'https://github.com/ruanqizhen'},
+            ],
+          },
+        ],
+        copyright: 'Copyright © 2026 阮奇桢',
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
