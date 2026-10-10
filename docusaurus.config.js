@@ -10,7 +10,7 @@ const CLARITY_ID = 'jxmn1qjx88';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '凡人琐忆',
-  tagline: '博客备份',
+  tagline: '阮奇桢的个人博客',
   favicon: 'img/favicon.ico',
 
   url: 'https://blog.qizhen.xyz/',
@@ -29,6 +29,7 @@ const config = {
       ({
         docs: false,
         blog: {
+          blogDescription: '阮奇桢的个人博客：旅行见闻、编程思考与社会观察',
           routeBasePath: '/', // Serve the blog at the site's root
           showReadingTime: true,
           feedOptions: {
