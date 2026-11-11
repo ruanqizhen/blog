@@ -15,6 +15,13 @@ const config = {
 
   url: 'https://blog.qizhen.xyz/',
   baseUrl: '/',
+  // Match how the host serves pages: Cloudflare redirects /2020/09/03/post
+  // to /2020/09/03/post/, but without this Docusaurus emits canonical/
+  // sitemap URLs without the trailing slash, so every post's canonical
+  // pointed at a redirect (Search Console: "Alternate page with proper
+  // canonical tag" / "Duplicate, Google chose different canonical than
+  // user").
+  trailingSlash: true,
   projectName: 'blog',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -44,6 +51,14 @@ const config = {
           blogSidebarCount: 'ALL',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          // /search is a thin client-side utility page, not content.
+          // (With trailingSlash: true the route path ends with a slash,
+          // so the pattern must include it to match.)
+          ignorePatterns: ['/search/'],
         },
         theme: {
           customCss: './src/css/custom.css',
